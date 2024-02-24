@@ -1,0 +1,13 @@
+{
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe"
+    },
+    "pages": {
+        "index": {
+            "slider-title": "Locationeriňiziň golaýynda ajaýyp ussatlary tapyň",
+            "slider-label": "Geljekde onlaýn endikleri öwreniň"
+        }
+    }
+}

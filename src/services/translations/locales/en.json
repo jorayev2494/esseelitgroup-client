@@ -1,0 +1,46 @@
+{
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe"
+    },
+    "system": {
+        "full_name": "Full name",
+        "birthday": "Birthday",
+        "father_name": "Father name",
+        "mother_name": "Mother name",
+        "passport_number": "Passport number",
+        "phone": "Phone",
+        "friend_phone": "Friend phone",
+
+        "email": "Email",
+        "home_address": "Home address",
+
+        "country": "Country",
+        "university": "University",
+        "faculty": "Faculty",
+        "department": "Department",
+
+        "passport": "Passport",
+        "passport_translation": "Passport translation",
+        "school_attestat": "School Attestat",
+        "school_attestat_translation": "School attestat translation",
+        "transcript": "Transcript",
+        "transcript_translation": "Transcript translation",
+        "equivalence_document": "Equivalence document",
+        "biometric_photo": "Biometric photo",
+
+        "add_additional_document": "Add additional document",
+        "additional_document": "Additional document",
+        "additional_document_name": "Additional document name",
+        "document_name": "Document name",
+
+        "form_success_sent_message": "Form success sent message"
+    },
+    "pages": {
+        "index": {
+            "slider-title": "Find the Perfect Mentors Near Your Location",
+            "slider-label": "Own your future learning new skills online"
+        }
+    }
+}
