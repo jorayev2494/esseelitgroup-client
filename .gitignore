@@ -1,12 +1,12 @@
 .DS_Store
 /node_modules
 /dist
-/docker/.env.example
+/docker/.env
 
 
 # local env files
 .env.local
-.env.example
+.env
 .env.*.local
 
 # Log files
