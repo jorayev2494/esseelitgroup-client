@@ -18,7 +18,7 @@ FROM node:21.5 as build-stage
 WORKDIR /var/project
 
 # Copy all files from git repository to working directory
-COPY ../../../ .
+COPY ../../ .
 
 # installation CNPM
 # RUN npm install cnpm -g --no-progress --registry=https://registry.npm.taobao.org
