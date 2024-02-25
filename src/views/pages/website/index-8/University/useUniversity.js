@@ -17,8 +17,11 @@ export default function useUniversity() {
   }
 
   const loadUniversities = () => {
-    console.log('adawdwadawd: loadUniversities');
-    store.dispatch('university/loadUniversitiesAsync')
+    store.dispatch('university/loadUniversityListAsync', {
+      params: {
+        filter_by_company_uuid: '885a3665-0684-43e5-be1c-677da726bbf6',
+      },
+    })
       .then(response => {
         console.log('adawdwadawd: ', universities.value);
         universities.value = response.data.map(universityMapper);
