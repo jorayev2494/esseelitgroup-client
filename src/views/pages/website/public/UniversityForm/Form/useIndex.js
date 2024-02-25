@@ -207,7 +207,7 @@ export default function useIndex({ props }) {
     faculties.value = [];
     departments.value = [];
 
-    httpClient.get(`/public/universities/list?filter_by_company_uuid=${uuid}`).then(response => {
+    httpClient.get(`/public/universities/universities/list?filter_by_company_uuid=${uuid}`).then(response => {
       universities.value = response.data.map(({uuid, name}) => ({
         uuid,
         name,
@@ -218,7 +218,7 @@ export default function useIndex({ props }) {
   const loadFaculties = event => {
     const { name, value } = event.target;
 
-    httpClient.get(`/public/faculties/list?filter_by_university_uuid=${value}`).then(response => {
+    httpClient.get(`/public/universities/faculties/list?filter_by_university_uuid=${value}`).then(response => {
       faculties.value = response.data.map(({uuid, name}) => ({
         uuid,
         name,
@@ -229,7 +229,7 @@ export default function useIndex({ props }) {
   const loadDepartments = event => {
     const { name, value } = event.target;
 
-    httpClient.get(`/public/departments/list?filter_by_faculty_uuid=${value}`).then(response => {
+    httpClient.get(`/public/universities/departments/list?filter_by_faculty_uuid=${value}`).then(response => {
       departments.value = response.data.map(({uuid, name}) => ({
         uuid,
         name,
@@ -239,7 +239,7 @@ export default function useIndex({ props }) {
 
   const loadCountries = () => {
     const { uuid } = university;
-    httpClient.get(`/public/countries/list?filter_by_company_uuid=${uuid}`).then(response => {
+    httpClient.get(`/public/universities/countries/list?filter_by_company_uuid=${uuid}`).then(response => {
       countries.value = response.data.map(({ uuid, value }) => ({ uuid, value}));
     })
   }

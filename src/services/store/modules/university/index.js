@@ -13,9 +13,9 @@ const mutations = {
 }
 
 const actions = {
-  async loadUniversitiesAsync(_, payload) {
+  async loadUniversityListAsync(_, { params }) {
     return await new Promise((resolve, reject) => {
-      return httpClient.get('/public/universities')
+      return httpClient.get('/public/universities/universities/list', { params })
         .then(response => {
           return resolve(response);
         })
@@ -25,7 +25,7 @@ const actions = {
 
   async showUniversityAsync(_, uuid) {
     return await new Promise((resolve, reject) => {
-      return httpClient.get(`/public/universities/${uuid}`)
+      return httpClient.get(`/public/universities/universities/${uuid}`)
         .then(response => resolve(response))
         .catch(error => reject(error));
     })
