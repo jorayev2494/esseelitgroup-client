@@ -279,7 +279,7 @@ export default function useIndex({ props }) {
   }
 
   const sendForm = () => {
-    httpClient.post('/public/applications', getData()).then(response => {
+    httpClient.post('/public/universities/applications', getData()).then(response => {
       console.log('Response: ', response);
       formClear();
       clearUploadedFiles();
