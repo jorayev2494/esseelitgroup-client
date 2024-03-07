@@ -16,11 +16,15 @@
           <p>{{ university.label }}</p>
         </div>
 
-        <!-- <div class="poular-search">
-          <p>
+        <div class="poular-search">
+          <!-- <p>
             <span>Popular Search :</span> Designer, Developer, Web, iOS, PHP
-          </p>
-        </div> -->
+          </p> -->
+          <a href="#application-form" class="btn btn-primary btn-lg">
+            {{ $t('system.apply_now') }}
+            <i class="fas fa-hand-point-down icon-apply-now"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -45,3 +49,9 @@
   const { form } = useIndex({ props })
 
 </script>
+
+<style scoped>
+.icon-apply-now {
+  margin-left: 6px;
+}
+</style>

@@ -49,7 +49,8 @@ import Appointments from '../views/pages/website/mentor/Appointments'
 
 // Project pages
 import Home from '../views/pages/website/public/home/Index.vue'
-import UniversityForm from '../views/pages/website/public/UniversityForm/Index.vue'
+import UniversityForm from '../views/pages/website/public/university/Index.vue'
+import Faculty from '../views/pages/website/public/faculty/Index.vue'
 
 const routes = [
   {
@@ -58,10 +59,16 @@ const routes = [
     component: Home
   },
   {
-    path: 'university/forum/:uuid',
+    path: 'university/:uuid',
     name: 'university-form',
     component: UniversityForm,
   },
+  {
+    path: 'faculty/:uuid',
+    name: 'faculty',
+    component: Faculty,
+  },
+
   {
     path: 'index',
     name: 'dashboard',

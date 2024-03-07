@@ -4,7 +4,19 @@
         "ru": "Русский",
         "tm": "Türkmençe"
     },
+    "navigation": {
+        "home": "Home",
+        "mentor": "Mentor",
+        "mentee": "Mentee",
+        "pages": "Pages",
+        "blog": "Blog"
+    },
     "system": {
+        "apply_now": "Apply now",
+        "required": "Required",
+        "send": "Send"
+    },
+    "application_form": {
         "full_name": "Full name",
         "birthday": "Birthday",
         "father_name": "Father name",
@@ -17,9 +29,9 @@
         "home_address": "Home address",
 
         "country": "Country",
+        "citizenship": "Citizenship",
         "university": "University",
-        "faculty": "Faculty",
-        "department": "Department",
+        "faculties_and_departments": "Faculties & Departments",
 
         "passport": "Passport",
         "passport_translation": "Passport translation",
@@ -32,15 +44,18 @@
 
         "add_additional_document": "Add additional document",
         "additional_document": "Additional document",
-        "additional_document_name": "Additional document name",
+        "name_of_additional_document": "Name of additional document",
         "document_name": "Document name",
 
-        "form_success_sent_message": "Form success sent message"
+        "form_success_sent_message": "Form success sent message",
+        "agreement_text": "I confirm that my data may be shared with the partner universities of Esse Elite Group. I allow Esse Elite Group to apply for the above mentioned department(s) to multiple universities."
     },
     "pages": {
         "index": {
-            "slider-title": "Find the Perfect Mentors Near Your Location CI/CD 2",
-            "slider-label": "Own your future learning new skills online"
+            "header": {
+                "slider-title": "Find the Perfect Mentors Near Your Location",
+                "slider-label": "Own your future learning new skills online"
+            }
         }
     }
 }

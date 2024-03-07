@@ -13,5 +13,4 @@ export const router = createRouter({
       children: routes,
     },
   ],
-  // routes,
 });

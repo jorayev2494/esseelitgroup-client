@@ -4,9 +4,13 @@
     <HomeBanner :university="university" />
     <CategoriesThree />
     <!-- <WorkThree /> -->
-    <Form  :university="university" />
-    <TrendingCourseThree />
-    <MentorThree />
+    <Info :university="university" />
+    <Form :university="university" />
+    <!-- <div class="main-wrapper-five">
+      <Faculty :university="university" />
+    </div> -->
+    <Faculty :university="university" />
+    <!-- <MentorThree /> -->
     <RatingThree />
     <PopularCourseThree />
     <TestimonialThree />
@@ -23,6 +27,8 @@
   import HomeBanner from './HomeBanner/Index.vue';
   import Form from './Form/Index.vue';
   import useUniversityForm from './useUniversityForm';
+  import Info from './Info/Index.vue';
+  import Faculty from './Faculty/Index.vue'
 
   const { university } = useUniversityForm();
 </script>

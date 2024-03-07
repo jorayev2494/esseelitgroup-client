@@ -3,6 +3,9 @@ import { router } from './router';
 import store from './services/store'
 import translation from './services/translations/index.js';
 import globalVariables from './services/globalVariables/index'
+import VueYtframe from 'vue3-ytframe'
+// import VueMultiselect from 'vue-multiselect'
+// import 'vue-multiselect/dist/vue-multiselect.css'
 
 import Vue3Toasity from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -362,4 +365,6 @@ app.use(
     },
 );
 app.use(translation);
+app.use(VueYtframe);
+// app.use(VueMultiselect);
 app.mount('#app');

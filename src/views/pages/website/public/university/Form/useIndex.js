@@ -1,3 +1,4 @@
+import factory from "@/assets/css/html/plugins/select2/js/select2.full";
 import httpClient from "@/services/http";
 import { reactive, ref, onMounted, computed } from "vue"
 import { useI18n } from "vue-i18n";
@@ -185,6 +186,27 @@ export default function useIndex({ props }) {
 
   const submitBtn = ref(null);
 
+  const selectedDepartments = ref([]);
+  const departmentOptions = ref([]);
+
+  const makeDepartmentOptions = () => {
+    const res = [];
+
+    faculties.value.forEach(faculty => {
+      departments.value.filter
+      res.push({
+        faculty: faculty.name,
+        departments: departments.value.filter(dep => dep.faculty_uuid === faculty.uuid).map(d => ({
+          uuid: d.uuid,
+          name: d.name,
+          category: 'category',
+        }))
+      })
+    });
+
+    departmentOptions.value = res;
+  }
+
   const setUploadedFile = event => {
     const { name, files } = event.target;
     const [file] = files;
@@ -208,17 +230,26 @@ export default function useIndex({ props }) {
     departments.value = [];
 
     httpClient.get(`/public/universities/universities/list?filter_by_company_uuid=${uuid}`).then(response => {
-      universities.value = response.data.map(({uuid, name}) => ({
+      universities.value = response.data.map(({ uuid, name }) => ({
         uuid,
         name,
       }));
     })
   }
 
-  const loadFaculties = event => {
+  const universityWasChanged = event => {
     const { name, value } = event.target;
 
-    httpClient.get(`/public/universities/faculties/list?filter_by_university_uuid=${value}`).then(response => {
+    Promise.all([
+      loadFaculties(value),
+      loadDepartments(value),
+    ]).then(values => {
+      setTimeout(makeDepartmentOptions, 1000);
+    });
+  }
+
+  const loadFaculties = universityUuid => {
+    httpClient.get(`/public/universities/faculties/list?filter_by_university_uuid=${universityUuid}`).then(response => {
       faculties.value = response.data.map(({uuid, name}) => ({
         uuid,
         name,
@@ -226,19 +257,18 @@ export default function useIndex({ props }) {
     })
   }
 
-  const loadDepartments = event => {
-    const { name, value } = event.target;
-
-    httpClient.get(`/public/universities/departments/list?filter_by_faculty_uuid=${value}`).then(response => {
-      departments.value = response.data.map(({uuid, name}) => ({
+  const loadDepartments = universityUuid => {
+    httpClient.get(`/public/universities/departments/list?filter_by_university_uuid=${universityUuid}`).then(response => {
+      departments.value = response.data.map(({ uuid, name, faculty_uuid }) => ({
         uuid,
         name,
+        faculty_uuid,
       }));
     })
   }
 
   const loadCountries = () => {
-    const { uuid } = university;
+    const { uuid } = university.company;
     httpClient.get(`/public/universities/countries/list?filter_by_company_uuid=${uuid}`).then(response => {
       countries.value = response.data.map(({ uuid, value }) => ({ uuid, value}));
     })
@@ -260,7 +290,9 @@ export default function useIndex({ props }) {
       }
     }
 
-    additionalDocuments.forEach(console.log);
+    selectedDepartments.value.forEach(({ uuid }, idx) => {
+      formData.append(`department_uuids[${idx}]`, uuid);
+    });
 
     additionalDocuments.forEach(({ document, description }, idx) => {
       formData.append(`additional_documents[${idx}][document]`, document);
@@ -276,6 +308,8 @@ export default function useIndex({ props }) {
         form[key] = '';
       }
     }
+
+    selectedDepartments.value = [];
   }
 
   const sendForm = () => {
@@ -327,8 +361,7 @@ export default function useIndex({ props }) {
     countries,
     basicData,
     uploadFiles,
-    loadFaculties,
-    loadDepartments,
+    universityWasChanged,
     additionalDocuments,
     addAdditionalDocument,
     removeAdditionalDocument,
@@ -336,6 +369,8 @@ export default function useIndex({ props }) {
     sendForm,
     canAddNewAdditionalColumn,
     setUploadedFile,
+    selectedDepartments,
+    departmentOptions,
     submitBtn,
   }
 }
