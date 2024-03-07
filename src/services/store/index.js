@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 // import { defaultLocale, localeOptions } from '@/configs/index.js';
 
 import university from './modules/university';
+import faculty from './modules/faculty';
 
 export default createStore({
   // state: {
@@ -31,5 +32,6 @@ export default createStore({
   // },
   modules: {
     university,
+    faculty,
   }
 });
