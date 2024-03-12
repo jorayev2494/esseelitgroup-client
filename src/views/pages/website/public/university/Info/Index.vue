@@ -11,7 +11,7 @@
               <!-- <div class="section-head-eight"> -->
                 <!-- <h2>Want To Become <span>A Mentor?</span></h2> -->
                 <div id="ck-content" class="ck-content">
-                  <div v-html="replaceStyles(university.description)"></div>
+                  <div v-html="$ckeditor.replaceStyles(university.description)"></div>
                 </div>
                 <!-- <div id="editor"></div> -->
                 <!-- <div>{!! university.description !!}</div> -->
@@ -77,20 +77,20 @@
     }
   });
 
-  const styleReplaces = [
-    {
-      from: '<a href="',
-      to: '<a class="link-success text-decoration-none" target="_blank" href="',
-    },
-  ]
+  // const styleReplaces = [
+  //   {
+  //     from: '<a href="',
+  //     to: '<a class="link-success text-decoration-none" target="_blank" href="',
+  //   },
+  // ]
 
-  const replaceStyles = content => {
-    styleReplaces.forEach(({ from, to }) => {
-      content = content.replaceAll(from, to);
-    });
+  // const replaceStyles = content => {
+  //   styleReplaces.forEach(({ from, to }) => {
+  //     content = content.replaceAll(from, to);
+  //   });
 
-    return content;
-  }
+  //   return content;
+  // }
 
   const ulDiscsFromContent = (contentId) => {
     const uls = window.document.getElementById(contentId).getElementsByTagName('ul');
@@ -111,15 +111,6 @@
 </script>
 
 <style scoped>
-  /* @import '../../../../../../assets/css/admin/ckeditor.css'; */
-  /* @import '../../../../../../assets/css/admin/bootstrap.css'; */
-
-  /* @import '@ckeditor/ckeditor5-list/theme/list.css'; */
-  /* @import '@ckeditor/ckeditor5-list/theme/list.css'; */
-
-  /* li */
-  /* @import '@ckeditor/ckeditor5-list/theme/todolist.css'; */
-
   ul > li {
     list-style: disc;
     list-style-type: circle;
@@ -128,5 +119,4 @@
   ul li::marker {
     color: red;
   }
-
 </style>
