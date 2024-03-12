@@ -14,7 +14,9 @@
                 </div>
                 <!-- <span class="sub">Variety of Courses</span> -->
                 <h2>{{ faculty.name }}</h2>
-                <p v-html="faculty.description"></p>
+                <div id="ck-content" class="ck-content">
+                  <p v-html="$ckeditor.replaceStyles(faculty.description)"></p>
+                </div>
               </div>
               <!-- <div class="reg-log-btn">
                 <router-link to="/mentee/mentor-search" class="find-ment">Find Mentors</router-link>
@@ -104,3 +106,15 @@
   } = useIndex({ props })
 
 </script>
+
+<style scoped>
+  ul > li {
+    list-style: disc;
+    list-style-type: circle;
+  }
+
+  ul li::marker {
+    color: red;
+  }
+
+</style>

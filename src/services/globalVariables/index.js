@@ -10,6 +10,22 @@ const services = {
 
         console.log('global service: ', Vue)
         
+        Vue.config.globalProperties.$ckeditor = {            
+            replaceStyles: content => {
+                const styleReplaces = [
+                    {
+                      from: '<a href="',
+                      to: '<a class="link-success text-decoration-none" target="_blank" href="',
+                    },
+                ]
+                
+                styleReplaces.forEach(({ from, to }) => {
+                  content = content.replaceAll(from, to);
+                });
+            
+                return content;
+            }
+        }
     }
 };
 
