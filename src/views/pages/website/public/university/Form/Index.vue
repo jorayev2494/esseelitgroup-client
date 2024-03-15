@@ -138,7 +138,7 @@
                   </div>
                 </div>
 
-                <div class="col-10 col-md-5">
+                <div class="col-11 col-md-5 input-additional-name">
                   <div class="form-group" :key="uploadFilesBlock + aIdx + 2">
                     <label for="phone">{{ $t('application_form.document_name') }}</label>
                     <span class="text-danger"> ({{ $t('system.required') }})</span>
@@ -146,16 +146,20 @@
                   </div>
                 </div>
 
-                <div class="col-2 col-md-1">
-                  <div class="btn-group d-flex" :key="uploadFilesBlock + aIdx + 3">
-                    <button
-                      type="submit"
-                      class="btn btn-block btn-outline-danger btn-additional-doc-delete"
-                      @click.prevent="removeAdditionalDocument(aIdx)"
-                    >
-                      <i class="fa fa-trash-alt"></i>
-                    </button>
-                  </div>
+                <div class="col-1 col-md-1 p-0">
+                  <center>
+                    <div class="btn-group" :key="uploadFilesBlock + aIdx + 3">
+
+                      <span
+                        role="button"
+                        class="btn-additional-doc-delete"
+                        @click.prevent="removeAdditionalDocument(aIdx)"
+                      >
+                        <i class="fa fa-trash-alt text-danger"></i>
+                      </span>
+
+                    </div>
+                  </center>
                 </div>
               </template>
 
@@ -176,8 +180,8 @@
 
               <div class="col-12 col-md-12">
                 <div class="form-check">
-                  <input class="form-check-input" name="is_agreed_to_share_data" v-model="form.is_agreed_to_share_data" type="checkbox" required>
-                  <label class="form-check-label">
+                  <input class="form-check-input" name="is_agreed_to_share_data" id="is_agreed_to_share_data" v-model="form.is_agreed_to_share_data" type="checkbox" required>
+                  <label class="form-check-label" for="is_agreed_to_share_data">
                     {{ $t('application_form.agreement_text') }} <span class="text-danger"> ({{ $t('system.required') }})</span>
                   </label>
                 </div>
@@ -245,9 +249,13 @@
     padding-left: 12px;
   }
 
-.btn-additional-doc-delete {
-  margin-top: 30px;
-}
+  .input-additional-name {
+    padding-right: 0;
+  }
+
+  .btn-additional-doc-delete {
+    margin-top: 38px;
+  }
 
 /* .additional-doc-description {
   margin-right: 10px;

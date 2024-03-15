@@ -101,7 +101,7 @@ export default {
 	background: #404040;  
 }
 .loader-ellips__dot:nth-child(2) { 
-	background: #1e88e5;  
+	background: #0f271a;  
 }
 .loader-ellips__dot:nth-child(3) { 
 	background: #404040;  
