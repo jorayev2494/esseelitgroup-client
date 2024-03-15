@@ -40,9 +40,9 @@
         </div>
       </div>
 
-      <div class="explore-more text-center aos" data-aos="fade-up">
+      <!-- <div class="explore-more text-center aos" data-aos="fade-up">
         <router-link to="/mentee/mentor-search" class="btn bg-explore">Show All Universities</router-link>
-      </div>
+      </div> -->
 
     </div>
   </section>
