@@ -129,7 +129,6 @@
                       :id="`additional-doc-${aIdx}`"
                       class="form-control"
                       :name="`additional-doc-${aIdx}`"
-                      accept=".pdf"
                       required
                       autocomplete="off"
                       @change="addAdditionalFile($event, aIdx)"
