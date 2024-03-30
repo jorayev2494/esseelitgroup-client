@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory, RouterView } from 'vue-router';
 import routes from './routes.js';
 import Tr from '@/services/translations/translation.js';
+import store from '@/services/store/index.js';
 
-export const router = createRouter({
+const router = createRouter({
   history: createWebHistory('/'),
   linkActiveClass: 'active',
   routes: [
@@ -14,3 +15,17 @@ export const router = createRouter({
     },
   ],
 });
+
+router.beforeEach(function(to, from, next) {
+  store.commit('setIsLoadingPage', true);
+
+  setTimeout(next, 1000);
+
+  setTimeout(() => {
+    store.commit('setIsLoadingPage', false);
+  }, 2000)
+});
+
+export {
+  router
+};

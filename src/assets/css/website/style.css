@@ -4050,12 +4050,12 @@ ul li {
 	flex: 1;
 	margin-right: 0;
 	width: 100%;
-	padding: 20px;
+	padding: 10px;
 	background: #FFFFFF;
 	border-radius: 5px;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 .home-slide .search-box .search-info.location-search-four input {
 	background-color: transparent;
@@ -6262,11 +6262,11 @@ span.rate-point.three-rate {
     height: 70px;
 }
 .home-slide-three.home-slide .search-box .bg-search {
-    background: #F5B716;
-    border: 1px solid #F5B716;
+    background: #0f271a;
+    border: 1px solid #0f271a;
     color: #fff;
 	transition: 0.5s all;
-	height: 60px;
+	height: 50px;
 }
 .home-slide-three .bg-search:hover {
     border: 1px solid #54469f;

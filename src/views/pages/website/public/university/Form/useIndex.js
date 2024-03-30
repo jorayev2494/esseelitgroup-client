@@ -229,7 +229,13 @@ export default function useIndex({ props }) {
     faculties.value = [];
     departments.value = [];
 
-    httpClient.get(`/public/universities/universities/list?filter_by_company_uuid=${uuid}`).then(response => {
+    httpClient.get(`/public/universities/universities/list`, {
+      params: {
+        filters: {
+          company_uuid: uuid,
+        }
+      }
+    }).then(response => {
       universities.value = response.data.map(({ uuid, name }) => ({
         uuid,
         name,
@@ -249,7 +255,13 @@ export default function useIndex({ props }) {
   }
 
   const loadFaculties = universityUuid => {
-    httpClient.get(`/public/universities/faculties/list?filter_by_university_uuid=${universityUuid}`).then(response => {
+    httpClient.get('/public/universities/faculties/list', {
+      params: {
+        filters: {
+          university_uuids: [universityUuid],
+        }
+      }
+    }).then(response => {
       faculties.value = response.data.map(({uuid, name}) => ({
         uuid,
         name,
@@ -258,7 +270,13 @@ export default function useIndex({ props }) {
   }
 
   const loadDepartments = universityUuid => {
-    httpClient.get(`/public/universities/departments/list?filter_by_university_uuid=${universityUuid}`).then(response => {
+    httpClient.get(`/public/universities/departments/list`, {
+      params: {
+        filters: {
+          university_uuids: [universityUuid],
+        }
+      }
+    }).then(response => {
       departments.value = response.data.map(({ uuid, name, faculty_uuid }) => ({
         uuid,
         name,
@@ -269,7 +287,13 @@ export default function useIndex({ props }) {
 
   const loadCountries = () => {
     const { uuid } = university.company;
-    httpClient.get(`/public/universities/countries/list?filter_by_company_uuid=${uuid}`).then(response => {
+    httpClient.get(`/public/universities/countries/list`, {
+      params: {
+        filters: {
+          company_uuid: uuid,
+        }
+      }
+    }).then(response => {
       countries.value = response.data.map(({ uuid, value }) => ({ uuid, value}));
     })
   }

@@ -39,32 +39,6 @@
   </section>
 </template>
 
-<!-- <script>
-        // ClassicEditor
-        //     .create( document.querySelector( '#editor' ) )
-        //     .catch( error => {
-        //         console.error( error );
-        //     } );
-
-  var editor = CKEDITOR.replace('editor1', {
-    fullPage: true,
-    allowedContent: true
-  });
-  CKEDITOR.instances.editor1.setData(university.description);
-
-</script> -->
-
-<!-- <script>
-
-  window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-    const node = window.document.getElementById('ck-content'); // .getElementsByTagName('ol');
-    console.log('node: ', node)
-    // node.setAttribute("class", "classname");
-  });
-
-</script> -->
-
 <script setup>
   import { defineProps, onMounted } from 'vue';
   import useIndex from './useIndex.js'
@@ -77,21 +51,6 @@
     }
   });
 
-  // const styleReplaces = [
-  //   {
-  //     from: '<a href="',
-  //     to: '<a class="link-success text-decoration-none" target="_blank" href="',
-  //   },
-  // ]
-
-  // const replaceStyles = content => {
-  //   styleReplaces.forEach(({ from, to }) => {
-  //     content = content.replaceAll(from, to);
-  //   });
-
-  //   return content;
-  // }
-
   const ulDiscsFromContent = (contentId) => {
     const uls = window.document.getElementById(contentId).getElementsByTagName('ul');
 
@@ -101,13 +60,12 @@
       for (const li of lis) {
         li.setAttribute('style', 'list-style: disc;')
       }
-    };
+    }
   }
 
   onMounted(() => {
     ulDiscsFromContent('ck-content');
   })
-
 </script>
 
 <style scoped>

@@ -29,7 +29,15 @@ const actions = {
         .then(response => resolve(response))
         .catch(error => reject(error));
     })
-  }
+  },
+
+  async searchUniversityAsync(_, { params }) {
+    return await new Promise((resolve, reject) => {
+      return httpClient.get('/public/universities/universities/search', { params })
+        .then(response => resolve(response))
+        .catch(error => reject(error));
+    })
+  },
 }
 
 export default {

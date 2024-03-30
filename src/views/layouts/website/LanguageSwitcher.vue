@@ -1,6 +1,6 @@
 <template>
   <li class="has-submenu">
-    <a href="#">{{ $t(`supported-locales.${locale}`) }}</a>
+    <a href="#">{{ $t(`navigation.supported_locales.${locale}`) }}</a>
     <ul class="submenu">
 
       <li
@@ -8,7 +8,7 @@
         :key="`locale-${sLocale}`"
         @click="switchLanguage(sLocale)"
       >
-        <a href="#">{{ $t(`supported-locales.${sLocale}`) }}</a>
+        <a href="#">{{ $t(`navigation.supported_locales.${sLocale}`) }}</a>
       </li>
 
     </ul>

@@ -21,7 +21,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6"
             v-for="({ uuid, name, label, logo }, idx) of universities" :key="idx"
           >
-            <router-link :to="$tMakeRoute({ name: 'university-form', params: { uuid } })">
+            <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid } })">
               <div class="sub-categories bg-design d-flex align-items-center justify-content-center pb-4 pt-2">
                 <div class="sub-categories-group">
                   <div class="categories-img">
@@ -40,9 +40,9 @@
         </div>
       </div>
 
-      <!-- <div class="explore-more text-center aos" data-aos="fade-up">
-        <router-link to="/mentee/mentor-search" class="btn bg-explore">Show All Universities</router-link>
-      </div> -->
+      <div class="explore-more text-center aos" data-aos="fade-up">
+        <router-link :to="$tMakeRoute({ name: 'universities' })" class="btn bg-explore">Show All Universities</router-link>
+      </div>
 
     </div>
   </section>
