@@ -1,0 +1,23 @@
+{
+    "context_title": "Gözläň",
+    "search_filter": "Filtr gözle",
+    "search_btn": "Gözläň",
+    "search_placeholder": "Gözläň",
+    "matches_found": "{count} gabat geldi",
+
+    "filter": {
+        "labels": {
+            "other_filters": "Beýleki filtrler",
+            "countries_and_cities": "Yurtlar we şäherler",
+            "degrees": "Derejeler",
+            "faculties": "Fakultetler",
+            "departments": "Bölümler"
+        },
+        "titles": {
+            "only_in_country_list": "Diňe ýurt sanawynda"
+        }
+    },
+
+    "sort": "Sort",
+    "load_more": "Has köp ýükläň"
+}

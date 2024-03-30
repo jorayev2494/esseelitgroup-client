@@ -1,0 +1,12 @@
+{
+    "supported_locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe"
+    },
+    "home": "Baş sahypa",
+    "mentor": "Mugallym",
+    "mentee": "Mentee",
+    "pages": "Sahypalar",
+    "blog": "Blog"
+}

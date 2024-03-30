@@ -1,0 +1,23 @@
+{
+    "context_title": "Поиск",
+    "search_filter": "Фильтр поиска",
+    "search_btn": "Поиск",
+    "search_placeholder": "Поиск",
+    "matches_found": "Найдено {count} совпадения",
+
+    "filter": {
+        "labels": {
+            "other_filters": "Другие фильтры",
+            "countries_and_cities": "Страны и города",
+            "degrees": "Степени",
+            "faculties": "Факультеты",
+            "departments": "Отделы"
+        },
+        "titles": {
+            "only_in_country_list": "Только в списке стран"
+        }
+    },
+
+    "sort": "Сортировка",
+    "load_more": "Загрузить больше"
+}
