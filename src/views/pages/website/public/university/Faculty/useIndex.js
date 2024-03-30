@@ -11,7 +11,9 @@ export default function useIndex({ props }) {
   const loadFaculties = universityUuid => {
     store.dispatch('faculty/loadFacultyListAsync', {
       params: {
-        filter_by_university_uuid: universityUuid,
+        filters: {
+          university_uuid: universityUuid,
+        }
       }
     }).then(response => {
       faculties.value = response.data

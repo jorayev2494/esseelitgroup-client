@@ -59,8 +59,13 @@ const routes = [
     component: Home
   },
   {
-    path: 'university/:uuid',
-    name: 'university-form',
+    path: 'universities',
+    name: 'universities',
+    component: () => import('../views/pages/website/public/search/Index.vue'),
+  },
+  {
+    path: 'universities/:uuid',
+    name: 'university-show',
     component: UniversityForm,
   },
   {

@@ -9,24 +9,9 @@
               <h1>{{ $t('pages.index.header.slider-title') }}</h1>
               <p>{{ $t('pages.index.header.slider-label') }}</p>
             </div>
-            <!-- Search -->
-            <!-- <div class="search-box">
-              <form action="/mentee/mentor-search">
-                <div class="form-group search-info location-search location-search-four">
-                  <input type="text" class="form-control text-truncate key" placeholder=" Keyword / Course Name" />
-                  <input type="text" class="form-control text-truncate city" placeholder=" City or Postalcode" />
-                  <router-link to="/mentee/mentor-search" class="btn bg-search search-btn align-items-center d-flex justify-content-center">
-                    Find Mentors
-                  </router-link>
-                </div>
-              </form>
-            </div> -->
-            <!-- /Search -->
-            <!-- <div class="poular-search">
-              <p>
-                <span>Popular Search :</span> Designer, Developer, Web, iOS, PHP
-              </p>
-            </div> -->
+            
+            <Search />
+
             <div class="banner-counter">
               <ul>
 
@@ -72,3 +57,7 @@
   </section>
   <!-- /Home Banner -->
 </template>
+
+<script setup>
+  import Search from './home/partials/search/Index.vue'
+</script>

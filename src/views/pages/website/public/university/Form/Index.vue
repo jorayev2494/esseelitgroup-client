@@ -29,10 +29,12 @@
                 <div class="section-top-head top-head-three">
                   <div class="section-header aos" data-aos="fade-up">
                     <h2>{{ university.name }} Application Form</h2>
-                    <p class="sub-title">
-                      Find the Categories that’s perfect for you. about 800+ new courses
-                      everyday
-                    </p>
+                    <center>
+                      <p class="sub-title">
+                        Find the Categories that’s perfect for you. about 800+ new courses
+                        everyday
+                      </p>
+                    </center>
                   </div>
                 </div>
               </div>
@@ -103,9 +105,15 @@
                     group-values="departments"
                     track-by="name"
                     label="name"
-                    placeholder="Type to search"
-                    select-label="Can't remove this value select"
-                    deselect-label="Can't remove this value deselect"
+
+                    :placeholder="$t('application_form.faculties_and_departments_select.placeholder')"
+
+                    :select-group-label="$t('application_form.faculties_and_departments_select.select_group_label')"
+                    :deselect-group-label="$t('application_form.faculties_and_departments_select.deselect_group_label')"
+                    
+                    :select-label="$t('application_form.faculties_and_departments_select.select_label')"
+                    :deselect-label="$t('application_form.faculties_and_departments_select.deselect_label')"
+                    :selected-label="$t('application_form.faculties_and_departments_select.selected')"
                   >
                   </VueMultiselect>
                 </div>

@@ -1,0 +1,43 @@
+{
+    "full_name": "Full name",
+    "birthday": "Birthday",
+    "father_name": "Father name",
+    "mother_name": "Mother name",
+    "passport_number": "Passport number",
+    "phone": "Phone",
+    "friend_phone": "Friend phone",
+
+    "email": "Email",
+    "home_address": "Home address",
+
+    "country": "Country",
+    "citizenship": "Citizenship",
+    "university": "University",
+    "faculties_and_departments": "Faculties & Departments",
+
+    "passport": "Passport",
+    "passport_translation": "Passport translation",
+    "school_attestat": "School Attestat",
+    "school_attestat_translation": "School attestat translation",
+    "transcript": "Transcript",
+    "transcript_translation": "Transcript translation",
+    "equivalence_document": "Equivalence document",
+    "biometric_photo": "Biometric photo",
+
+    "faculties_and_departments_select": {
+        "placeholder": "Faculties & Departments",
+        "select_group_label": "Press enter to select faculty",
+        "deselect_group_label": "Press enter to deselect faculty",
+        "select_label": "Press enter to select department",
+        "deselect_label": "Press enter to remove department",
+        "selected": "Selected"
+    },
+
+    "add_additional_document": "Add additional document",
+    "additional_document": "Additional document",
+    "name_of_additional_document": "Name of additional document",
+    "document_name": "Document name",
+
+    "form_success_sent_message": "Form success sent message",
+    "agreement_text": "I confirm that my data may be shared with the partner universities of Esse Elite Group. I allow Esse Elite Group to apply for the above mentioned department(s) to multiple universities."
+}

@@ -1,0 +1,12 @@
+{
+    "supported_locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe"
+    },
+    "home": "Главный",
+    "mentor": "Наставник",
+    "mentee": "Подопечный",
+    "pages": "Страницы",
+    "blog": "Блог"
+}

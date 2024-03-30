@@ -1,0 +1,23 @@
+{
+    "context_title": "Search",
+    "search_filter": "Search Filter",
+    "search_btn": "Search",
+    "search_placeholder": "Search",
+    "matches_found": "{count} matches found",
+
+    "filter": {
+        "labels": {
+            "other_filters": "Other filters",
+            "countries_and_cities": "Countries & Cities",
+            "degrees": "Degrees",
+            "faculties": "Faculties",
+            "departments": "Departments"
+        },
+        "titles": {
+            "only_in_country_list": "Only in country list"
+        }
+    },
+
+    "sort": "Sort",
+    "load_more": "Load more"
+}

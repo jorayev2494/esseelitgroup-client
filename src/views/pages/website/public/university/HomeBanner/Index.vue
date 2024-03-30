@@ -14,6 +14,8 @@
         <div class="banner-header">
           <h1>{{ university.name }}</h1>
           <p>{{ university.label }}</p>
+          <p v-if="university.country">{{ university.country.value }}</p>
+          <p v-if="university.city">{{ university.city.value }}</p>
         </div>
 
         <div class="poular-search">
