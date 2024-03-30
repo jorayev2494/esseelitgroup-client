@@ -20,10 +20,16 @@
             <h4>{{ $t(filter.label) }}</h4>
 
             <template v-if="filter.type === 'checkbox'">
-              <div v-for="({ label: lLabel, value, translate }, iIdx) of filter.items" :key="iIdx">
+              <div v-for="({ label: lLabel, value, translate, disabled }, iIdx) of filter.items" :key="iIdx">
                 <label class="custom_check">
-                  <input type="checkbox" name="gender_type" @click="() => addValue(filter.field, { value }, filter.multiple)" />
-                  <span class="checkmark"></span> {{ translate ? $t(lLabel) : lLabel }}
+                  <input type="checkbox" name="gender_type" @click="() => addValue(filter.field, { value }, filter.multiple)" :disabled="disabled" />
+                  <span class="checkmark"></span>
+                  <span :class="disabled ? 'text-secondary' : 'text-dark'">
+                    {{ translate ? $t(lLabel) : lLabel }}
+                  </span>
+                  <!-- <component :is="disabled ? 'del' : 'span'">
+                    {{ translate ? $t(lLabel) : lLabel }}
+                  </component> -->
                 </label>
               </div>
             </template>

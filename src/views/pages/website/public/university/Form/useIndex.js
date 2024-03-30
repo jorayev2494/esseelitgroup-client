@@ -199,6 +199,7 @@ export default function useIndex({ props }) {
         departments: departments.value.filter(dep => dep.faculty_uuid === faculty.uuid).map(d => ({
           uuid: d.uuid,
           name: d.name,
+          $isDisabled: d.is_filled,
           category: 'category',
         }))
       })
@@ -277,10 +278,11 @@ export default function useIndex({ props }) {
         }
       }
     }).then(response => {
-      departments.value = response.data.map(({ uuid, name, faculty_uuid }) => ({
+      departments.value = response.data.map(({ uuid, name, faculty_uuid, is_filled }) => ({
         uuid,
-        name,
+        name: name += is_filled,
         faculty_uuid,
+        is_filled,
       }));
     })
   }
