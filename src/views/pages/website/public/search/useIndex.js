@@ -114,10 +114,11 @@ export default function useIndex()
 
   const loadDepartments = (params = {}) => {
     return store.dispatch('department/loadDepartmentListAsync', { params }).then(response => {
-      departments.value = response.data.map(({ uuid, name }) => ({
+      departments.value = response.data.map(({ uuid, name, is_filled }) => ({
         uuid,
         label: name,
         value: uuid,
+        disabled: is_filled,
       }))
     })
   }
