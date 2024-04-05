@@ -12,7 +12,7 @@ export default function useIndex({ props }) {
     store.dispatch('faculty/loadFacultyListAsync', {
       params: {
         filters: {
-          university_uuid: universityUuid,
+          university_uuids: [universityUuid],
         }
       }
     }).then(response => {

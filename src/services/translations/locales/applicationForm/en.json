@@ -12,6 +12,7 @@
 
     "country": "Country",
     "citizenship": "Citizenship",
+    "alias": "Alias",
     "university": "University",
     "faculties_and_departments": "Faculties & Departments",
 

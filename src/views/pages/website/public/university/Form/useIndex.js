@@ -3,10 +3,12 @@ import httpClient from "@/services/http";
 import { reactive, ref, onMounted, computed } from "vue"
 import { useI18n } from "vue-i18n";
 import { toast } from 'vue3-toastify';
+import { useStore } from "vuex";
 
 export default function useIndex({ props }) {
 
-  const { t } = useI18n()
+  const store = useStore();
+  const { t } = useI18n();
 
   const { university } = props;
 
@@ -164,6 +166,7 @@ export default function useIndex({ props }) {
     home_address: '',
 
     country_uuid: '',
+    alias_uuid: '',
     university_uuid: '',
     faculty_uuid: '',
     department_uuid: '',
@@ -179,6 +182,7 @@ export default function useIndex({ props }) {
     is_agreed_to_share_data: false,
   })
 
+  const aliases = ref([]);
   const universities = ref([]);
   const faculties = ref([]);
   const departments = ref([]);
@@ -225,22 +229,45 @@ export default function useIndex({ props }) {
     additionalDocuments.splice(0);
   }
 
-  const loadUniversities = () => {
-    const { uuid } = university.company;
+  const loadUniversities = (params = {}) => {
+    // const { uuid } = university.company;
     faculties.value = [];
     departments.value = [];
 
-    httpClient.get(`/public/universities/universities/list`, {
-      params: {
-        filters: {
-          company_uuid: uuid,
-        }
-      }
-    }).then(response => {
+    httpClient.get(`/public/universities/universities/list`, { params }).then(response => {
       universities.value = response.data.map(({ uuid, name }) => ({
         uuid,
         name,
       }));
+    })
+  }
+
+  const loadAliases = (params = {}) => {
+    // const { uuid } = university.company;
+    faculties.value = [];
+    departments.value = [];
+
+    store.dispatch(`alias/loadAliasListAsync`, { params }).then(response => {
+      aliases.value = response.data.map(({ uuid, value }) => ({
+        uuid,
+        name: value,
+      }));
+    })
+  }
+
+  const aliasWasChanged = event => {
+    universities.value = [];
+    faculties.value = [];
+    departments.value = [];
+
+    const { name, value } = event.target;
+
+    loadUniversities({
+      filters: {
+        alias_uuids: [
+          value,
+        ]
+      }
     })
   }
 
@@ -265,7 +292,7 @@ export default function useIndex({ props }) {
     }).then(response => {
       faculties.value = response.data.map(({uuid, name}) => ({
         uuid,
-        name,
+        name: name?.value,
       }));
     })
   }
@@ -278,9 +305,9 @@ export default function useIndex({ props }) {
         }
       }
     }).then(response => {
-      departments.value = response.data.map(({ uuid, name, faculty_uuid, is_filled }) => ({
+      departments.value = response.data.map(({ uuid, name, faculty_uuid, language, is_filled }) => ({
         uuid,
-        name: name += is_filled,
+        name: name !== null ? name.value + ' Lang: ' + language?.value : name,
         faculty_uuid,
         is_filled,
       }));
@@ -288,11 +315,11 @@ export default function useIndex({ props }) {
   }
 
   const loadCountries = () => {
-    const { uuid } = university.company;
+    // const { uuid } = university.company;
     httpClient.get(`/public/universities/countries/list`, {
       params: {
         filters: {
-          company_uuid: uuid,
+          // company_uuid: uuid,
         }
       }
     }).then(response => {
@@ -374,6 +401,7 @@ export default function useIndex({ props }) {
   const canAddNewAdditionalColumn = computed(() => additionalDocuments.length >= maxCountAdditionalDocuments)
  
   onMounted(() => {
+    loadAliases()
     loadUniversities()
     loadCountries()
   })
@@ -381,12 +409,14 @@ export default function useIndex({ props }) {
   return {
     form,
     uploadFilesBlock,
+    aliases,
     universities,
     faculties,
     departments,
     countries,
     basicData,
     uploadFiles,
+    aliasWasChanged,
     universityWasChanged,
     additionalDocuments,
     addAdditionalDocument,

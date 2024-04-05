@@ -1,7 +1,6 @@
 import { usePaginate } from "@/views/pages/utils/usePaginate";
 import useSearch from "@/views/pages/utils/useSearch";
-import { onMounted, ref, watch } from "vue"
-import { useI18n } from "vue-i18n";
+import { onMounted, ref } from "vue"
 import { useStore } from "vuex";
 
 export default function useIndex()
@@ -15,9 +14,10 @@ export default function useIndex()
 
   const countries = ref([]);
   const cities = ref([]);
-  const faculties = ref([]);
-  const departments = ref([]);
+  const facultyNames = ref([]);
+  const departmentNames = ref([]);
   const degrees = ref([]);
+  const languages = ref([]);
 
   const filterForm = ref({});
 
@@ -43,6 +43,13 @@ export default function useIndex()
       items: countries,
     },
     {
+      label: 'search.filter.labels.languages',
+      field: 'language_uuids',
+      type: 'checkbox',
+      multiple: true,
+      items: languages,
+    },
+    {
       label: 'search.filter.labels.degrees',
       field: 'degree_uuids',
       type: 'checkbox',
@@ -54,14 +61,14 @@ export default function useIndex()
       field: 'faculty_uuids',
       type: 'checkbox',
       multiple: true,
-      items: faculties,
+      items: facultyNames,
     },
     {
       label: 'search.filter.labels.departments',
       field: 'department_uuids',
       type: 'checkbox',
       multiple: true,
-      items: departments,
+      items: departmentNames,
     },
   ]);
 
@@ -102,23 +109,32 @@ export default function useIndex()
     })
   }
 
-  const loadFaculties = (params = {}) => {
-    return store.dispatch('faculty/loadFacultyListAsync', { params }).then(response => {
-      faculties.value = response.data.map(({ uuid, name }) => ({
+  const loadFacultyNames = (params = {}) => {
+    return store.dispatch('facultyName/loadFacultyNameListAsync', { params }).then(response => {
+      facultyNames.value = response.data.map(({ uuid, value }) => ({
         uuid,
-        label: name,
+        label: value,
         value: uuid,
       }))
     })
   }
 
-  const loadDepartments = (params = {}) => {
-    return store.dispatch('department/loadDepartmentListAsync', { params }).then(response => {
-      departments.value = response.data.map(({ uuid, name, is_filled }) => ({
+  const loadDepartmentNames = (params = {}) => {
+    return store.dispatch('departmentName/loadDepartmentNameListAsync', { params }).then(response => {
+      departmentNames.value = response.data.map(({ uuid, value }) => ({
         uuid,
-        label: name,
+        label: value,
         value: uuid,
-        disabled: is_filled,
+      }))
+    })
+  }
+
+  const loadLanguages = (params = {}) => {
+    return store.dispatch('language/loadLanguageListAsync', { params }).then(response => {
+      languages.value = response.data.map(({ uuid, value }) => ({
+        uuid,
+        label: value,
+        value: uuid,
       }))
     })
   }
@@ -159,9 +175,10 @@ export default function useIndex()
     Promise.all([
       loadCountries(),
       loadCities(),
-      loadFaculties(),
-      loadDepartments(),
-      loadDegrees()
+      loadFacultyNames(),
+      loadDepartmentNames(),
+      loadDegrees(),
+      loadLanguages(),
     ]).then(() => {
       makeCountryAndCitySelect();
     })

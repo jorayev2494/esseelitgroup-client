@@ -11,7 +11,8 @@
             "countries_and_cities": "Страны и города",
             "degrees": "Степени",
             "faculties": "Факультеты",
-            "departments": "Отделы"
+            "departments": "Отделы",
+            "languages": "Языки"
         },
         "titles": {
             "only_in_country_list": "Только в списке стран"

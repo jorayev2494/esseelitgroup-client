@@ -160,7 +160,7 @@
                       </div>
 
                       <h3 class="title">
-                        <a href="javascript:void(0);">{{ faculty.name }}</a>
+                        <a href="javascript:void(0);">{{ faculty.name?.value }}</a>
                       </h3>
 
                       <p v-html="faculty.description?.slice(0, 45)"></p>
