@@ -52,10 +52,10 @@
                           <span class="d-inline-block average-rating">{{ item.ratings }}</span>
                         </div> -->
 
-                        <div class="mentor-details">
+                        <div class="mentor-details" v-if="item.country">
                           <p class="user-location">
                             <i class="fas fa-map-marker-alt"></i>
-                            {{ item.country.value }}, {{ item.city.value }}
+                            {{ item.country?.value }}, {{ item.city?.value }}
                           </p>
                         </div>
 
@@ -82,9 +82,9 @@
                             <i class="far fa-comment"></i>
                             15
                           </li>
-                          <li>
+                          <li v-if="item.country">
                             <i class="fas fa-map-marker-alt"></i>
-                            {{ item.country.value }}, {{ item.city.value }}
+                            {{ item.country?.value }}, {{ item.city?.value }}
                           </li>
                           <!-- <li>
                             <i class="far fa-money-bill-alt"></i>

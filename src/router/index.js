@@ -23,7 +23,7 @@ router.beforeEach(function(to, from, next) {
 
   setTimeout(() => {
     store.commit('setIsLoadingPage', false);
-  }, 2000)
+  }, 1000)
 });
 
 export {

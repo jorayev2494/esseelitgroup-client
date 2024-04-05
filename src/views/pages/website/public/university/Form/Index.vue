@@ -68,6 +68,29 @@
                 </div>
               </div>
 
+              <div class="col-12 col-md-12">
+                <div class="form-group">
+                  <label for="email">{{ $t('application_form.alias') }}</label>
+                  <!-- <span class="text-danger"> ({{ $t('system.required') }})</span> -->
+                  <select
+                    name="university_uuid"
+                    v-model="form.alias_uuid"
+                    class="form-control form-select"
+                    aria-label="Default select example"
+                    required
+                    @change="aliasWasChanged"
+                  >
+                    <option value="" disabled selected>{{ $t('application_form.alias') }}</option>
+                    <option
+                      v-for="(alias, aIdx) of aliases" :key="aIdx"
+                      :value="alias.uuid" 
+                    >
+                      {{ alias.name }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
               <div class="col-12 col-md-6">
                 <div class="form-group">
                   <label for="email">{{ $t('application_form.university') }}</label>
@@ -228,12 +251,14 @@
   const { 
     form,
     uploadFilesBlock,
+    aliases,
     universities,
     faculties,
     departments,
     countries,
     basicData,
     uploadFiles,
+    aliasWasChanged,
     universityWasChanged,
     additionalDocuments,
     addAdditionalDocument,

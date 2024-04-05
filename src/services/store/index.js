@@ -3,10 +3,14 @@ import { createStore } from 'vuex'
 
 import university from './modules/university';
 import faculty from './modules/faculty';
+import facultyName from './modules/facultyName';
 import department from './modules/department';
+import departmentName from './modules/departmentName';
 import country from './modules/country';
 import city from './modules/city';
 import degree from './modules/degree';
+import language from './modules/language';
+import alias from './modules/alias';
 
 export default createStore({
   state: {
@@ -47,9 +51,13 @@ export default createStore({
   modules: {
     university,
     faculty,
+    facultyName,
     department,
+    departmentName,
     country,
     city,
     degree,
+    language,
+    alias,
   }
 });

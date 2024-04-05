@@ -11,7 +11,8 @@
             "countries_and_cities": "Countries & Cities",
             "degrees": "Degrees",
             "faculties": "Faculties",
-            "departments": "Departments"
+            "departments": "Departments",
+            "languages": "Languages"
         },
         "titles": {
             "only_in_country_list": "Only in country list"

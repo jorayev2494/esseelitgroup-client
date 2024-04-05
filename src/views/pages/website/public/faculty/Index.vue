@@ -13,7 +13,7 @@
                   <img class="avatar-img rounded" alt="User Image" :src="faculty.logo.url">
                 </div>
                 <!-- <span class="sub">Variety of Courses</span> -->
-                <h2>{{ faculty.name }}</h2>
+                <h2>{{ faculty.name?.value }}</h2>
                 <div id="ck-content" class="ck-content">
                   <p v-html="$ckeditor.replaceStyles(faculty.description)"></p>
                 </div>
