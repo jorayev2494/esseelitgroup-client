@@ -111,42 +111,42 @@ export default function useIndex({ props }) {
   const uploadFiles = [
     {
       name: 'passport',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'passport_translation',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'school_attestat',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'school_attestat_translation',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'transcript',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'transcript_translation',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'equivalence_document',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
     {
       name: 'biometric_photo',
-      accept: '.pdf',
+      accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
   ]
@@ -259,6 +259,7 @@ export default function useIndex({ props }) {
     universities.value = [];
     faculties.value = [];
     departments.value = [];
+    selectedDepartments.value = [];
 
     const { name, value } = event.target;
 
@@ -273,6 +274,7 @@ export default function useIndex({ props }) {
 
   const universityWasChanged = event => {
     const { name, value } = event.target;
+    selectedDepartments.value = [];
 
     Promise.all([
       loadFaculties(value),
@@ -305,12 +307,16 @@ export default function useIndex({ props }) {
         }
       }
     }).then(response => {
-      departments.value = response.data.map(({ uuid, name, faculty_uuid, language, is_filled }) => ({
-        uuid,
-        name: name !== null ? name.value + ' Lang: ' + language?.value : name,
-        faculty_uuid,
-        is_filled,
-      }));
+      departments.value = response.data.map(({ uuid, name, faculty_uuid, language, is_filled }) => {
+        const lang = language ? ' (' + language?.value + ')' : '';
+
+        return {
+          uuid,
+          name: name !== null ? name.value + lang : null,
+          faculty_uuid,
+          is_filled,
+        }
+      });
     })
   }
 

@@ -3,7 +3,7 @@
   <div class="search-box mb-5">
     <form action="#">
       <div class="form-group search-info location-search location-search-four">
-        <div class="col-5 col-md-5">
+        <div class="col-10 col-md-10">
           <!-- <pre>{{ form }}</pre> -->
           <div class="form-group">
           <input type="text" class="form-control text-truncate key" v-model="form.search" placeholder=" Keyword / Course Name" />
@@ -11,18 +11,14 @@
           </div>
         </div>
 
-        <div class="col-4 col-md-4">
-          <!-- <div class="form-group"> -->
-          <!-- <div class="form-select"> -->
-            <select id="search-county-select" class="form-control">
+        <!-- <div class="col-4 col-md-4">
+          <select id="search-county-select" class="form-control">
               <option selected>Open this select menu</option>
               <option value="1">One</option>
               <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          <!-- </div> -->
-          <!-- </div> -->
-        </div>
+            <option value="3">Three</option>
+          </select>
+        </div> -->
 
         <div class="col-2 col-md-2">
 
