@@ -3,8 +3,8 @@
     <layout-header-four />
     <HomeBannerFour />
     <CategoriesFour />
-    <PopularCourseFour />
-    <KnowledgeFour />
+    <!-- <PopularCourseFour /> -->
+    <!-- <KnowledgeFour />4 -->
     <TrendingCourseFour />
     <TestimonialFour />
     <FeaturedInstructorFour />
