@@ -13,6 +13,7 @@
           <!-- <pre>{{ additionalDocuments }}</pre> -->
           <!-- <pre>{{ countries }}</pre> -->
 
+
           <form action="/" method="POST" enctype="multipart/form-data" @submit.prevent="sendForm">
 
             <div class="row form-row">
@@ -39,20 +40,37 @@
                 </div>
               </div>
 
-              <div v-for="(input, dIdx) in basicData" :key="dIdx" :class="input.class">
+              <!-- <pre>{{ studentData }}</pre> -->
+              <!-- <pre>{{ formStudent }}</pre> -->
+              <!-- <pre>{{ formStudent }}</pre> -->
+
+              <div v-for="(input, dIdx) in studentData" :key="dIdx" :class="input.class">
                 <div class="form-group">
-                  <label :for="input.name">{{ $t(`application_form.${input.name}`) }}</label><span class="text-danger" v-if="input.required"> ({{ $t('system.required') }})</span>
-                  <input :type="input.type" :id="input.name" class="form-control" v-bind="input.bind" :name="input.name" v-model="form[input.name]" :placeholder="$t(`application_form.${input.name}`)" :required="input.required" autocomplete="off" />
+                  <template v-if="input.type === 'select'">
+                    <label :for="input.name">{{ $t(`application_form.${input.name}`) }}</label><span class="text-danger" v-if="input.required"> ({{ $t('system.required') }})</span>
+                    <!-- <input :type="input.type" :id="input.name" class="form-control" v-bind="input.bind" :name="input.name" v-model="formStudent[input.name]" :placeholder="$t(`application_form.${input.name}`)" :required="input.required" autocomplete="off" /></div> -->
+                    <select class="form-select"  :id="input.name" :name="input.name" v-model="formStudent[input.name]" aria-label="Default select example" v-bind="input.bind" :required="input.required">
+                      <option value="" disabled selected>{{ $t(`application_form.${input.name}`) }}</option>
+                      <option
+                        v-for="(item, idx) of countries" :key="idx"
+                        :value="item.uuid"
+                      >{{ item.label }}</option>
+                    </select>
+                  </template>
+                  <template v-else>
+                    <label :for="input.name">{{ $t(`application_form.${input.name}`) }}</label><span class="text-danger" v-if="input.required"> ({{ $t('system.required') }})</span>
+                    <input :type="input.type" :id="input.name" class="form-control" v-bind="input.bind" :name="input.name" v-model="formStudent[input.name]" :placeholder="$t(`application_form.${input.name}`)" :required="input.required" autocomplete="off" />
+                  </template>
                 </div>
               </div>
 
-              <div class="col-12 col-md-12">
+              <!-- <div class="col-12 col-md-12">
                 <div class="form-group">
                   <label for="email">{{ $t('application_form.country') }}</label>
                   <span class="text-danger"> ({{ $t('system.required') }})</span>
                   <select
                     name="university_uuid"
-                    v-model="form.country_uuid"
+                    v-model="formStudent.country_uuid"
                     class="form-control form-select"
                     aria-label="Default select example"
                     required
@@ -62,19 +80,18 @@
                       v-for="(country, cIdx) of countries" :key="cIdx"
                       :value="country.uuid" 
                     >
-                      {{ country.value }}
+                      {{ country.label }}
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="col-12 col-md-12">
+              <!-- <div class="col-12 col-md-12">
                 <div class="form-group">
                   <label for="email">{{ $t('application_form.alias') }}</label>
-                  <!-- <span class="text-danger"> ({{ $t('system.required') }})</span> -->
                   <select
                     name="university_uuid"
-                    v-model="form.alias_uuid"
+                    v-model="formStudent.alias_uuid"
                     class="form-control form-select"
                     aria-label="Default select example"
                     required
@@ -89,15 +106,15 @@
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="col-12 col-md-6">
+              <!-- <div class="col-12 col-md-6">
                 <div class="form-group">
                   <label for="email">{{ $t('application_form.university') }}</label>
                   <span class="text-danger"> ({{ $t('system.required') }})</span>
                   <select
                     name="university_uuid"
-                    v-model="form.university_uuid"
+                    v-model="formStudent.university_uuid"
                     class="form-control form-select"
                     aria-label="Default select example"
                     required
@@ -112,9 +129,9 @@
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="col-12 col-md-6">
+              <!-- <div class="col-12 col-md-6">
                 <div class="form-group">
                   <label for="email">{{ $t('application_form.faculties_and_departments') }}</label><span class="text-danger"> ({{ $t('system.required') }})</span>
 
@@ -140,7 +157,7 @@
                   >
                   </VueMultiselect>
                 </div>
-              </div>
+              </div> -->
 
               <div class="col-12 col-md-6" v-for="({ name, accept }, idx) in uploadFiles" :key="uploadFilesBlock + idx">
                 <div class="form-group" :key="uploadFilesBlock">
@@ -149,6 +166,12 @@
                   <!-- <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small> -->
                 </div>
               </div>
+
+              <hr>
+
+              <ApplicationForm :form="formApplication" />
+
+              <hr>
 
               <template v-for="(aDocument, aIdx) in additionalDocuments" :key="uploadFilesBlock + aIdx">
                 <div class="col-12 col-md-6">
@@ -210,12 +233,14 @@
 
               <div class="col-12 col-md-12">
                 <div class="form-check">
-                  <input class="form-check-input" name="is_agreed_to_share_data" id="is_agreed_to_share_data" v-model="form.is_agreed_to_share_data" type="checkbox" required>
+                  <input class="form-check-input" name="is_agreed_to_share_data" id="is_agreed_to_share_data" v-model="formApplication.is_agreed_to_share_data" type="checkbox" required>
                   <label class="form-check-label" for="is_agreed_to_share_data">
                     {{ $t('application_form.agreement_text') }} <span class="text-danger"> ({{ $t('system.required') }})</span>
                   </label>
                 </div>
               </div>
+
+              <!-- <pre>{{ selectedDepartments }}</pre> -->
 
               <center>
                 <div class="submit-section mt-4">
@@ -236,6 +261,7 @@
 
 <script setup>
   import { defineProps } from 'vue';
+  import ApplicationForm from './Application/Index.vue'
   import useIndex from './useIndex.js'
   import { ref } from 'vue';
   import VueMultiselect from 'vue-multiselect'
@@ -249,14 +275,13 @@
   });
 
   const { 
-    form,
+    formStudent,
+    formApplication,
     uploadFilesBlock,
     aliases,
     universities,
-    faculties,
-    departments,
     countries,
-    basicData,
+    studentData,
     uploadFiles,
     aliasWasChanged,
     universityWasChanged,
@@ -267,7 +292,6 @@
     sendForm,
     setUploadedFile,
     canAddNewAdditionalColumn,
-    selectedDepartments,
     departmentOptions,
     submitBtn,
   } = useIndex({ props });
