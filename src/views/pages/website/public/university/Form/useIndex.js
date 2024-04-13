@@ -12,9 +12,19 @@ export default function useIndex({ props }) {
 
   const { university } = props;
 
-  const basicData = [
+  const studentData = [
     {
-      name: 'full_name',
+      name: 'first_name',
+      type: 'text',
+      required: true,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
+      name: 'last_name',
       type: 'text',
       required: true,
       class: 'col-12 col-md-6',
@@ -32,36 +42,6 @@ export default function useIndex({ props }) {
         title: 'title value',
         // format: 'yy-mm-dd',
         pattern: "\d{4}-\d{2}-\d{2}",
-      },
-    },
-    {
-      name: 'father_name',
-      type: 'text',
-      required: false,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
-
-      },
-    },
-    {
-      name: 'mother_name',
-      type: 'text',
-      required: false,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
-
-      },
-    },
-    {
-      name: 'passport_number',
-      type: 'text',
-      required: true,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
-
       },
     },
     {
@@ -95,6 +75,121 @@ export default function useIndex({ props }) {
       },
     },
     {
+      name: 'passport_number',
+      type: 'text',
+      required: true,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
+      name: 'passport_date_of_issue',
+      type: 'date',
+      required: true,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    
+    {
+      name: 'passport_date_of_expiry',
+      type: 'date',
+      required: true,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+
+    {
+      name: 'nationality_uuid',
+      type: 'select',
+      // options: [
+      //   countries
+      // ],
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+
+    {
+      name: 'father_name',
+      type: 'text',
+      required: false,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+
+    {
+      name: 'country_of_residence_uuid',
+      type: 'select',
+      // options: [
+      //   countries
+      // ],
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+
+    {
+      name: 'mother_name',
+      type: 'text',
+      required: false,
+      class: 'col-12 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+
+    {
+      name: 'high_school_country_uuid',
+      type: 'select',
+      // options: [
+      //   countries
+      // ],
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
+      name: 'high_school_name',
+      type: 'text',
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
+      name: 'high_school_grade_average',
+      type: 'text',
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
       name: 'home_address',
       type: 'text',
       required: true,
@@ -108,7 +203,7 @@ export default function useIndex({ props }) {
 
   const uploadFilesBlock = ref(1)
 
-  const uploadFiles = [
+  const uploadFiles = ref([
     {
       name: 'passport',
       accept: '.pdf, .jpg, .jpeg',
@@ -149,27 +244,30 @@ export default function useIndex({ props }) {
       accept: '.pdf, .jpg, .jpeg',
       required: true,
     },
-  ]
+  ])
 
   const maxCountAdditionalDocuments = 5;
   const additionalDocuments = reactive([]);
 
-  const form = reactive({
-    full_name: '',
+  const formStudent = reactive({
+    first_name: '',
+    last_name: '',
     birthday: '',
-    father_name: '',
-    mother_name: '',
-    passport_number: '',
     email: '',
     phone: '',
     friend_phone: '',
+    passport_number: '',
+    passport_date_of_issue: '',
+    passport_date_of_expiry: '',
+    father_name: '',
+    mother_name: '',
     home_address: '',
 
-    country_uuid: '',
-    alias_uuid: '',
-    university_uuid: '',
-    faculty_uuid: '',
-    department_uuid: '',
+    nationality_uuid: '',
+    country_of_residence_uuid: '',
+    high_school_name: '',
+    high_school_country_uuid: '',
+    high_school_grade_average: '',
 
     passport: null,
     passport_translation: null,
@@ -179,6 +277,16 @@ export default function useIndex({ props }) {
     transcript_translation: null,
     equivalence_document: null,
     biometric_photo: null,
+  })
+
+  const formApplication = reactive({
+    student_uuid: '',
+    alias_uuid: '',
+    language_uuid: '',
+    degree_uuid: '',
+    country_uuid: '',
+    university_uuid: '',
+    department_uuids: [],
     is_agreed_to_share_data: false,
   })
 
@@ -190,7 +298,7 @@ export default function useIndex({ props }) {
 
   const submitBtn = ref(null);
 
-  const selectedDepartments = ref([]);
+  // const selectedDepartments = ref(null);
   const departmentOptions = ref([]);
 
   const makeDepartmentOptions = () => {
@@ -216,8 +324,8 @@ export default function useIndex({ props }) {
     const { name, files } = event.target;
     const [file] = files;
 
-    if (uploadFiles.map(i => i.name).includes(name) && Object.keys(form).includes(name)) {
-      form[name] = file;
+    if (uploadFiles.value.map(i => i.name).includes(name) && Object.keys(formStudent).includes(name)) {
+      formStudent[name] = file;
     }
   }
 
@@ -259,7 +367,8 @@ export default function useIndex({ props }) {
     universities.value = [];
     faculties.value = [];
     departments.value = [];
-    selectedDepartments.value = [];
+    formApplication.value.department_uuids = [];
+    // selectedDepartments.value.length = 0;
 
     const { name, value } = event.target;
 
@@ -274,7 +383,7 @@ export default function useIndex({ props }) {
 
   const universityWasChanged = event => {
     const { name, value } = event.target;
-    selectedDepartments.value = [];
+    formApplication.value.department_uuids = [];
 
     Promise.all([
       loadFaculties(value),
@@ -329,16 +438,42 @@ export default function useIndex({ props }) {
         }
       }
     }).then(response => {
-      countries.value = response.data.map(({ uuid, value }) => ({ uuid, value}));
+      countries.value = response.data.map(({ uuid, value }) => ({ uuid, label: value }));
     })
   }
 
-  const getData = () => {
+  const getStudentData = () => {
     const formData = new FormData();
 
-    for (const key in form) {
-      if (Object.hasOwnProperty.call(form, key)) {
-        const value = form[key];
+    for (const key in formStudent) {
+      if (Object.hasOwnProperty.call(formStudent, key)) {
+        const value = formStudent[key];
+        formData.append(key, value);
+      }
+    }
+
+    formData.append(`additional_documents[]`, []);
+    additionalDocuments.forEach(({ document, description }, idx) => {
+      formData.append(`additional_documents[${idx}][document]`, document);
+      formData.append(`additional_documents[${idx}][description]`, description);
+    });
+
+    return formData;
+  }
+
+  const getApplicationData = () => {
+    const formData = new FormData();
+
+    // formApplication.student_uuid = uuid;
+    // formData.append('student_uuid', uuid);
+
+    for (const key in formApplication) {
+      if (Object.hasOwnProperty.call(formApplication, key)) {
+        const value = formApplication[key];
+
+        if (key === 'department_uuids') {
+          continue;
+        }
 
         if (key === 'is_agreed_to_share_data') {
           const boolValue = (value ? 1 : 0).toString();
@@ -349,38 +484,60 @@ export default function useIndex({ props }) {
       }
     }
 
-    selectedDepartments.value.forEach(({ uuid }, idx) => {
+    formApplication.department_uuids.forEach(({ uuid }, idx) => {
       formData.append(`department_uuids[${idx}]`, uuid);
-    });
-
-    additionalDocuments.forEach(({ document, description }, idx) => {
-      formData.append(`additional_documents[${idx}][document]`, document);
-      formData.append(`additional_documents[${idx}][description]`, description);
     });
 
     return formData;
   }
 
-  const formClear = () => {
-    for (const key in form) {
-      if (Object.hasOwnProperty.call(form, key)) {
-        form[key] = '';
+  const studentFormClear = () => {
+    for (const key in formStudent) {
+      if (Object.hasOwnProperty.call(formStudent, key)) {
+        formStudent[key] = '';
+      }
+    }
+  }
+
+  const applicationFormClear = () => {
+    for (const key in formApplication) {
+      if (Object.hasOwnProperty.call(formApplication, key)) {
+        formApplication[key] = '';
       }
     }
 
-    selectedDepartments.value = [];
+    formApplication.value.department_uuids = [];
   }
 
+  // const formClear = () => {
+  //   studentFormClear()
+  //   applicationFormClear()
+  // }
+
   const sendForm = () => {
-    httpClient.post('/public/universities/applications', getData()).then(response => {
-      console.log('Response: ', response);
-      formClear();
+    sendStudentForm().then(({ data }) => {
+      formApplication.student_uuid = data.uuid;
+      sendApplicationForm()
+    })
+  }
+
+  const sendStudentForm = () => {
+    return httpClient.post('/public/students/students', getStudentData()).then(response => response)
+  }
+
+  const sendApplicationForm = () => {
+    return httpClient.post('/public/universities/applications', getApplicationData()).then(response => {
+      studentFormClear();
       clearUploadedFiles();
       clearAdditionalDocuments();
+      applicationFormClear();
+      
       toast.success(t('system.form_success_sent_message'), { position: "top-center" });
       setTimeout(() => {
         submitBtn.value.click();
       }, 100)
+
+      return response;
     })
   }
 
@@ -413,14 +570,15 @@ export default function useIndex({ props }) {
   })
 
   return {
-    form,
+    formStudent,
+    formApplication,
     uploadFilesBlock,
     aliases,
     universities,
     faculties,
     departments,
     countries,
-    basicData,
+    studentData,
     uploadFiles,
     aliasWasChanged,
     universityWasChanged,
@@ -431,7 +589,6 @@ export default function useIndex({ props }) {
     sendForm,
     canAddNewAdditionalColumn,
     setUploadedFile,
-    selectedDepartments,
     departmentOptions,
     submitBtn,
   }

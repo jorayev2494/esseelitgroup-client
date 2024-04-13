@@ -1,11 +1,21 @@
 {
-    "full_name": "Doly ady",
+    "first_name": "Ady",
+    "last_name": "Familiýa",
     "birthday": "Doglan gün",
     "father_name": "Kakasynyň ady",
     "mother_name": "Ejesiniň ady",
     "passport_number": "Zagran pasport nomeri",
+    "passport_date_of_issue": "Pasportyň berlen senesi",
+    "passport_date_of_expiry": "Pasportyň möhleti",
     "phone": "Telefon",
     "friend_phone": "Dostyn telefony",
+
+    "nationality_uuid": "Milleti",
+    "country_of_residence_uuid": "Residenceaşaýan ýeri",
+
+    "high_school_name": "Orta mekdebiň ady",
+    "high_school_country_uuid": "Orta mekdep ýurdy",
+    "high_school_grade_average": "Orta mekdep ortaça bahasy",
 
     "email": "E-poçta",
     "home_address": "Öý addresi",
@@ -13,6 +23,8 @@
     "country": "Yurt",
     "citizenship": "Raýatlyk",
     "alias": "Alias",
+    "language": "Dil",
+    "degree": "Dereje",
     "university": "Uniwersitet",
     "faculties_and_departments": "Fakultetler we bölümler",
 
