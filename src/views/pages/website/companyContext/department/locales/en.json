@@ -1,0 +1,18 @@
+{
+  "context_title": "Search Departments",
+  "translations": "Translates",
+  "form": {
+    "company": "Company",
+    "information": "Information",
+    "alias": "Alias",
+    "university": "University",
+    "faculty": "Faculty",
+    "activity": "Activity",
+    "name": "Name",
+    "description": "Description",
+    "degree": "Degree",
+    "language": "Language",
+    "is_filled": "Is filled",
+    "location": "Location"
+  }
+}

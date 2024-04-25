@@ -1,6 +1,9 @@
 <template>
   <li class="has-submenu">
-    <a href="#">{{ $t(`navigation.supported_locales.${locale}`) }}</a>
+    <a href="#">
+      <i :class="`fi fi-${getLocaleFlag(locale)} me-1`" width="300"></i>
+      {{ $t(`navigation.supported_locales.${locale}`) }}
+    </a>
     <ul class="submenu">
 
       <li
@@ -8,7 +11,10 @@
         :key="`locale-${sLocale}`"
         @click="switchLanguage(sLocale)"
       >
-        <a href="#">{{ $t(`navigation.supported_locales.${sLocale}`) }}</a>
+        <a href="#">
+          <i :class="`fi fi-${getLocaleFlag(sLocale)} me-1`" width="300"></i>
+          {{ $t(`navigation.supported_locales.${sLocale}`) }}
+        </a>
       </li>
 
     </ul>
@@ -21,7 +27,7 @@
   import { useRouter } from 'vue-router';
 
   const router = useRouter();
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
 
   const supportedLocales = Tr.supportedLocales;
 
@@ -31,9 +37,20 @@
     try {
       await router.replace({ params: { locale: newLocale } })
     } catch (error) {
-      console.log(e)
       router.push('/');
     }
+
+    window.location.reload();
+  }
+
+  const getLocaleFlag = flag => {
+    const flags = {
+      en: 'us',
+      ru: 'ru',
+      tm: 'tm',
+    }
+
+    return flags[flag] ?? flag
   }
 
 </script>
