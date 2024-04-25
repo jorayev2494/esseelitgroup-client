@@ -65,20 +65,20 @@
               </li> -->
             </ul>
           </div>
-          <!-- <ul class="nav header-navbar-rht">
+          <ul class="nav header-navbar-rht ms-4">
             <li class="nav-item">
-              <router-link class="nav-link header-login-two" to="pages/login">
+              <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
                 Start Login
                 <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/>
               </router-link>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <router-link class="nav-link header-login" to="pages/register">
                 Register Now
                 <i class="fas fa-user ms-2"></i>
               </router-link>
-            </li>
-          </ul> -->
+            </li> -->
+          </ul>
         </div>
       </nav>
     </div>

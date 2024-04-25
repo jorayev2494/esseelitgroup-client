@@ -1,3 +1,4 @@
+import company from './company'
 
 /** For  Website**/
 import Index from '../views/pages/website/index/Index'
@@ -73,6 +74,8 @@ const routes = [
     name: 'faculty',
     component: Faculty,
   },
+
+  ...company,
 
   {
     path: 'index',

@@ -1,6 +1,32 @@
 {
     "loading_page_text": "Loading ...",
+    "gender": {
+        "label": "Gender",
+        "items": {
+            "male": "Male",
+            "female": "Female"
+        }
+    },
+    "marital_status": {
+        "label": "Marital Status",
+        "items": {
+            "single": "Single",
+            "married": "Married"
+        }
+    },
     "apply_now": "Apply now",
     "required": "Required",
-    "send": "Send"
+    "translations": "Translates",
+    "actions": "Actions",
+    "create": "Create",
+    "edit": "Edit",
+    "show": "Show",
+    "delete": "Delete",
+    "send": "Send",
+    "save": "Save",
+    "save_changes": "Save changes",
+    "created_at": "Created at",
+    "clear": "Clear",
+    "yes": "Yes",
+    "no": "No"
 }

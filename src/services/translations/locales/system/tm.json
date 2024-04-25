@@ -1,6 +1,32 @@
 {
     "loading_page_text": "Yükleryäris ...",
+    "gender": {
+        "label": "Jyns",
+        "items": {
+            "male": "Erkek",
+            "female": "Aýal"
+        }
+    },
+    "marital_status": {
+        "label": "Maşgala ýagdaýy",
+        "items": {
+            "single": "Leeke",
+            "married": "Öýlenen"
+        }
+    },
     "apply_now": "Häzir ýüz tutuň",
     "required": "Zerur",
-    "send": "Iber"
+    "translations": "Terjimeleri",
+    "actions": "Hereketler",
+    "create": "Döret",
+    "edit": "Redaktirle",
+    "show": "Görkez",
+    "delete": "Öçür",
+    "send": "Iber",
+    "save": "Saklaň",
+    "save_changes": "Üýtgetmeleri ýatda sakla",
+    "created_at": "Döredildi",
+    "clear": "Arassala",
+    "yes": "Hawa",
+    "no": "Yok"
 }

@@ -19,11 +19,41 @@ const router = createRouter({
 router.beforeEach(function(to, from, next) {
   store.commit('setIsLoadingPage', true);
 
-  setTimeout(next, 1000);
+  // setTimeout(
+    next();
+  // , 1000);
 
-  setTimeout(() => {
+  // setTimeout(() => {
     store.commit('setIsLoadingPage', false);
-  }, 1000)
+  // }, 1000)
+});
+
+router.beforeEach(function(to, from, next) {
+  // Middleware
+  if (to.meta.hasOwnProperty('middleware')) {
+    const accessToken = localStorage.getItem('access_token');
+
+    // For Guest
+    if (to.meta.middleware.includes('guest')) {
+      if (accessToken) {
+        next(Tr.i18nRoute({ name: 'company-dashboard' }));
+      }
+    }
+
+    // For Authorization
+    if (to.meta.middleware.includes('auth')) {
+      if (accessToken) {
+        next();
+      } else {
+        next(Tr.i18nRoute({ name: 'home' }));
+      }
+    }
+
+    next();
+  } else {
+    // Non-protected route, allow access
+    next();
+  }
 });
 
 export {

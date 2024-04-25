@@ -1873,7 +1873,7 @@ button.bg-danger:hover {
 	background: #fff;
 	border-bottom: 1px solid #f0f0f0;
 	left: 0;
-	position: fixed;
+	/* position: fixed; */
 	right: 0;
 	top: 0;
 	z-index: 1001;

@@ -11,6 +11,7 @@ import city from './modules/city';
 import degree from './modules/degree';
 import language from './modules/language';
 import alias from './modules/alias';
+import companyContext from './modules/companyContext/index';
 
 export default createStore({
   state: {
@@ -59,5 +60,6 @@ export default createStore({
     degree,
     language,
     alias,
+    companyContext,
   }
 });
