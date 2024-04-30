@@ -6,6 +6,7 @@ import application from '@/views/pages/website/companyContext/application/store/
 import language  from '@/views/pages/website/companyContext/language/store/index.js'
 import employee  from '@/views/pages/website/companyContext/employee/store/index.js'
 import department  from '@/views/pages/website/companyContext/department/store/index.js'
+import announcement  from '@/views/pages/website/companyContext/announcement/store/index.js'
 
 export default {
   namespaced: true,
@@ -18,5 +19,6 @@ export default {
     language,
     employee,
     department,
+    announcement,
   },
 }

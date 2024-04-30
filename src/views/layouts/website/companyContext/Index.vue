@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div>
     <Header />
     <Breadcrumb></Breadcrumb>
     <!-- Page Content -->
