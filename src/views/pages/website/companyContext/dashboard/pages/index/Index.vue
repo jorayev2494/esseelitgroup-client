@@ -1,5 +1,8 @@
 <template>
   <div class="row">
+    <Announcement />
+  </div>
+  <div class="row">
     <div class="col-md-12 col-lg-4 dash-board-list blue">
       <div class="dash-widget">
         <div class="circle-bar">
@@ -114,13 +117,17 @@
 </template>
 
 <script>
+import Announcement from '../../../announcement/components/list/Index.vue'
 import mentees from "@/assets/json/website/mentees.json";
+
 export default {
   data() {
     return {
       mentees: mentees,
     };
   },
-  methods: {},
+  components: {
+    Announcement,
+  },
 };
 </script>

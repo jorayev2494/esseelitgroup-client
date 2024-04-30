@@ -5,6 +5,7 @@ import application from '@/views/pages/website/companyContext/application/locale
 import profile from '@/views/pages/website/companyContext/profile/locales/en.json'
 import employee from '@/views/pages/website/companyContext/employee/locales/en.json'
 import department from '@/views/pages/website/companyContext/department/locales/en.json'
+import announcement from '@/views/pages/website/companyContext/announcement/locales/en.json'
 
 export default {
   layout: {
@@ -16,4 +17,5 @@ export default {
   profile,
   employee,
   department,
+  announcement,
 }

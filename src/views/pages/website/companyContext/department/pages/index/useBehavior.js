@@ -36,7 +36,6 @@ export default () => {
   }
 
   const loadItems = (filters) => {
-    console.log('loadItems: ', filters)
     loading.value = true;
 
     store.dispatch('companyContext/department/loadDepartmentsAsync', { params: { ...paginator.toQueryParams(), ...toQueryParams(), filters } })

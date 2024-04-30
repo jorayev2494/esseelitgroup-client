@@ -80,7 +80,7 @@ export default () => {
     loadFaculties()
     loadDepartments()
 
-    setTimeout(makeDepartmentOptions, 1000);
+    setTimeout(makeDepartmentOptions, 2200);
   })
 
   return {
