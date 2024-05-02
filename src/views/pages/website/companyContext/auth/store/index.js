@@ -1,3 +1,5 @@
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
+
 const keyName = 'auth_data'
 
 const getAuthData = () => {
@@ -28,9 +30,14 @@ const mutations = {
     state.accessToken = accessToken
   },
   setAuthData: (state, payload) => {
+    const { defaultImage } = useUrlPattern()
+
+    payload.avatar = payload.avatar ?? {}
+    payload.avatar.url = payload?.avatar?.url ?? defaultImage('avatar')
+
     state.authData = payload;
     localStorage.setItem(state.keyName, JSON.stringify(payload));
-  }
+  },
 }
 
 const actions = {
