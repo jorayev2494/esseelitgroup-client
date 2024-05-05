@@ -64,47 +64,47 @@ export default function useIndex({ props }) {
 
       },
     },
-    {
-      name: 'friend_phone',
-      type: 'text',
-      required: true,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
+    // {
+    //   name: 'friend_phone',
+    //   type: 'text',
+    //   required: true,
+    //   class: 'col-12 col-md-6',
+    //   bind: {
+    //     title: 'title value',
 
-      },
-    },
+    //   },
+    // },
     {
       name: 'passport_number',
       type: 'text',
-      required: true,
+      required: false,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
 
       },
     },
-    {
-      name: 'passport_date_of_issue',
-      type: 'date',
-      required: true,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
+    // {
+    //   name: 'passport_date_of_issue',
+    //   type: 'date',
+    //   required: true,
+    //   class: 'col-12 col-md-6',
+    //   bind: {
+    //     title: 'title value',
 
-      },
-    },
+    //   },
+    // },
     
-    {
-      name: 'passport_date_of_expiry',
-      type: 'date',
-      required: true,
-      class: 'col-12 col-md-6',
-      bind: {
-        title: 'title value',
+    // {
+    //   name: 'passport_date_of_expiry',
+    //   type: 'date',
+    //   required: true,
+    //   class: 'col-12 col-md-6',
+    //   bind: {
+    //     title: 'title value',
 
-      },
-    },
+    //   },
+    // },
 
     {
       name: 'nationality_uuid',
@@ -169,26 +169,26 @@ export default function useIndex({ props }) {
 
       },
     },
-    {
-      name: 'high_school_name',
-      type: 'text',
-      required: true,
-      class: 'col-6 col-md-6',
-      bind: {
-        title: 'title value',
+    // {
+    //   name: 'high_school_name',
+    //   type: 'text',
+    //   required: true,
+    //   class: 'col-6 col-md-6',
+    //   bind: {
+    //     title: 'title value',
 
-      },
-    },
-    {
-      name: 'high_school_grade_average',
-      type: 'text',
-      required: true,
-      class: 'col-6 col-md-6',
-      bind: {
-        title: 'title value',
+    //   },
+    // },
+    // {
+    //   name: 'high_school_grade_average',
+    //   type: 'text',
+    //   required: true,
+    //   class: 'col-6 col-md-6',
+    //   bind: {
+    //     title: 'title value',
 
-      },
-    },
+    //   },
+    // },
     {
       name: 'home_address',
       type: 'text',
@@ -367,7 +367,7 @@ export default function useIndex({ props }) {
     universities.value = [];
     faculties.value = [];
     departments.value = [];
-    formApplication.value.department_uuids = [];
+    formApplication.department_uuids = [];
     // selectedDepartments.value.length = 0;
 
     const { name, value } = event.target;
@@ -383,7 +383,7 @@ export default function useIndex({ props }) {
 
   const universityWasChanged = event => {
     const { name, value } = event.target;
-    formApplication.value.department_uuids = [];
+    formApplication.department_uuids = [];
 
     Promise.all([
       loadFaculties(value),
@@ -506,7 +506,7 @@ export default function useIndex({ props }) {
       }
     }
 
-    formApplication.value.department_uuids = [];
+    formApplication.department_uuids = [];
   }
 
   // const formClear = () => {
