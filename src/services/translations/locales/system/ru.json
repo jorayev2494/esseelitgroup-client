@@ -28,5 +28,7 @@
     "created_at": "Создан в",
     "clear": "Очистить",
     "yes": "Да",
-    "no": "Нет"
+    "no": "Нет",
+    "load_more": "Загрузи больше",
+    "is_filled": "Is filled"
 }

@@ -28,5 +28,7 @@
     "created_at": "Created at",
     "clear": "Clear",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "load_more": "Load more",
+    "is_filled": "Is filled"
 }

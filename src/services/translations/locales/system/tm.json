@@ -28,5 +28,7 @@
     "created_at": "Döredildi",
     "clear": "Arassala",
     "yes": "Hawa",
-    "no": "Yok"
+    "no": "Yok",
+    "load_more": "Yene ýükle",
+    "is_filled": "Is filled"
 }

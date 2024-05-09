@@ -533,11 +533,11 @@ export default {
     });
 
     const menteeMenu = computed(() => {
-      return Util.menteeMenu(useRoute().name);
+    return Util.menteeMenu(useRoute().name);
     });
 
     const pagesMenu = computed(() => {
-      return Util.pagesMenu(useRoute().name);
+    return Util.pagesMenu(useRoute().name);
     });
 
     const blogMenu = computed(() => {

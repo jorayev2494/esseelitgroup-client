@@ -1,4 +1,4 @@
-import { ref } from "vue"
+import { computed, ref } from "vue"
 
 export function usePaginator() {
   const page = ref(1);
@@ -23,7 +23,8 @@ export function usePaginator() {
     total.value = dTotal;
   }
 
-  const isLastPage = () => lastPage.value === 1
+  const isLastPage = computed(() => lastPage.value === page.value)
+  const isNotLastPage = computed(() => lastPage.value !== page.value)
 
   const serverPaginate = data => {
     if (['page', 'pagesize'].includes(data.change_type)) {
@@ -42,9 +43,11 @@ export function usePaginator() {
     total,
     perPageOptions,
 
+    isLastPage,
+    isNotLastPage,
+
     setMetaData,
     serverPaginate,
     toQueryParams,
-    isLastPage,
   };
 }

@@ -50,8 +50,11 @@ import Appointments from '../views/pages/website/mentor/Appointments'
 
 // Project pages
 import Home from '../views/pages/website/public/home/Index.vue'
-import UniversityForm from '../views/pages/website/public/university/Index.vue'
+// import UniversityForm from '../views/pages/website/public/university/Index.vue'
 import Faculty from '../views/pages/website/public/faculty/Index.vue'
+import university from '../views/pages/website/public/university/routes.js'
+import department from '../views/pages/website/public/department/routes.js'
+import departmentName from '../views/pages/website/public/departmentName/routes.js'
 
 const routes = [
   {
@@ -59,16 +62,19 @@ const routes = [
     name: 'home',
     component: Home
   },
-  {
-    path: 'universities',
-    name: 'universities',
-    component: () => import('../views/pages/website/public/search/Index.vue'),
-  },
-  {
-    path: 'universities/:uuid',
-    name: 'university-show',
-    component: UniversityForm,
-  },
+  // {
+  //   path: 'universities',
+  //   name: 'universities',
+  //   component: () => import('../views/pages/website/public/search/Index.vue'),
+  // },
+  // {
+  //   path: 'universities/:uuid',
+  //   name: 'university-show',
+  //   component: UniversityForm,
+  // },
+  ...university,
+  ...department,
+  ...departmentName,
   {
     path: 'faculty/:uuid',
     name: 'faculty',

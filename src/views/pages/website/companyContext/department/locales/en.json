@@ -11,6 +11,8 @@
     "name": "Name",
     "description": "Description",
     "degree": "Degree",
+    "price": "Price",
+    "currency": "Currency",
     "language": "Language",
     "is_filled": "Is filled",
     "location": "Location"

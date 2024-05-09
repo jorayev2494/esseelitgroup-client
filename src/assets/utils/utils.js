@@ -58,6 +58,33 @@ const pagesMenu = (value) =>  {
     return !!pathName.some(item => item == value);
 }
 
+const universitiesMenu = (value) =>  {
+    const pathName = [
+        // 'map-grid', 
+        // 'map-list', 
+        // 'mentor-search-results',
+        // 'mentee-mentor-profile',
+        // 'mentee-bookings',
+        // 'mentee-checkout',
+        // 'booking-success',
+        // 'mentee-dashboard',
+        // 'mentee-favourites',
+        // 'mentee-chat',
+        // 'mentee-profile-settings',
+        // 'change-password',
+        'universities'
+    ]
+    return !!pathName.some(item => item == value);
+}
+
+const departmentsMenu = (value) =>  {
+    const pathName = [
+        'departments',
+    ]
+
+    return !!pathName.some(item => item == value);
+}
+
 const blogMenu = (value) =>  {
     const pathName = [
         'mentor-blog-details',
@@ -66,4 +93,4 @@ const blogMenu = (value) =>  {
     ]
     return !!pathName.some(item => item == value);
 }
-export default { homeMenu,mentorMenu, menteeMenu, pagesMenu, blogMenu }
+export default { homeMenu,mentorMenu, universitiesMenu, departmentsMenu, menteeMenu, pagesMenu, blogMenu }

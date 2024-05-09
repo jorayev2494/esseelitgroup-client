@@ -1,4 +1,4 @@
-import httpClient from "@/services/http";
+import httpClient from "@/services/http"
 
 const state = {
 
@@ -22,6 +22,15 @@ const actions = {
         .catch(error => reject(error));
     })
   },
+  async loadDepartmentsAsync(_, { params }) {
+    return await new Promise((resolve, reject) => {
+      return httpClient.get('/public/universities/departments', { params })
+        .then(response => {
+          return resolve(response);
+        })
+        .catch(error => reject(error));
+    })
+  },
 }
 
 export default {
@@ -31,4 +40,3 @@ export default {
   mutations,
   actions,
 }
-
