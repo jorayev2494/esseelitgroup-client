@@ -136,7 +136,7 @@
 <script setup>
 
   import useIndex from './useIndex';
-  import LayoutHeaderFour from "../../../../layouts/website/HeaderFour.vue";
+  import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
   import Breadcrumb from './partials/Breadcrumb.vue';
   import Sidebar from './partials/Sidebar/Index.vue';
   import Search from './partials/Search.vue';

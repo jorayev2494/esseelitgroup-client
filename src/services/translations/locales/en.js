@@ -4,6 +4,7 @@ import pages from './pages/en.json'
 import applicationForm from './applicationForm/en.json'
 import search from '@/views/pages/website/public/search/locales/en.json'
 import companyContext from './companyContext/en.js'
+import department from '../../../views/pages/website/public/department/locales/en.json'
 
 export default {
   system,
@@ -12,4 +13,5 @@ export default {
   application_form: applicationForm,
   search,
   companyContext,
+  department,
 }

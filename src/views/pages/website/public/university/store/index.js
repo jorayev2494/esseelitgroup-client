@@ -13,12 +13,18 @@ const mutations = {
 }
 
 const actions = {
+  async loadUniversitiesAsync(_, { params }) {
+    return await new Promise((resolve, reject) => {
+      return httpClient.get('/public/universities/universities', { params })
+        .then(response => resolve(response))
+        .catch(error => reject(error));
+    })
+  },
+
   async loadUniversityListAsync(_, { params }) {
     return await new Promise((resolve, reject) => {
       return httpClient.get('/public/universities/universities/list', { params })
-        .then(response => {
-          return resolve(response);
-        })
+        .then(resolve)
         .catch(error => reject(error));
     })
   },
@@ -47,4 +53,3 @@ export default {
   mutations,
   actions,
 }
-

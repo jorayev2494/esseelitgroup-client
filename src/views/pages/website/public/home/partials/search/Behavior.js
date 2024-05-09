@@ -14,7 +14,7 @@ export default function useBehavior()
   const search = () => {
     console.log('object');
 
-    router.push({ name: 'universities', query: { ...toQueryParams() } })
+    router.push({ name: 'university-search', query: { ...toQueryParams() } })
   }
 
   return {

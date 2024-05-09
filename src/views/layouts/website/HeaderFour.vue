@@ -36,15 +36,15 @@
                   {{ $t('navigation.mentor') }}
                 </a>
               </li>
-              <li v-bind:class="{ active: menteeMenu }">
-                <a href="">
-                  {{ $t('navigation.mentee') }}
-                </a>
+              <li v-bind:class="{ active: universitiesMenu }">
+                <router-link :to="$tMakeRoute({ name: 'universities' })">
+                  {{ $t('navigation.universities') }}
+                </router-link>
               </li>
-              <li v-bind:class="{ active: pagesMenu }">
-                <a href="">
-                  {{ $t('navigation.pages') }}
-                </a>
+              <li v-bind:class="{ active: departmentsMenu }">
+                <router-link :to="$tMakeRoute({ name: 'department-names' })">
+                  {{ $t('navigation.departments') }}
+                </router-link>
               </li>
 
               <li v-bind:class="{ active: blogMenu }">
@@ -113,12 +113,12 @@
         return Util.mentorMenu(useRoute().name);
       });
 
-      const menteeMenu = computed(() => {
-        return Util.menteeMenu(useRoute().name);
+      const universitiesMenu = computed(() => {
+        return Util.universitiesMenu(useRoute().name);
       });
 
-      const pagesMenu = computed(() => {
-        return Util.pagesMenu(useRoute().name);
+      const departmentsMenu = computed(() => {
+        return Util.departmentsMenu(useRoute().name);
       });
 
       const blogMenu = computed(() => {
@@ -174,12 +174,13 @@
         //   }
         // });
       });
+
       return {
         currentPath,
         homeMenu,
         mentorMenu,
-        menteeMenu,
-        pagesMenu,
+        universitiesMenu,
+        departmentsMenu,
         blogMenu,
       };
     },

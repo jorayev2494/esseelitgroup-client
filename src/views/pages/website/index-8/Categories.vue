@@ -41,7 +41,7 @@
       </div>
 
       <div class="explore-more text-center aos" data-aos="fade-up">
-        <router-link :to="$tMakeRoute({ name: 'universities' })" class="btn bg-explore">Show All Universities</router-link>
+        <router-link :to="$tMakeRoute({ name: 'university-search' })" class="btn bg-explore">Show All Universities</router-link>
       </div>
 
     </div>

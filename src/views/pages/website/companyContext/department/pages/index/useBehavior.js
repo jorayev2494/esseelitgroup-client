@@ -20,6 +20,7 @@ export default () => {
     { field: 'name', title: t('companyContext.department.form.name') },
     { field: 'information', title: t('companyContext.department.form.information') },
     { field: 'location', title: t('companyContext.department.form.location') },
+    { field: 'price', title: t('companyContext.department.form.price') },
     // { field: 'created_at', title: t('system.created_at'), type: 'date' },
     // { field: 'actions', title: t('system.actions'), sort: false, headerClass: 'float-end', cellClass: 'float-end' },
   ];

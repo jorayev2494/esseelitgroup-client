@@ -23,12 +23,12 @@
 </template>
 
 <script setup>
-  import LayoutHeaderFour from "../../../../layouts/website/HeaderFour.vue";
-  import HomeBanner from './HomeBanner/Index.vue';
-  import Form from './Form/Index.vue';
-  import useUniversityForm from './useUniversityForm';
-  import Info from './Info/Index.vue';
-  import Faculty from './Faculty/Index.vue'
+  import useUniversityForm from '../../pages/show/useUniversityForm';
+  import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
+  import HomeBanner from '../../HomeBanner/Index.vue';
+  import Form from '../../Form/Index.vue';
+  import Info from '../../Info/Index.vue';
+  import Faculty from '../../Faculty/Index.vue'
 
   const { university } = useUniversityForm();
 </script>

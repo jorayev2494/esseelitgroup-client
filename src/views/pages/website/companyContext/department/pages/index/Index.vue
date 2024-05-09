@@ -75,7 +75,7 @@
         <div class="flex-row">
           <ul class="p-0 float-start">
 
-            <li class="align-start">
+            <li class="align-start" v-if="data.value.degree">
               <div class="mx-1 mb-1 row">
                 <span class="text-black p-0">
                   <strong>{{ $t('companyContext.department.form.degree') }}: </strong>
@@ -112,6 +112,15 @@
             {{ data.value.university.country.value }}
           </span>
         </span>
+      </template>
+
+      <template #price="data">
+        <div class="d-flex flex-row">
+          <p class="mt-2">
+            {{ data.value.price }}
+            {{ data.value.price_currency?.code }}
+          </p>
+        </div>
       </template>
 
     </vue3-datatable>
