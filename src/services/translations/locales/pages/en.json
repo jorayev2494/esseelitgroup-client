@@ -1,9 +1,24 @@
 {
     "index": {
         "header": {
-            "slider-title": "Find the Perfect Mentors Near Your Location",
-            "slider-label": "Own your future learning new skills online",
+            "slider-title": "The Fastest Way to Find Your Dream University: Education Consulting in Turkey",
+            "slider-label": "",
             "search_btn": "Search universities"
+        },
+        "top_universities": {
+            "top_universities": "Top universities",
+            "top_university_categories": "Popular Universities Categories",
+            "top_university_text": "If you want to study at universities in Turkey ranked in the world and Turkmenistan, the best ones are here."
+        },
+        "footer": {
+            "contact_us": {
+                "title": "Contact Us",
+                "text": "Get in touch with us to learn more about our solutions for your educational needs."
+            },
+            "documents": {
+                "title": "Required Documents",
+                "text": "Visa Application, University Application, Student Residence Permit, Equivalency Certificate"
+            }
         }
     }
 }
