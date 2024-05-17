@@ -1,9 +1,24 @@
 {
     "index": {
         "header": {
-            "slider-title": "Locationeriňiziň golaýynda ajaýyp ussatlary tapyň",
-            "slider-label": "Geljekde onlaýn endikleri öwreniň",
+            "slider-title": "Türkiýe ýyokary okuw jaýlarynda okamak üçin iň amatly hyzmaty hödürleýän kompaniýa",
+            "slider-label": "",
             "search_btn": "Uniwersitetleri gözläň"
+        },
+        "top_universities": {
+            "top_universities": "Iň ýokary uniwersitetler",
+            "top_university_categories": "Meşhur uniwersitet kategoriýalary",
+            "top_university_text": "Dünýäde we Türkmenistanyň sanawynda bolan Türk uniwersitetlerinde okamak isleseňiz, iň gowularyny şu ýerden tapyp bilersiňiz."
+        },
+        "footer": {
+            "contact_us": {
+                "title": "Biz bilen habarlaşyň",
+                "text": "Wiza ýüz tutmak, Uniwersitet  ýüz tutmak, Talyplaryň ýaşamagy üçin rugsatnamasy, Deňlik şahadatnamasy"
+            },
+            "documents": {
+                "title": "Gerekli Resminamalar",
+                "text": "Wiza ýüz tutmak, Uniwersitet  ýüz tutmak, Talyplaryň ýaşamagy üçin rugsatnamasy, Deňlik şahadatnamasy"
+            }
         }
     }
 }

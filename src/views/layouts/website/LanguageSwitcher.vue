@@ -48,6 +48,7 @@
       en: 'us',
       ru: 'ru',
       tm: 'tm',
+      tr: 'tr',
     }
 
     return flags[flag] ?? flag

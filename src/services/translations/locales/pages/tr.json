@@ -1,0 +1,24 @@
+{
+    "index": {
+        "header": {
+            "slider-title": "Hayalinizdeki Üniversiteyi Bulmanın En Hızlı Yolu: Türkiye'de Eğitim Danışmanlığı",
+            "slider-label": "",
+            "search_btn": "Search universities"
+        },
+        "top_universities": {
+            "top_universities": "En İyi Universitetler",
+            "top_university_categories": "Popüler Üniversiteler Kategorileri",
+            "top_university_text": "Dünya ve Türkmenistan sıralamasında yer alan Türkiye üniversitelerinde eğitim almak istiyorsanız, en iyileri burada bulabilirsiniz."
+        },
+        "footer": {
+            "contact_us": {
+                "title": "Bize ulaşın",
+                "text": "Vize Başvurusu, Üniversite Başvurusu, Öğrenci Oturma İzni, Denklik Belgesi"
+            },
+            "documents": {
+                "title": "Gereken Belgeler",
+                "text": "Vize Başvurusu, Üniversite Başvurusu, Öğrenci Oturma İzni, Denklik Belgesi"
+            }
+        }
+    }
+}

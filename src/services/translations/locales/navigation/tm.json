@@ -2,7 +2,8 @@
     "supported_locales": {
         "en": "English",
         "ru": "Русский",
-        "tm": "Türkmençe"
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
     },
     "home": "Baş sahypa",
     "mentor": "Mugallym",

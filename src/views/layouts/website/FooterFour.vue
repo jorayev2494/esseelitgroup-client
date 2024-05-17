@@ -5,49 +5,54 @@
     <div class="footer-top footer-two-top footer-four-index aos">
       <div class="container">
         <div class="row" data-aos="fade-up">
-          <div class="col-lg-4 col-md-6">
-            <!-- Footer Widget -->
+
+          <div class="col-lg-5 col-md-6">
             <div class="footer-widget footer-about">
-              <h2 class="footer-title">Contact US</h2>
+
+              <h2 class="footer-title">{{ $t('pages.index.footer.contact_us.title') }}</h2>
               <div class="footer-about-content">
-                <p class="footer-sub-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  consequat mauris Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Ut consequat
-                </p>
+                <p class="footer-sub-text">{{ $t('pages.index.footer.contact_us.text') }}</p>
               </div>
+
               <div class="footer-three-contact">
                 <ul>
                   <li>
-                    <i class="fe fe-map-pin"></i>121 King St, Melbourne den
-                    3000, Australia
+                    <i class="fa fa-map-pin"></i>
+                    121 King St, Melbourne den 3000, Australia
                   </li>
-                  <li><i class="fe fe-phone"></i>+1 55265 164561</li>
-                  <li><i class="fe fe-mail"></i>mentoring@example.com</li>
+                  <li>
+                    <i class="fa fa-phone"></i>
+                    +1 55265 164561
+                  </li>
+                  <li>
+                    <i class="fa fa-envelope"></i>
+                    mentoring@example.com
+                  </li>
                 </ul>
+
                 <ul class="icon-socials d-flex">
-                  <li>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fab fa-behance"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fab fa-twitter"></i></a>
+                  <li v-for="({ link, icon }, idx) of socials" :key="idx">
+                    <a :href="link">
+                      <i :class="icon"></i>
+                    </a>
                   </li>
                 </ul>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-6">
+            <div class="footer-widget footer-menu">
+              <h2 class="footer-title">{{ $t('pages.index.footer.documents.title') }}</h2>
+              <div class="footer-about-content">
+                <p class="footer-sub-text">{{ $t('pages.index.footer.documents.text') }}</p>
               </div>
             </div>
-            <!-- /Footer Widget -->
           </div>
-          <div class="col-lg-2 col-md-6">
-            <!-- Footer Widget -->
+
+          <!-- <div class="col-lg-5 col-md-6">
             <div class="footer-widget footer-menu">
               <h2 class="footer-title">For Mentors</h2>
               <ul>
@@ -58,8 +63,8 @@
                 <li><router-link to="/mentor/index">Mentor Dashboard</router-link></li>
               </ul>
             </div>
-            <!-- /Footer Widget -->
-          </div>
+          </div> -->
+
           <div class="col-lg-2 col-md-6">
             <!-- Footer Widget -->
             <div class="footer-widget footer-menu">
@@ -82,8 +87,8 @@
             </div>
             <!-- /Footer Widget -->
           </div>
-          <div class="col-lg-4 col-md-6">
-            <!-- Footer News letter -->
+
+          <!-- <div class="col-lg-4 col-md-6">
             <div class="subscriber-two">
               <h2 class="footer-title">Subscribe to get Updates</h2>
               <p>
@@ -104,8 +109,8 @@
                 <div class="bottom-border-two"></div>
               </form>
             </div>
-            <!-- /Footer News letter -->
-          </div>
+          </div> -->
+
         </div>
       </div>
     </div>
@@ -157,3 +162,28 @@
   </footer>
   <!-- /Footer -->
 </template>
+
+<script setup>
+  const socials = [
+    {
+      icon: 'fab fa-facebook-f',
+      link: '#',
+    },
+    {
+      icon: 'fab fa-linkedin',
+      link: '#',
+    },
+    // {
+    //   icon: 'fab fa-behance',
+    //   link: '#',
+    // },
+    {
+      icon: 'fab fa-instagram',
+      link: '#',
+    },
+    // {
+    //   icon: 'fab fa-twitter',
+    //   link: '#',
+    // },
+  ];
+</script>

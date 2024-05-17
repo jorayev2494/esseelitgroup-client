@@ -1,0 +1,35 @@
+{
+    "loading_page_text": "Yükleniyor ...",
+    "gender": {
+        "label": "Cinsiyet",
+        "items": {
+            "male": "Erkek",
+            "female": "Bayan"
+        }
+    },
+    "marital_status": {
+        "label": "Medeni durum",
+        "items": {
+            "single": "Tek",
+            "married": "Evli"
+        }
+    },
+    "apply_now": "Şimdi başvur",
+    "required": "Zorunlu",
+    "translations": "Çeviriler",
+    "actions": "Aksiyonu",
+    "create": "Oluştur",
+    "edit": "Düzenle",
+    "show": "Göster",
+    "delete": "Sil",
+    "send": "Gönder",
+    "save": "Kaydet",
+    "save_changes": "Değişiklikleri kaydet",
+    "created_at": "Oluşturulma zamanı",
+    "clear": "Temizlemek",
+    "yes": "Evet",
+    "no": "Yok",
+    "load_more": "Daha fazla yükle",
+    "is_filled": "Dolu",
+    "all_universities": "Tüm Üniversiteler"
+}

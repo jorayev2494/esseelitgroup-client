@@ -2,7 +2,7 @@
   <div class="main-wrapper main-wrapper-four">
     <layout-header-four />
     <HomeBannerFour />
-    <CategoriesFour />
+    <TopUniversity />
     <!-- <PopularCourseFour /> -->
     <!-- <KnowledgeFour />4 -->
     <TrendingCourseFour />
@@ -19,7 +19,7 @@
   import LayoutHeaderFour from "../../../../layouts/website/HeaderFour.vue";
   import HomeBannerFour from "../HomeBanner";
   // import CategoriesFour from "../Categories";
-  import CategoriesFour from "../../index-8/Categories.vue";
+  import TopUniversity from "./partials/topUniversity/Index.vue";
   import PopularCourseFour from "../PopularCourse";
   import KnowledgeFour from "../Knowledge";
   import TrendingCourseFour from "../TrendingCourse";
