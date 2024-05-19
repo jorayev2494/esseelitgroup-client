@@ -7,7 +7,7 @@
       </div>
 
       <div class="section-header h-four text-center aos" data-aos="fade-up">
-        <span>{{ $t('pages.index.top_universities.top_universities') }}</span>
+        <!-- <span>{{ $t('pages.index.top_universities.top_universities') }}</span> -->
         <h2>{{ $t('pages.index.top_universities.top_university_categories') }}</h2>
         <p class="sub-title">{{ $t('pages.index.top_universities.top_university_text') }}</p>
       </div>

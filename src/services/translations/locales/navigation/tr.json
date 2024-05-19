@@ -6,10 +6,8 @@
         "tr": "Türkçe"
     },
     "home": "Home",
-    "mentor": "Mentor",
-    "mentee": "Mentee",
-    "pages": "Pages",
-    "blog": "Blog",
-    "universities": "Universities",
-    "departments": "Departments"
+    "about_us": "Hakkımızda",
+    "lists": "Listeler",
+    "universities": "Üniversiteler",
+    "departments": "Bölümler"
 }

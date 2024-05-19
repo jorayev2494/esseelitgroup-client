@@ -40,10 +40,6 @@
                 </div>
               </div>
 
-              <!-- <pre>{{ studentData }}</pre> -->
-              <!-- <pre>{{ formStudent }}</pre> -->
-              <!-- <pre>{{ formStudent }}</pre> -->
-
               <div v-for="(input, dIdx) in studentData" :key="dIdx" :class="input.class">
                 <div class="form-group">
                   <template v-if="input.type === 'select'">
@@ -51,10 +47,12 @@
                     <!-- <input :type="input.type" :id="input.name" class="form-control" v-bind="input.bind" :name="input.name" v-model="formStudent[input.name]" :placeholder="$t(`application_form.${input.name}`)" :required="input.required" autocomplete="off" /></div> -->
                     <select class="form-select"  :id="input.name" :name="input.name" v-model="formStudent[input.name]" aria-label="Default select example" v-bind="input.bind" :required="input.required">
                       <option value="" disabled selected>{{ $t(`application_form.${input.name}`) }}</option>
-                      <option
-                        v-for="(item, idx) of countries" :key="idx"
-                        :value="item.uuid"
-                      >{{ item.label }}</option>
+                      <template v-if="input.options.value.length">
+                        <option
+                          v-for="(item, idx) of input.options.value" :key="idx"
+                          :value="item.uuid"
+                        >{{ item.label }}</option>
+                      </template>
                     </select>
                   </template>
                   <template v-else>

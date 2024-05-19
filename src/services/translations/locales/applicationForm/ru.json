@@ -12,6 +12,7 @@
 
     "nationality_uuid": "Национальность",
     "country_of_residence_uuid": "Страна проживания",
+    "company_uuid": "Компания",
 
     "high_school_name": "Название средней школы",
     "high_school_country_uuid": "Страна средней школы",

@@ -53,7 +53,7 @@
     </section>
     <!-- /Featured Instructor -->
 
-    <layout-footer></layout-footer>
+    <layout-footer-four></layout-footer-four>
   </div>
 </template>
 
@@ -61,6 +61,7 @@
   import useBehavior from "./useBehavior.js";
   import University from "./University.vue"
   import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
+  import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
 
   const {
     items,

@@ -6,10 +6,8 @@
         "tr": "Türkçe"
     },
     "home": "Главный",
-    "mentor": "Наставник",
-    "mentee": "Подопечный",
-    "pages": "Страницы",
-    "blog": "Блог",
+    "about_us": "O нас",
+    "lists": "Списки",
     "universities": "Университеты",
-    "departments": "Отделы"
+    "departments": "Департаменты"
 }

@@ -26,30 +26,28 @@
               </a>
             </div>
             <ul class="main-nav">
-              <li class="megamenu" v-bind:class="{ active: homeMenu }">
-                <router-link to="/">
-                  {{ $t('navigation.home') }}
+
+              <li class="megamenu" v-bind:class="{ active: aboutUsMenu }">
+                <router-link :to="$tMakeRoute({ name: 'about-us' })">
+                  {{ $t('navigation.about_us') }}
                 </router-link>
               </li>
-              <li v-bind:class="{ active: mentorMenu }">
-                <a href="">
-                  {{ $t('navigation.mentor') }}
-                </a>
-              </li>
+
               <li v-bind:class="{ active: universitiesMenu }">
                 <router-link :to="$tMakeRoute({ name: 'universities' })">
                   {{ $t('navigation.universities') }}
                 </router-link>
               </li>
+
               <li v-bind:class="{ active: departmentsMenu }">
                 <router-link :to="$tMakeRoute({ name: 'department-names' })">
                   {{ $t('navigation.departments') }}
                 </router-link>
               </li>
 
-              <li v-bind:class="{ active: blogMenu }">
+              <li v-bind:class="{ active: listsMenu }">
                 <a href="">
-                  {{ $t('navigation.blog') }}
+                  {{ $t('navigation.lists') }}
                 </a>
               </li>
 
@@ -105,8 +103,8 @@
         return useRoute().name;
       });
 
-      const homeMenu = computed(() => {
-        return Util.homeMenu(useRoute().name);
+      const aboutUsMenu = computed(() => {
+        return Util.aboutUsMenu(useRoute().name);
       });
 
       const mentorMenu = computed(() => {
@@ -121,8 +119,8 @@
         return Util.departmentsMenu(useRoute().name);
       });
 
-      const blogMenu = computed(() => {
-        return Util.blogMenu(useRoute().name);
+      const listsMenu = computed(() => {
+        return Util.listsMenu(useRoute().name);
       });
 
       onMounted(() => {
@@ -177,11 +175,11 @@
 
       return {
         currentPath,
-        homeMenu,
+        aboutUsMenu,
         mentorMenu,
         universitiesMenu,
         departmentsMenu,
-        blogMenu,
+        listsMenu,
       };
     },
     components: {

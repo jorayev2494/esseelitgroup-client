@@ -125,16 +125,16 @@
           <div class="row align-items-center">
             <div class="col-lg-4">
               <div class="copyright-text">
-                <p class="mb-0">© 2023 Mentoring. All rights reserved.</p>
+                <p class="mb-0">© {{ currentYear }} {{ $store.getters['getAppName'] }}. All rights reserved.</p>
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="footer-logo text-center">
+              <!-- <div class="footer-logo text-center">
                 <img src="@/assets/img/logo-5.png" class="img-fluid" alt="Logo" />
-              </div>
+              </div> -->
             </div>
             <div class="col-lg-5">
-              <div class="term-privacy">
+              <!-- <div class="term-privacy">
                 <div class="terms">
                   <ul class="align-items-center">
                     <li>
@@ -151,7 +151,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -164,6 +164,9 @@
 </template>
 
 <script setup>
+
+  const currentYear = new Date().getFullYear();
+
   const socials = [
     {
       icon: 'fab fa-facebook-f',

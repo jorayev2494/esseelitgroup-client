@@ -55,6 +55,7 @@ import Faculty from '../views/pages/website/public/faculty/Index.vue'
 import university from '../views/pages/website/public/university/routes.js'
 import department from '../views/pages/website/public/department/routes.js'
 import departmentName from '../views/pages/website/public/departmentName/routes.js'
+import aboutUs from '../views/pages/website/public/aboutUs/routes.js'
 
 const routes = [
   {
@@ -75,6 +76,7 @@ const routes = [
   ...university,
   ...department,
   ...departmentName,
+  ...aboutUs,
   {
     path: 'faculty/:uuid',
     name: 'faculty',
