@@ -11,6 +11,8 @@ export default function useIndex({ props }) {
   const { t } = useI18n();
 
   const { university } = props;
+  const countries = ref([]);
+  const companies = ref([]);
 
   const studentData = [
     {
@@ -109,6 +111,7 @@ export default function useIndex({ props }) {
     {
       name: 'nationality_uuid',
       type: 'select',
+      options: countries,
       // options: [
       //   countries
       // ],
@@ -134,6 +137,7 @@ export default function useIndex({ props }) {
     {
       name: 'country_of_residence_uuid',
       type: 'select',
+      options: countries,
       // options: [
       //   countries
       // ],
@@ -159,6 +163,21 @@ export default function useIndex({ props }) {
     {
       name: 'high_school_country_uuid',
       type: 'select',
+      options: countries,
+      // options: [
+      //   countries
+      // ],
+      required: true,
+      class: 'col-6 col-md-6',
+      bind: {
+        title: 'title value',
+
+      },
+    },
+    {
+      name: 'company_uuid',
+      type: 'select',
+      options: companies,
       // options: [
       //   countries
       // ],
@@ -268,6 +287,7 @@ export default function useIndex({ props }) {
     high_school_name: '',
     high_school_country_uuid: '',
     high_school_grade_average: '',
+    company_uuid: '',
 
     passport: null,
     passport_translation: null,
@@ -294,7 +314,7 @@ export default function useIndex({ props }) {
   const universities = ref([]);
   const faculties = ref([]);
   const departments = ref([]);
-  const countries = ref([]);
+  // const countries = ref([]);
 
   const submitBtn = ref(null);
 
@@ -442,6 +462,19 @@ export default function useIndex({ props }) {
     })
   }
 
+  const loadCompanies = () => {
+    // const { uuid } = university.company;
+    httpClient.get(`/public/companies/companies/list`, {
+      params: {
+        filters: {
+          // company_uuid: uuid,
+        }
+      }
+    }).then(response => {
+      companies.value = response.data.map(({ uuid, name }) => ({ uuid, label: name }));
+    })
+  }
+
   const getStudentData = () => {
     const formData = new FormData();
 
@@ -567,6 +600,7 @@ export default function useIndex({ props }) {
     loadAliases()
     loadUniversities()
     loadCountries()
+    loadCompanies()
   })
 
   return {

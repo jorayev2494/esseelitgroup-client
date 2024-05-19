@@ -11,7 +11,7 @@
               <!-- <div class="section-head-eight"> -->
                 <!-- <h2>Want To Become <span>A Mentor?</span></h2> -->
                 <div id="ck-content" class="ck-content">
-                  <div v-html="$ckeditor.replaceStyles(university.description)"></div>
+                  <div v-html="$ckeditor.replaceStyles(university.description ?? '')"></div>
                 </div>
                 <!-- <div id="editor"></div> -->
                 <!-- <div>{!! university.description !!}</div> -->

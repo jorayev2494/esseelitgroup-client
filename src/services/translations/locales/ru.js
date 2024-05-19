@@ -5,6 +5,7 @@ import applicationForm from './applicationForm/ru.json'
 import search from '../../../views/pages/website/public/university/pages/search/locales/ru.json'
 import companyContext from './companyContext/ru.js'
 import department from '../../../views/pages/website/public/department/locales/ru.json'
+import aboutUs from '../../../views/pages/website/public/aboutUs/locales/ru.json'
 
 export default {
   system,
@@ -14,4 +15,5 @@ export default {
   search,
   companyContext,
   department,
+  aboutUs,
 }

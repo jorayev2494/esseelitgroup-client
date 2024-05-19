@@ -12,6 +12,7 @@
 
     "nationality_uuid": "Milliyet",
     "country_of_residence_uuid": "İkamet edilen ülke",
+    "company_uuid": "Şirket",
 
     "high_school_name": "Lise adı",
     "high_school_country_uuid": "Lise ülkesi",

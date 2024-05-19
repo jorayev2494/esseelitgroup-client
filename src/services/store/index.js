@@ -12,9 +12,11 @@ import degree from './modules/degree';
 import language from './modules/language';
 import alias from './modules/alias';
 import companyContext from './modules/companyContext/index';
+import staticPage from './modules/staticPage/index';
 
 export default createStore({
   state: {
+    appName: process.env.VUE_APP_NAME,
     loadingPageSpinner: 'loading-page-spinner6.gif',
     isLoadingPage: false,
   //   langIcon: '',
@@ -24,6 +26,7 @@ export default createStore({
   //   defaultLangIcon: 'flag-icon-' + defaultLocale,
   },
   getters: {
+    getAppName: state => state.appName,
     getLoadingPageSpinner: state => state.loadingPageSpinner,
     getIsLoadingPage: state => state.isLoadingPage,
   //   langIcon: (state) => { return state.langIcon },
@@ -61,5 +64,6 @@ export default createStore({
     language,
     alias,
     companyContext,
+    staticPage,
   }
 });

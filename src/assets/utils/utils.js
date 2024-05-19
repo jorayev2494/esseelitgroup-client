@@ -11,6 +11,14 @@ const homeMenu = (value) =>  {
     ]
     return !!pathName.some(item => item == value);
 }
+
+const aboutUsMenu = (value) =>  {
+    const pathName = [
+        'about_us'
+    ]
+    return !!pathName.some(item => item == value);
+}
+
 const mentorMenu = (value) =>  {
     const pathName = [
         'mentor-dashboard', 
@@ -93,4 +101,24 @@ const blogMenu = (value) =>  {
     ]
     return !!pathName.some(item => item == value);
 }
-export default { homeMenu,mentorMenu, universitiesMenu, departmentsMenu, menteeMenu, pagesMenu, blogMenu }
+
+const listsMenu = (value) =>  {
+    const pathName = [
+        'mentor-blog-details',
+        'blog-list',
+        'blog-grid'
+    ]
+    return !!pathName.some(item => item == value);
+}
+
+export default {
+    homeMenu,
+    aboutUsMenu,
+    mentorMenu,
+    universitiesMenu,
+    departmentsMenu,
+    menteeMenu,
+    pagesMenu,
+    blogMenu,
+    listsMenu,
+}
