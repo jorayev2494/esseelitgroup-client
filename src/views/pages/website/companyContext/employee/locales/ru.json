@@ -1,6 +1,6 @@
 {
-  "context_title": "Студенты",
-  "employee_info": "Информация о студенте",
+  "context_title": "Сотрудники",
+  "employee_info": "Информация о сотруднике",
   "form": {
     "full_name": "Полное имя",
     "first_name": "Имя",

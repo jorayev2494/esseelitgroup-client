@@ -42,63 +42,63 @@ export default () => {
 
   const showInfo = [
     {
-      label: 'Nationality',
+      label: 'companyContext.student.form.nationality',
       icon: 'fa fa-globe',
       key: 'nationality.value',
     },
     {
-      label: 'Mail',
+      label: 'companyContext.student.form.email',
       icon: 'fa fa-envelope',
       key: 'email',
     },
     {
-      label: 'Phone',
+      label: 'companyContext.student.form.phone',
       icon: 'fa fa-phone',
       key: 'phone',
     },
 
     {
-      label: 'Birthday',
+      label: 'companyContext.student.form.birthday',
       icon: 'fa fa-birthday-cake',
       key: 'birthday',
     },
     {
-      label: 'Residence country',
+      label: 'companyContext.student.form.country_of_residence',
       icon: 'fa fa-child',
       key: 'country_of_residence.value',
     },
     {
-      label: 'Passport ID',
+      label: 'companyContext.student.form.passport_number',
       icon: 'fa fa-id-card',
       key: 'passport_number',
     },
     {
-      label: 'Issue Date',
+      label: 'companyContext.student.form.passport_date_of_issue',
       icon: 'fa fa-calendar-check',
       key: 'passport_date_of_issue',
     },
     {
-      label: 'Expiry Date',
+      label: 'companyContext.student.form.passport_date_of_expiry',
       icon: 'fa fa-calendar-times',
       key: 'passport_date_of_expiry',
     },
     {
-      label: 'Gender',
+      label: 'companyContext.student.form.gender',
       icon: 'fa fa-venus-mars',
       key: 'gender',
     },
     {
-      label: 'Marital Status',
+      label: 'companyContext.student.form.marital_type',
       icon: 'fa fa-user-circle',
       key: 'marital_type',
     },
     {
-      label: 'Father',
+      label: 'companyContext.student.form.father_name',
       icon: 'fa fa-male',
       key: 'father_name',
     },
     {
-      label: 'Mother',
+      label: 'companyContext.student.form.mother_name',
       icon: 'fa fa-female',
       key: 'mother_name',
     },

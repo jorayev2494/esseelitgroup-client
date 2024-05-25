@@ -6,6 +6,7 @@ import search from '../../../views/pages/website/public/university/pages/search/
 import companyContext from './companyContext/tm.js'
 import department from '../../../views/pages/website/public/department/locales/tm.json'
 import aboutUs from '../../../views/pages/website/public/aboutUs/locales/tm.json'
+import document from '../../../views/pages/website/public/document/locales/tm.json'
 
 export default {
   system,
@@ -16,4 +17,5 @@ export default {
   companyContext,
   department,
   aboutUs,
+  document,
 }
