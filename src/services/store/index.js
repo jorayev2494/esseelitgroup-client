@@ -13,6 +13,7 @@ import language from './modules/language';
 import alias from './modules/alias';
 import companyContext from './modules/companyContext/index';
 import staticPage from './modules/staticPage/index';
+import document from '../../views/pages/website/public/document/store/index.js';
 
 export default createStore({
   state: {
@@ -65,5 +66,6 @@ export default createStore({
     alias,
     companyContext,
     staticPage,
+    document,
   }
 });

@@ -6,6 +6,7 @@ import search from '../../../views/pages/website/public/university/pages/search/
 import companyContext from './companyContext/tr.js'
 import department from '../../../views/pages/website/public/department/locales/tr.json'
 import aboutUs from '../../../views/pages/website/public/aboutUs/locales/tr.json'
+import document from '../../../views/pages/website/public/document/locales/tr.json'
 
 export default {
   system,
@@ -16,4 +17,5 @@ export default {
   companyContext,
   department,
   aboutUs,
+  document,
 }

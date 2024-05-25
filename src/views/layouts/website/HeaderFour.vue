@@ -25,6 +25,7 @@
                 <i class="fas fa-times"></i>
               </a>
             </div>
+
             <ul class="main-nav">
 
               <li class="megamenu" v-bind:class="{ active: aboutUsMenu }">
@@ -46,9 +47,9 @@
               </li>
 
               <li v-bind:class="{ active: listsMenu }">
-                <a href="">
+                <router-link :to="$tMakeRoute({ name: 'document-lists' })">
                   {{ $t('navigation.lists') }}
-                </a>
+                </router-link>
               </li>
 
               <!-- <li>
@@ -63,6 +64,7 @@
               </li> -->
             </ul>
           </div>
+
           <ul class="nav header-navbar-rht ms-4">
             <li class="nav-item">
               <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
