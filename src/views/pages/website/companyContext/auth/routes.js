@@ -1,7 +1,7 @@
 export default [
   {
     path: 'company/auth',
-    name: 'auth',
+    // name: 'auth',
     children: [
       {
         path: 'login',

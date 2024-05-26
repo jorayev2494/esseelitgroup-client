@@ -5,6 +5,8 @@ export default class JwtService {
   // Will be used by this service for making API calls
   httpClientIns = null
 
+  authenticated = 'student'
+
   // jwtConfig <= Will be used by this service
   jwtConfig = {
     ...jwtDefaultConfig

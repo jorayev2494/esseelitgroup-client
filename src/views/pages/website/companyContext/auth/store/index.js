@@ -37,6 +37,7 @@ const mutations = {
 
     state.authData = payload;
     localStorage.setItem(state.keyName, JSON.stringify(payload));
+    localStorage.setItem('who', 'company');
   },
 }
 

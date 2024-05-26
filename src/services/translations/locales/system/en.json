@@ -1,5 +1,11 @@
 {
     "loading_page_text": "Loading ...",
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
     "gender": {
         "label": "Gender",
         "items": {

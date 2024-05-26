@@ -213,48 +213,22 @@
               <li class="has-submenu" v-bind:class="{ active: mentorMenu }">
                 <a href="">Mentor <i class="fas fa-chevron-down"></i></a>
                 <ul class="submenu">
-                  <li
-                    v-bind:class="{ active: currentPath == 'mentor-dashboard' }"
-                  >
-                    <router-link to="/mentor/index"
-                      >Mentor Dashboard</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-dashboard' }">
+                    <router-link to="/mentor/index">Mentor Dashboard</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath === 'mentor-bookings' }"
-                  >
+                  <li v-bind:class="{ active: currentPath === 'mentor-bookings' }">
                     <router-link to="/mentor/my-bookings">Bookings</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-schedule-timings',
-                    }"
-                  >
-                    <router-link to="/mentor/schedule-timings"
-                      >Schedule Timing</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-schedule-timings' }">
+                    <router-link to="/mentor/schedule-timings">Schedule Timing</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-mentee-list',
-                    }"
-                  >
-                    <router-link to="/mentor/mentee-list"
-                      >Mentee List</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-mentee-list' }">
+                    <router-link to="/mentor/mentee-list">Mentee List</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-mentee-profile',
-                    }"
-                  >
-                    <router-link to="/mentor/mentee-profile"
-                      >Mentee Profile</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-mentee-profile' }">
+                    <router-link to="/mentor/mentee-profile">Mentee Profile</router-link>
                   </li>
-                  <li
-                    class="has-submenu"
-                    v-bind:class="{
+                  <li class="has-submenu" v-bind:class="{
                       active:
                         currentPath == 'mentor-blog' ||
                         currentPath == 'add-blog' ||
@@ -263,25 +237,17 @@
                   >
                     <router-link to="/mentor/blog">Blog</router-link>
                     <ul class="submenu">
-                      <li
-                        v-bind:class="{ active: currentPath == 'mentor-blog' }"
-                      >
+                      <li v-bind:class="{ active: currentPath == 'mentor-blog' }">
                         <router-link to="/mentor/blog">Blog</router-link>
                       </li>
                       <li>
-                        <router-link to="/mentor/blog-details"
-                          >Blog View</router-link
-                        >
+                        <router-link to="/mentor/blog-details">Blog View</router-link>
                       </li>
                       <li v-bind:class="{ active: currentPath == 'add-blog' }">
-                        <router-link to="/mentor/add-blog"
-                          >Add Blog</router-link
-                        >
+                        <router-link to="/mentor/add-blog">Add Blog</router-link>
                       </li>
                       <li v-bind:class="{ active: currentPath == 'edit-blog' }">
-                        <router-link to="/mentor/edit-blog"
-                          >Edit Blog</router-link
-                        >
+                        <router-link to="/mentor/edit-blog">Edit Blog</router-link>
                       </li>
                     </ul>
                   </li>
@@ -302,21 +268,13 @@
                       active: currentPath == 'mentor-profile-settings',
                     }"
                   >
-                    <router-link to="/mentor/profile-settings"
-                      >Profile Settings</router-link
-                    >
+                    <router-link to="/mentor/profile-settings">Profile Settings</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'mentor-reviews' }"
-                  >
+                  <li v-bind:class="{ active: currentPath == 'mentor-reviews' }">
                     <router-link to="/mentor/reviews">Reviews</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'mentor-register' }"
-                  >
-                    <router-link to="/mentor/register"
-                      >Mentor Register</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-register' }">
+                    <router-link to="/mentor/register">Mentor Register</router-link>
                   </li>
                 </ul>
               </li>
@@ -333,14 +291,10 @@
                     <a href="#">Mentors</a>
                     <ul class="submenu">
                       <li v-bind:class="{ active: currentPath == 'map-grid' }">
-                        <router-link to="/mentee/map-grid"
-                          >Map Grid</router-link
-                        >
+                        <router-link to="/mentee/map-grid">Map Grid</router-link>
                       </li>
                       <li v-bind:class="{ active: currentPath == 'map-list' }">
-                        <router-link to="/mentee/map-list"
-                          >Map List</router-link
-                        >
+                        <router-link to="/mentee/map-list">Map List</router-link>
                       </li>
                     </ul>
                   </li>
@@ -349,70 +303,40 @@
                       active: currentPath == 'mentor-search-results',
                     }"
                   >
-                    <router-link to="/mentee/mentor-search"
-                      >Search Mentor</router-link
-                    >
+                    <router-link to="/mentee/mentor-search">Search Mentor</router-link>
                   </li>
                   <li
                     v-bind:class="{
                       active: currentPath == 'mentee-mentor-profile',
                     }"
                   >
-                    <router-link to="/mentee/mentor-profile"
-                      >Mentor Profile</router-link
-                    >
+                    <router-link to="/mentee/mentor-profile">Mentor Profile</router-link>
                   </li>
                   <li
                     v-bind:class="{ active: currentPath == 'mentee-bookings' }"
                   >
                     <router-link to="/mentee/bookings">Bookings</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'mentee-checkout' }"
-                  >
+                  <li v-bind:class="{ active: currentPath == 'mentee-checkout' }">
                     <router-link to="/mentee/checkout">Checkout</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'booking-success' }"
-                  >
-                    <router-link to="/mentee/booking-success"
-                      >Booking Success</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'booking-success' }">
+                    <router-link to="/mentee/booking-success">Booking Success</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'mentee-dashboard' }"
-                  >
-                    <router-link to="/mentee/index"
-                      >Mentee Dashboard</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentee-dashboard' }">
+                    <router-link to="/mentee/index">Mentee Dashboard</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentee-favourites',
-                    }"
-                  >
-                    <router-link to="/mentee/favourites"
-                      >Favourites</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentee-favourites' }">
+                    <router-link to="/mentee/favourites">Favourites</router-link>
                   </li>
                   <li v-bind:class="{ active: currentPath == 'mentee-chat' }">
                     <router-link to="/mentee/chat">Chat</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentee-profile-settings',
-                    }"
-                  >
-                    <router-link to="/mentee/profile-settings"
-                      >Profile Settings</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentee-profile-settings' }">
+                    <router-link to="/mentee/profile-settings">Profile Settings</router-link>
                   </li>
-                  <li
-                    v-bind:class="{ active: currentPath == 'change-password' }"
-                  >
-                    <router-link to="/mentee/change-password"
-                      >Change Password</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'change-password' }">
+                    <router-link to="/mentee/change-password">Change Password</router-link>
                   </li>
                 </ul>
               </li>
@@ -437,30 +361,22 @@
                     <router-link to="/mentor/invoices">Invoices</router-link>
                     <ul class="submenu">
                       <li>
-                        <router-link to="/mentor/invoices"
-                          >Invoices</router-link
-                        >
+                        <router-link to="/mentor/invoices">Invoices</router-link>
                       </li>
                       <li>
-                        <router-link to="/mentor/invoice-view"
-                          >Invoice View</router-link
-                        >
+                        <router-link to="/mentor/invoice-view">Invoice View</router-link>
                       </li>
                     </ul>
                   </li>
                   <li v-bind:class="{ active: currentPath == 'blank-page' }">
-                    <router-link to="/pages/blank-page"
-                      >Starter Page</router-link
-                    >
+                    <router-link to="/pages/blank-page">Starter Page</router-link>
                   </li>
                   <li><router-link to="/pages/login">Login</router-link></li>
                   <li>
                     <router-link to="/pages/register">Register</router-link>
                   </li>
                   <li>
-                    <router-link to="/pages/forgot-password"
-                      >Forgot Password</router-link
-                    >
+                    <router-link to="/pages/forgot-password">Forgot Password</router-link>
                   </li>
                 </ul>
               </li>
@@ -473,21 +389,14 @@
                   <li v-bind:class="{ active: currentPath == 'blog-grid' }">
                     <router-link to="/blog/blog-grid">Blog Grid</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-blog-details',
-                    }"
+                  <li v-bind:class="{ active: currentPath == 'mentor-blog-details' }"
                   >
-                    <router-link to="/mentor/blog-details"
-                      >Blog Details</router-link
-                    >
+                    <router-link to="/mentor/blog-details">Blog Details</router-link>
                   </li>
                 </ul>
               </li>
               <li>
-                <router-link to="/admin/index" target="_blank"
-                  >Admin</router-link
-                >
+                <router-link to="/admin/index" target="_blank">Admin</router-link>
               </li>
               <li class="login-link">
                 <router-link to="/pages/login">Login / Signup</router-link>
@@ -496,14 +405,10 @@
           </div>
           <ul class="nav header-navbar-rht">
             <li class="nav-item">
-              <router-link class="nav-link" to="pages/register"
-                >Register</router-link
-              >
+              <router-link class="nav-link" to="pages/register">Register</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link header-login" to="pages/login"
-                >Log In</router-link
-              >
+              <router-link class="nav-link header-login" to="pages/login">Log In</router-link>
             </li>
           </ul>
         </div>

@@ -72,12 +72,14 @@
                 <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/>
               </router-link>
             </li>
-            <!-- <li class="nav-item">
-              <router-link class="nav-link header-login" to="pages/register">
-                Register Now
+
+            <li class="nav-item">
+              <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
+                Cabinet
                 <i class="fas fa-user ms-2"></i>
               </router-link>
-            </li> -->
+            </li>
+
           </ul>
         </div>
       </nav>

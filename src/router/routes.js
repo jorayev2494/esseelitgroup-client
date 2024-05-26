@@ -1,4 +1,5 @@
 import company from './company'
+import student from './student'
 
 /** For  Website**/
 import Index from '../views/pages/website/index/Index'
@@ -86,6 +87,7 @@ const routes = [
   },
 
   ...company,
+  ...student,
 
   {
     path: 'index',
