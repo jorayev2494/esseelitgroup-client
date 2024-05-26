@@ -1,0 +1,8 @@
+{
+  "context_title": "Profil",
+  "form": {
+    "first_name": "İlk adı",
+    "last_name": "Soyadı",
+    "email": "E-posta"
+  }
+}

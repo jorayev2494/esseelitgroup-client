@@ -15,6 +15,7 @@
             :class="idx === 0 ? 'active' : ''"
             @click="setActive(locale)"
           >
+            <i :class="`fi fi-${getLocaleFlag(locale)} me-1`" width="300"></i>
             {{ $t(`system.supported-locales.${locale}`) }}
           </a>
         </li>
@@ -64,14 +65,14 @@
                 </textarea>
               </div>
 
-              <div v-if="inputs[tIdx]['type'] == 'ckeditor'">
+              <!-- <div v-if="inputs[tIdx]['type'] == 'ckeditor'">
                 <ckeditor
                   :key="locale + input.field"
                   :form="form"
                   :locale="locale"
                   :name="input['field']"
                 />
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -86,7 +87,7 @@
 <script setup>
   import { defineProps, ref } from 'vue'
   import useInput from './useInput'
-  import ckeditor from '../partials/ckeditor/Index.vue'
+  // import ckeditor from '../partials/ckeditor/Index.vue'
 
   const props = defineProps({
     form: {
@@ -110,6 +111,17 @@
       default: () => false,
     },
   });
+
+  const getLocaleFlag = flag => {
+    const flags = {
+      en: 'us',
+      ru: 'ru',
+      tm: 'tm',
+      tr: 'tr',
+    }
+
+    return flags[flag] ?? flag
+  }
 
   const activeLocale = ref('');
   const isLoaded = ref(false);

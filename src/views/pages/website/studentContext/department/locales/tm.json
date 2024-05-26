@@ -1,0 +1,20 @@
+{
+  "context_title": "Bölümleri Gözle",
+  "translations": "Terjimeleri",
+  "form": {
+    "company": "Kompaniýa",
+    "information": "Maglumat",
+    "alias": "Lakam",
+    "university": "Uniwersitet",
+    "faculty": "Fakultet",
+    "activity": "Activity",
+    "name": "Ady",
+    "description": "Düşündiriş",
+    "degree": "Dereje",
+    "language": "Dil",
+    "price": "Bahasy",
+    "currency": "Walyuta",
+    "is_filled": "Doldy",
+    "location": "Locationerleşýän ýeri"
+  }
+}

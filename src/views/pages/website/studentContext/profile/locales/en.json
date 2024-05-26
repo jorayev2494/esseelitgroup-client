@@ -1,0 +1,8 @@
+{
+  "context_title": "Profile",
+  "form": {
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email"
+  }
+}

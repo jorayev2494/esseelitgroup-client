@@ -10,7 +10,12 @@ const services = {
         // Vue.config.globalProperties.$ws = window.ws = ws;
         Vue.config.globalProperties.$tMakeRoute = Tr.route;
 
-        console.log('global service: ', Vue)
+        Vue.config.globalProperties.$clientSupportedLocales = [
+            'en',
+            'ru',
+            'tm',
+            'tr',
+        ];
         
         Vue.config.globalProperties.$ckeditor = {            
             replaceStyles: content => {

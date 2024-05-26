@@ -1,6 +1,9 @@
 import { createStore } from 'vuex'
 // import { defaultLocale, localeOptions } from '@/configs/index.js';
 
+import companyContext from './modules/companyContext/index';
+import studentContext from './modules/studentContext/index';
+
 import university from '../../views/pages/website/public/university/store/index.js';
 import department from '../../views/pages/website/public/department/store/index.js';
 import departmentName from '../../views/pages/website/public/departmentName/store/index.js';
@@ -11,7 +14,6 @@ import city from './modules/city';
 import degree from './modules/degree';
 import language from './modules/language';
 import alias from './modules/alias';
-import companyContext from './modules/companyContext/index';
 import staticPage from './modules/staticPage/index';
 import document from '../../views/pages/website/public/document/store/index.js';
 
@@ -54,6 +56,9 @@ export default createStore({
   //   }
   },
   modules: {
+    companyContext,
+    studentContext,
+
     university,
     faculty,
     facultyName,
@@ -64,7 +69,6 @@ export default createStore({
     degree,
     language,
     alias,
-    companyContext,
     staticPage,
     document,
   }
