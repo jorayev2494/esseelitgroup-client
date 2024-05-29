@@ -13,8 +13,6 @@
                 <p class="text-muted">Enter your email to get a password reset link</p>
               </div>
 
-              <pre>{{ form }}</pre>
-
               <!-- Forgot Password Form -->
               <form method="POST" @submit.prevent="send">
 
