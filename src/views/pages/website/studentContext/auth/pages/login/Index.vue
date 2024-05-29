@@ -29,7 +29,7 @@
 									</div>
 
 									<div class="text-end">
-										<router-link class="forgot-link" :to="$tMakeRoute({ name: 'company-restore-password-link' })">Forgot Password ?</router-link>
+										<router-link class="forgot-link" :to="$tMakeRoute({ name: 'student-restore-password-link' })">Forgot Password ?</router-link>
 									</div>
 
 									<button type="submit" class="btn btn-primary login-btn">Login</button>
