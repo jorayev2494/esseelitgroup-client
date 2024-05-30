@@ -24,7 +24,7 @@
         <li v-for="(item, idx) of items" :key="idx">
           <router-link :to="$tMakeRoute({ name: item.route })" v-bind:class="{ 'active': currentPath === item.route }">
             <i class="fas" :class="item.icon"></i>
-            {{ $t(`companyContext.${item.label}.context_title`) }}
+            {{ $t(`studentContext.${item.label}.context_title`) }}
             <span>
               <i class="fas fa-chevron-right"></i>
             </span>
@@ -77,11 +77,11 @@ export default {
         label: 'application',
         route: 'student-applications',
       },
-      // {
-      //   icon: 'fa-user',
-      //   label: 'employee',
-      //   route: 'company-employees',
-      // },
+      {
+        icon: 'fa-user',
+        label: 'contest',
+        route: 'student-contests',
+      },
     ]
 
     const currentPath = computed(() => route.name)

@@ -7,6 +7,7 @@ import language  from '@/views/pages/website/studentContext/language/store/index
 import employee  from '@/views/pages/website/studentContext/employee/store/index.js'
 import department  from '@/views/pages/website/studentContext/department/store/index.js'
 import announcement  from '@/views/pages/website/studentContext/announcement/store/index.js'
+import contest  from '@/views/pages/website/studentContext/contest/store/index.js'
 
 export default {
   namespaced: true,
@@ -20,5 +21,6 @@ export default {
     employee,
     department,
     announcement,
+    contest,
   },
 }

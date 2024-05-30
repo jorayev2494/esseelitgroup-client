@@ -138,7 +138,7 @@ export default () => {
   };
 
   const create = () => {
-    store.dispatch('companyContext/application/createApplicationAsync', { uuid: form.value.uuid, data: getData() })
+    store.dispatch('studentContext/application/createApplicationAsync', { uuid: form.value.uuid, data: getData() })
       .then(response => {
         const { uuid } = response.data
         router.push(Tr.route({ name: 'company-student-show', params: { uuid: student_uuid } }))

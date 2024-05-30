@@ -3,7 +3,8 @@
     <Announcement />
   </div>
   <div class="row">
-    <div class="col-md-12 col-lg-4 dash-board-list blue">
+
+    <!-- <div class="col-md-12 col-lg-4 dash-board-list blue">
       <div class="dash-widget">
         <div class="circle-bar">
           <div class="icon-col">
@@ -43,7 +44,8 @@
           <h6>Total Earned</h6>
         </div>
       </div>
-    </div>
+    </div> -->
+
   </div>
 
   <div class="row">

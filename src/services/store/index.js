@@ -16,6 +16,7 @@ import language from './modules/language';
 import alias from './modules/alias';
 import staticPage from './modules/staticPage/index';
 import document from '../../views/pages/website/public/document/store/index.js';
+import auth from './modules/auth/index.js';
 
 export default createStore({
   state: {
@@ -59,6 +60,7 @@ export default createStore({
     companyContext,
     studentContext,
 
+    auth,
     university,
     faculty,
     facultyName,
