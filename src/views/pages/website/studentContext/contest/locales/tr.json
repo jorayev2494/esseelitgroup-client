@@ -1,0 +1,23 @@
+{
+  "context_title": "Yarışmalar",
+  "translations": "Çeviriler",
+  "form": {
+    "participants_number": "Katılımcı sayısı",
+    "title": "İsim",
+    "description": "Açıklama",
+
+    "application_statuses": "Başvuru Durumları",
+    "student_nationalities": "Öğrenci Milliyetleri",
+    "start_time": "Başlangıç ​​saati",
+    "end_time": "Bitiş zamanı",
+    "is_active": "Aktivite"
+  },
+  "won_student": {
+    "title": "Kazanılan öğrenci detayı",
+    "code": "Kod",
+    "full_name": "Tam ad",
+    "gift_given_at": "Verilen hediye zamani",
+    "note": "Not",
+    "created_at": "Oluşturulma zamanı"
+  }
+}

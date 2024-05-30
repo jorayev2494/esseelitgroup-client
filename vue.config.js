@@ -4,10 +4,11 @@ module.exports = defineConfig({
   devServer: {
     port: 8090,
     client: {
-      overlay: {
-        warnings: false,
-        errors: false,
-      },
+      overlay: false,
+      // overlay: {
+      //   warnings: false,
+      //   errors: false,
+      // },
     },
   },
   lintOnSave:false,
