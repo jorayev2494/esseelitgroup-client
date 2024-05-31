@@ -4,6 +4,7 @@ import { createStore } from 'vuex'
 import companyContext from './modules/companyContext/index';
 import studentContext from './modules/studentContext/index';
 
+import auth from './modules/auth/index.js';
 import university from '../../views/pages/website/public/university/store/index.js';
 import department from '../../views/pages/website/public/department/store/index.js';
 import departmentName from '../../views/pages/website/public/departmentName/store/index.js';
@@ -16,7 +17,7 @@ import language from './modules/language';
 import alias from './modules/alias';
 import staticPage from './modules/staticPage/index';
 import document from '../../views/pages/website/public/document/store/index.js';
-import auth from './modules/auth/index.js';
+import manager from '../../views/pages/website/public/manager/store/index.js';
 
 export default createStore({
   state: {
@@ -73,5 +74,6 @@ export default createStore({
     alias,
     staticPage,
     document,
+    manager,
   }
 });

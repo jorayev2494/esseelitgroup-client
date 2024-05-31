@@ -9,6 +9,7 @@ import search from '../../../views/pages/website/public/university/pages/search/
 import department from '../../../views/pages/website/public/department/locales/tm.json'
 import aboutUs from '../../../views/pages/website/public/aboutUs/locales/tm.json'
 import document from '../../../views/pages/website/public/document/locales/tm.json'
+import manager from '../../../views/pages/website/public/manager/locales/tm.json'
 
 export default {
   companyContext,
@@ -22,4 +23,5 @@ export default {
   department,
   aboutUs,
   document,
+  manager,
 }

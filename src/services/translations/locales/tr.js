@@ -9,6 +9,7 @@ import search from '../../../views/pages/website/public/university/pages/search/
 import department from '../../../views/pages/website/public/department/locales/tr.json'
 import aboutUs from '../../../views/pages/website/public/aboutUs/locales/tr.json'
 import document from '../../../views/pages/website/public/document/locales/tr.json'
+import manager from '../../../views/pages/website/public/manager/locales/tr.json'
 
 export default {
   studentContext,
@@ -22,4 +23,5 @@ export default {
   department,
   aboutUs,
   document,
+  manager,
 }

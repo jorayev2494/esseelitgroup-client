@@ -7,7 +7,8 @@
     <!-- <KnowledgeFour />4 -->
     <TrendingCourseFour />
     <TestimonialFour />
-    <FeaturedInstructorFour />
+    <!-- <FeaturedInstructorFour /> -->
+    <ManagerCarousel />
     <FaqFour />
     <BlogFour />
     <NewCourseFour />
@@ -28,4 +29,6 @@
   import FaqFour from "../Faq";
   import BlogFour from "../Blog";
   import LayoutFooterFour from "../../../../layouts/website/FooterFour.vue";
+
+  import ManagerCarousel from '../manager/components/managerCarousel/Index.vue'
 </script>

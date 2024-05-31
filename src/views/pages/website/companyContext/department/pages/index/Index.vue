@@ -103,15 +103,17 @@
       </template>
 
       <template #location="data">
-        <span>
-          <span class="me-1">
-            {{ data.value.university.city.value }},
-          </span>
+        <div v-if="data.value?.university?.city">
           <span>
-            <i :class="`fi fi-${data.value.university.country.iso}`" width="300"></i>
-            {{ data.value.university.country.value }}
+            <span class="me-1">
+              {{ data.value.university.city.value }},
+            </span>
+            <span>
+              <i :class="`fi fi-${data.value.university.country.iso}`" width="300"></i>
+              {{ data.value.university.country.value }}
+            </span>
           </span>
-        </span>
+        </div>
       </template>
 
       <template #price="data">

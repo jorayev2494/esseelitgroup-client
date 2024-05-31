@@ -47,7 +47,9 @@
             <div class="footer-widget footer-menu">
               <h2 class="footer-title">{{ $t('pages.index.footer.documents.title') }}</h2>
               <div class="footer-about-content">
-                <p class="footer-sub-text">{{ $t('pages.index.footer.documents.text') }}</p>
+                <p class="footer-sub-text" v-for="(item, idx) of $t('pages.index.footer.documents.text').split(', ')" :key="idx">
+                  {{ item }}
+                </p>
               </div>
             </div>
           </div>
