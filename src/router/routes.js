@@ -58,6 +58,7 @@ import department from '../views/pages/website/public/department/routes.js'
 import departmentName from '../views/pages/website/public/departmentName/routes.js'
 import aboutUs from '../views/pages/website/public/aboutUs/routes.js'
 import document from '../views/pages/website/public/document/routes.js'
+import manager from '../views/pages/website/public/manager/routes.js'
 
 const routes = [
   {
@@ -80,6 +81,7 @@ const routes = [
   ...departmentName,
   ...aboutUs,
   ...document,
+  ...manager,
   {
     path: 'faculty/:uuid',
     name: 'faculty',
