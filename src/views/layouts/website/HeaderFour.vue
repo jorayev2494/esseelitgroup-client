@@ -66,21 +66,34 @@
           </div>
 
           <ul class="nav header-navbar-rht ms-4">
-            <li class="nav-item">
-              <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
-                Start Login
-                <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/>
-              </router-link>
-            </li>
+            <template v-if="! $store.getters['auth/getWhoIsAuthenticated'](['student', 'company'])">
+              <li class="nav-item">
+                <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
+                  Company login
+                  <!-- <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/> -->
+                  <i class="fas fa-building ms-2"></i>
+                </router-link>
+              </li>
 
-            <li class="nav-item">
-              <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
-                Cabinet
-                <i class="fas fa-user ms-2"></i>
-              </router-link>
-            </li>
+              <li class="nav-item">
+                <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
+                  Cabinet
+                  <i class="fas fa-graduation-cap ms-2"></i>
+                </router-link>
+              </li>
+            </template>
 
+            <template v-else>
+              <li class="nav-item">
+                <router-link class="nav-link header-login" :to="$tMakeRoute({ name: `${$store.getters['auth/getWhoAuthenticated']}-dashboard` })">
+                  Go to panel
+                  <i class="fas fa-user ms-2"></i>
+                </router-link>
+              </li>
+            </template>
           </ul>
+
+          <pre>{{ $store.getters['auth/getWhoAuthenticated'] }}</pre>
         </div>
       </nav>
     </div>

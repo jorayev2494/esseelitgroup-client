@@ -1,4 +1,5 @@
 import sidebar from '../../../../views/layouts/website/companyContext/partials/Sidebar/locales/en.json'
+import auth from '@/views/pages/website/companyContext/auth/locales/en.json'
 import dashboard from '@/views/pages/website/companyContext/dashboard/locales/en.json'
 import student from '@/views/pages/website/companyContext/student/locales/en.json'
 import application from '@/views/pages/website/companyContext/application/locales/en.json'
@@ -11,6 +12,7 @@ export default {
   layout: {
     sidebar,
   },
+  auth,
   dashboard,
   student,
   application,

@@ -1,0 +1,37 @@
+{
+  "context_title": "Gişriş",
+  "login": {
+    "title": "CABINET'E GİRİŞ YAPIN",
+    "label": "Kontrol panelimize erişim",
+    "forgot_password": "Şifrenizi mı unuttunuz ?",
+    "login_btn_text": "Giriş yap",
+    "form": {
+      "email": "E-posta",
+      "password": "Şifre"
+    },
+    "flash_messages": {
+      "success": {
+        "welcome": "Hoş geldiňiz {first_name}! 🧑‍🎓"
+      }
+    }
+  },
+  "forgot_password": {
+    "title": "ŞIFRENIZI MI UNUTTUNUZ?",
+    "label": "Şifre sıfırlama bağlantısı almak için e-postanızı girin",
+    "remember_your_password": "Şifrenizi hatırlıyor musunuz?",
+    "restore_password_btn_text": "Şifreni yenile",
+    "form": {
+      "email": "E-posta"
+    }
+  },
+  "restore_password": {
+    "title": "ŞIFRENI YENILE",
+    "label": "",
+    "remember_your_password": "Şifrenizi hatırlıyor musunuz?",
+    "reset_password_btn_text": "Şifreni yenile",
+    "form": {
+      "password": "Şifre",
+      "password_confirmation": "Şifre onayı"
+    }
+  }
+}

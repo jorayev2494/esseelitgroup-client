@@ -3,12 +3,12 @@ import { onMounted, reactive, ref } from "vue"
 import { useRoute, useRouter } from "vue-router";
 import { useStore } from "vuex"
 import { useNationality, useCountryOfResidence, useHighSchoolCountry } from '../../useCases/usePartials'
-import Tr from '@/services/translations/translation'
 import useGender from "@/views/pages/useCases/useGender";
 import useMaritalStatus from "@/views/pages/useCases/useMaritalStatus";
 import useChangeImage from "@/views/pages/useCases/useChangeImage";
 import { useDate } from "@/views/pages/utils/helpers";
 import { useI18n } from "vue-i18n";
+import { toast } from "vue3-toastify";
 
 export default () => {
 
@@ -17,6 +17,7 @@ export default () => {
   const store = useStore();
   const { d } = useI18n()
   const { image } = useUrlPattern();
+  const { t } = useI18n();
 
   const { uuid } = route.params;
 
@@ -70,6 +71,9 @@ export default () => {
 
   const update = () => {
     store.dispatch('studentContext/profile/updateProfileAsync', { data: getData() })
+      .then(() => {
+        toast.success(t('companyContext.profile.flash_messages.success.profile_was_updated'))
+      })
   }
 
   const studentMapper = student => {
