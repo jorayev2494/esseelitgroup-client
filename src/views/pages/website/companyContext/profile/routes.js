@@ -2,7 +2,7 @@ export default [
   {
     path: 'profile/edit',
     name: 'company-profile-edit',
-    component: () => import('./setting/Index.vue'),
+    component: () => import('./pages/setting/Index.vue'),
     meta: {
       title: 'companyContext.profile.context_title',
       middleware: [

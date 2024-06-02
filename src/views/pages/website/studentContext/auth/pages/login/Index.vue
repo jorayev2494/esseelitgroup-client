@@ -10,29 +10,29 @@
 						<div class="account-box">
 							<div class="login-right">
 								<div class="login-header">
-									<h3>Login <span>Mentoring</span></h3>
-									<p class="text-muted">Access to our dashboard</p>
+									<h3>{{ $t('studentContext.auth.login.title') }}</h3>
+									<p class="text-muted">{{ $t('studentContext.auth.login.label') }}d</p>
 								</div>
 
-								<form action="/" @submit.prevent="login">
+								<form action="#" @submit.prevent="login">
 									<div class="form-group">
-										<label class="form-control-label">Email Address</label>
-										<input type="email" v-model="form.email" class="form-control" required>
+										<label class="form-control-label">{{ $t('studentContext.auth.login.form.email') }}</label>
+										<input type="email" v-model="form.email" class="form-control" :placeholder="$t('studentContext.auth.login.form.email')" required>
 									</div>
 
 									<div class="form-group">
-										<label class="form-control-label">Password</label>
+										<label class="form-control-label">{{ $t('studentContext.auth.login.form.password') }}</label>
 										<div class="pass-group">
-											<input :type="isShowPassword ? 'text' : 'password'" v-model="form.password" class="form-control pass-input" required>
+											<input :type="isShowPassword ? 'text' : 'password'" v-model="form.password" class="form-control pass-input" :placeholder="$t('studentContext.auth.login.form.password')" required>
 											<span class="toggle-password fas" :class="isShowPassword ? 'fa-eye-slash' : 'fa-eye'" @click="toggleIsShowPassword"></span>
 										</div>
 									</div>
 
 									<div class="text-end">
-										<router-link class="forgot-link" :to="$tMakeRoute({ name: 'student-restore-password-link' })">Forgot Password ?</router-link>
+										<router-link class="forgot-link" :to="$tMakeRoute({ name: 'student-restore-password-link' })">{{ $t('studentContext.auth.login.forgot_password') }}</router-link>
 									</div>
 
-									<button type="submit" class="btn btn-primary login-btn">Login</button>
+									<button type="submit" class="btn btn-primary login-btn">{{ $t('studentContext.auth.login.login_btn_text') }}</button>
 									<!-- <div class="text-center dont-have">Don’t have an account? <router-link to="/pages/register">Register</router-link></div> -->
 								</form>
 

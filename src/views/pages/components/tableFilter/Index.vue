@@ -42,7 +42,7 @@
                         >
                           <input type="checkbox" :value="item[filter.valueKey]" v-model="filter.value" />
                           <span class="checkmark"></span>
-                          {{ $_.get(item, filter.labelKey) }}
+                          <span class="text-black">{{ $_.get(item, filter.labelKey) }}</span>
                         </label>
                       </template>
 
@@ -52,7 +52,7 @@
                           <label class="custom_check w-100 bg-primary text-white rounded py-1" @click.prevent="changeGroup(filter, idx)">
                             <input type="checkbox" v-model="item.selected" class="m-1" />
                             <span class="checkmark m-1"></span>
-                            {{ $_.get(item, filter.labelKey) }}
+                            <span class="text-black">{{ $_.get(item, filter.labelKey) }}</span>
                           </label>
                           <!-- End Group Header -->
 
@@ -90,7 +90,7 @@
                     </button>
                   </form>
                 </div>
-                <div v-if="filter.value?.length" class="text-muted">{{ filter.value?.length }} Please provide a valid state.</div>
+                <div v-if="filter.value?.length" class="text-muted mt-2">{{ filter.value?.length }} Please provide a valid state.</div>
               </div>
             </li>
 

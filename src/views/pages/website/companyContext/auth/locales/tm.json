@@ -1,0 +1,37 @@
+{
+  "context_title": "Gişriş",
+  "login": {
+    "title": "LOGIN",
+    "label": "Dolandyryş paneliimize girmek",
+    "forgot_password": "Paroly ýatdan çykardyňyzmy?",
+    "login_btn_text": "Giriş",
+    "form": {
+      "email": "Email",
+      "password": "Parol"
+    },
+    "flash_messages": {
+      "success": {
+        "welcome": "Hoş geldiňiz {first_name}! 🏢"
+      }
+    }
+  },
+  "forgot_password": {
+    "title": "Paralynyzy ýatdan çykardyňyzmy?",
+    "label": "Paroly täzeden düzmek baglanyşygyny almak üçin e-poçtaňyzy giriziň",
+    "remember_your_password": "Parolyňyz ýadyňyzdamy?",
+    "restore_password_btn_text": "Paroly duzelt",
+    "form": {
+      "email": "Email"
+    }
+  },
+  "restore_password": {
+    "title": "Paroly duzelt",
+    "label": "",
+    "remember_your_password": "Parolyňyz ýadyňyzdamy?",
+    "reset_password_btn_text": "Paroly duzelt",
+    "form": {
+      "password": "Parol",
+      "password_confirmation": "Paroly tassyklaman"
+    }
+  }
+}

@@ -3109,7 +3109,8 @@ ul li {
 	color: #fff;
 }
 .bg-pattern-style {
-    background: url(@/assets/img/website/home_art.jpg) no-repeat;
+    /* background: url(@/assets/img/website/home_art.jpg) no-repeat; */
+	background: url('@/assets/img/abstract_design-1920x1080.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;

@@ -1,21 +1,25 @@
 import useChangeImage from "@/views/pages/useCases/useChangeImage"
 import { onMounted, ref } from "vue"
+import { useI18n } from "vue-i18n"
+import { toast } from "vue3-toastify";
 import { useStore } from "vuex"
 
 export default () => {
   const store = useStore()
   const { imagePreview, uploadImage } = useChangeImage()
+  const { t } = useI18n();
 
   const form = ref(null)
 
   const mapProfile = profile => {
     imagePreview.value = profile?.avatar?.url;
+    profile.avatar = '';
 
     return profile;
   }
 
   const loadProfile = () => {
-    store.dispatch('studentContext/profile/loadProfileAsync').then(response => {
+    store.dispatch('companyContext/profile/loadProfileAsync').then(response => {
       form.value = mapProfile(response.data)
     })
   }
@@ -34,7 +38,10 @@ export default () => {
   }
 
   const update = () => {
-    store.dispatch('studentContext/profile/updateProfileAsync', { data: getData() })
+    store.dispatch('companyContext/profile/updateProfileAsync', { data: getData() })
+      .then(() => {
+        toast.success(t('companyContext.profile.flash_messages.success.profile_was_updated'))
+      })
   }
 
   onMounted(() => {

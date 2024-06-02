@@ -32,35 +32,25 @@
               <i class="fas fa-times"></i>
             </a>
           </div>
-          <ul class="main-nav">
-            <li
-              class="megamenu has-submenu"
-              v-bind:class="{ active: homeMenu }"
-            >
-              <router-link to="/"
-                >Home <i class="fas fa-chevron-down"></i
-              ></router-link>
+
+          <ul class="main-nav" v-if="$store.getters['getIsMode'](['local'])">
+            <li class="megamenu has-submenu" v-bind:class="{ active: homeMenu }">
+              <router-link to="/">Home<i class="fas fa-chevron-down"></i></router-link>
               <ul class="submenu mega-submenu">
                 <li>
                   <div class="megamenu-wrapper">
                     <div class="row">
                       <div class="col-lg-3">
-                        <div
-                          class="single-demo"
-                          v-bind:class="{ active: currentPath == 'index' }"
-                        >
+                        <div class="single-demo" v-bind:class="{ active: currentPath == 'index' }">
                           <div class="demo-img">
-                            <router-link to="/" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-1.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/" class="inner-demo-img">
+                              <img src="@/assets/img/home-1.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/" class="inner-demo-img"
-                              >Home - 1</router-link
-                            >
+                            <router-link to="/" class="inner-demo-img">
+                              Home - 1
+                            </router-link>
                           </div>
                         </div>
                       </div>
@@ -70,17 +60,12 @@
                           v-bind:class="{ active: currentPath == 'index-2' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-2" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-2.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-2" class="inner-demo-img">
+                              <img src="@/assets/img/home-2.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-2" class="inner-demo-img"
-                              >Home - 2</router-link
-                            >
+                            <router-link to="/index-2" class="inner-demo-img">Home - 2</router-link>
                           </div>
                         </div>
                       </div>
@@ -90,57 +75,38 @@
                           v-bind:class="{ active: currentPath == 'index-3' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-3" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-3.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-3" class="inner-demo-img">
+                            <img src="@/assets/img/home-3.jpg" class="img-fluid" alt="img" /></router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-3" class="inner-demo-img"
-                              >Home - 3</router-link
-                            >
+                            <router-link to="/index-3" class="inner-demo-img">Home - 3</router-link>
                           </div>
                         </div>
                       </div>
                       <div class="col-lg-3">
-                        <div
-                          class="single-demo"
-                          v-bind:class="{ active: currentPath == 'index-4' }"
-                        >
+                        <div class="single-demo" v-bind:class="{ active: currentPath == 'index-4' }">
                           <div class="demo-img">
-                            <router-link to="/index-4" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-4.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-4" class="inner-demo-img">
+                              <img src="@/assets/img/home-4.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-4" class="inner-demo-img"
-                              >Home - 4</router-link
-                            >
+                            <router-link to="/index-4" class="inner-demo-img">Home - 4</router-link>
                           </div>
                         </div>
                       </div>
                       <div class="col-lg-3">
-                        <div
+                        <div 
                           class="single-demo"
                           v-bind:class="{ active: currentPath == 'index-5' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-5" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-6.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-5" class="inner-demo-img">
+                              <img src="@/assets/img/home-6.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-5" class="inner-demo-img"
-                              >Home - 5</router-link
-                            >
+                            <router-link to="/index-5" class="inner-demo-img">Home - 5</router-link>
                           </div>
                         </div>
                       </div>
@@ -150,17 +116,12 @@
                           v-bind:class="{ active: currentPath == 'index-6' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-6" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-8.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-6" class="inner-demo-img">
+                              <img src="@/assets/img/home-8.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-6" class="inner-demo-img"
-                              >Home - 6</router-link
-                            >
+                            <router-link to="/index-6" class="inner-demo-img">Home - 6</router-link>
                           </div>
                         </div>
                       </div>
@@ -170,17 +131,12 @@
                           v-bind:class="{ active: currentPath == 'index-7' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-7" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-7.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-7" class="inner-demo-img">
+                              <img src="@/assets/img/home-7.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-7" class="inner-demo-img"
-                              >Home - 7</router-link
-                            >
+                            <router-link to="/index-7" class="inner-demo-img" >Home - 7</router-link>
                           </div>
                         </div>
                       </div>
@@ -190,17 +146,12 @@
                           v-bind:class="{ active: currentPath == 'index-8' }"
                         >
                           <div class="demo-img">
-                            <router-link to="/index-8" class="inner-demo-img"
-                              ><img
-                                src="@/assets/img/home-5.jpg"
-                                class="img-fluid"
-                                alt="img"
-                            /></router-link>
+                            <router-link to="/index-8" class="inner-demo-img">
+                              <img src="@/assets/img/home-5.jpg" class="img-fluid" alt="img" />
+                            </router-link>
                           </div>
                           <div class="demo-info">
-                            <router-link to="/index-8" class="inner-demo-img"
-                              >Home - 8</router-link
-                            >
+                            <router-link to="/index-8" class="inner-demo-img">Home - 8</router-link>
                           </div>
                         </div>
                       </div>
