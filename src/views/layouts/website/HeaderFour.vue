@@ -69,7 +69,7 @@
             <template v-if="! $store.getters['auth/getWhoIsAuthenticated'](['student', 'company'])">
               <li class="nav-item">
                 <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
-                  Company login
+                  Company
                   <!-- <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/> -->
                   <i class="fas fa-building ms-2"></i>
                 </router-link>
@@ -77,7 +77,7 @@
 
               <li class="nav-item">
                 <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
-                  Cabinet
+                  Student
                   <i class="fas fa-graduation-cap ms-2"></i>
                 </router-link>
               </li>
