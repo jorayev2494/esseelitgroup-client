@@ -3,6 +3,7 @@ import { computed, ref } from "vue"
 export function usePaginator() {
   const page = ref(1);
   const perPage = ref(10);
+  const nextPage = ref(null);
   const lastPage = ref(1);
   const to = ref(0);
   const total = ref(0);
@@ -14,16 +15,17 @@ export function usePaginator() {
   })
 
   const setMetaData = data => {
-    const { current_page, last_page, per_page, to: dTo, total: dTotal } = data;
+    const { current_page, next_page, last_page, per_page, to: dTo, total: dTotal } = data;
   
     page.value = current_page;
     perPage.value = per_page;
+    nextPage.value = next_page;
     lastPage.value = last_page;
     to.value = dTo;
     total.value = dTotal;
   }
 
-  const isLastPage = computed(() => lastPage.value === page.value)
+  const isLastPage = computed(() => nextPage.value === null)
   const isNotLastPage = computed(() => lastPage.value !== page.value)
 
   const serverPaginate = data => {
@@ -38,6 +40,7 @@ export function usePaginator() {
   return {
     page,
     perPage,
+    nextPage,
     lastPage,
     to,
     total,

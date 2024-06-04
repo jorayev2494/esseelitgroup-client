@@ -37,7 +37,7 @@
                   <button
                     type="submit"
                     class="btn btn-rounded btn-primary col-md-12 mt-4"
-                    :disabled="isLastPage"
+                    :disabled="paginator.isLastPage.value"
                     @click="loadMore"
                   >
                     {{ $t('system.load_more') }}

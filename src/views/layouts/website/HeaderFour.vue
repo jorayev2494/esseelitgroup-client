@@ -16,7 +16,9 @@
               <img src="@/assets/img/website/logo.png" class="img-fluid" alt="Logo" />
             </router-link>
           </div>
+
           <div class="main-menu-wrapper">
+
             <div class="menu-header">
               <router-link to="/" class="menu-logo">
                 <img src="@/assets/img/website/logo.png" class="img-fluid" alt="Logo" />
@@ -50,6 +52,51 @@
                 <router-link :to="$tMakeRoute({ name: 'document-lists' })">
                   {{ $t('navigation.lists') }}
                 </router-link>
+              </li>
+
+              <!-- <li class="has-submenu">
+                <a href="#" class="">
+                  Blog
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                  <li class="">
+                    <a href="/blog/blog-list" class="">
+                      Blog List
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/blog/blog-grid" class="">
+                      Blog Grid
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/mentor/blog-details" class="">
+                      Blog Details
+                    </a>
+                  </li>
+                </ul>
+              </li> -->
+
+              <li class="has-submenu" v-bind:class="{ active: blogMenu }">
+                <a href="">Blog bb <i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li v-bind:class="{ active: currentPath == 'blog-list' }">
+                    <router-link to="/blog/blog-list">Blog List</router-link>
+                  </li>
+                  <li v-bind:class="{ active: currentPath == 'blog-grid' }">
+                    <router-link to="/blog/blog-grid">Blog Grid</router-link>
+                  </li>
+                  <li
+                    v-bind:class="{
+                      active: currentPath == 'mentor-blog-details',
+                    }"
+                  >
+                    <router-link to="/mentor/blog-details"
+                      >Blog Details</router-link
+                    >
+                  </li>
+                </ul>
               </li>
 
               <!-- <li>
