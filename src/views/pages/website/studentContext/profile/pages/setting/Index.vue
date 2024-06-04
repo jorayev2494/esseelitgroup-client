@@ -320,6 +320,30 @@
                         </div>
                       </div> -->
 
+                      <div class="form-group row">
+                        <label class="col-lg-3 col-form-label">{{ $t('companyContext.student.form.communication_language') }}</label>
+                        <div class="col-lg-9">
+                          <VueMultiselect
+                            v-model="form.communication_language"
+                            :options="languages"
+
+                            track-by="uuid"
+                            label="value"
+                            :placeholder="$t('companyContext.student.form.communication_language')"
+
+                            @select="item => form.communication_language_uuid = item.uuid"
+                            @remove="item => form.communication_language_uuid = null"
+                          >
+                          </VueMultiselect>
+                          <!-- :select-group-label="$t('student.form.faculties_and_departments_select.select_group_label')"
+                          :deselect-group-label="$t('student.form.faculties_and_departments_select.deselect_group_label')"
+                          
+                          :select-label="$t('student.form.faculties_and_departments_select.select_label')"
+                          :deselect-label="$t('student.form.faculties_and_departments_select.deselect_label')"
+                          :selected-label="$t('student.form.faculties_and_departments_select.selected')" -->
+                        </div>
+                      </div>
+
                       <div class="text-right">
                         <button type="submit" class="btn btn-primary">{{ $t('system.save_changes') }}</button>
                       </div>
@@ -377,6 +401,9 @@
 
     highSchoolCountryPreview,
     highSchoolCountries,
+
+    languagePreview,
+    languages,
 
     countries,
     additionalDocuments,
