@@ -2,7 +2,7 @@ import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
 import { onMounted, reactive, ref } from "vue"
 import { useRoute, useRouter } from "vue-router";
 import { useStore } from "vuex"
-import { useNationality, useCountryOfResidence, useHighSchoolCountry } from '../../useCases/usePartials'
+import { useNationality, useCountryOfResidence, useHighSchoolCountry, useLanguage } from '../../useCases/usePartials'
 import useGender from "@/views/pages/useCases/useGender";
 import useMaritalStatus from "@/views/pages/useCases/useMaritalStatus";
 import useChangeImage from "@/views/pages/useCases/useChangeImage";
@@ -27,6 +27,7 @@ export default () => {
   const { highSchoolCountryPreview, highSchoolCountries, loadHighSchoolCountries } = useHighSchoolCountry();
   const { genderPreview, genders, findGender } = useGender();
   const { maritalStatusPreview, maritalStatuses, findMaritalStatus } = useMaritalStatus();
+  const { languagePreview, languages, loadLanguages } = useLanguage();
 
   const { dateFromTimestamp, formatDate } = useDate();
 
@@ -104,6 +105,7 @@ export default () => {
     loadNationalities();
     loadCountryOfResidences();
     loadHighSchoolCountries();
+    loadLanguages();
   })
 
   return {
@@ -125,6 +127,9 @@ export default () => {
 
     highSchoolCountryPreview,
     highSchoolCountries,
+
+    languagePreview,
+    languages,
 
     additionalDocuments,
 

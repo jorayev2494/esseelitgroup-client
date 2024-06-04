@@ -104,10 +104,10 @@
 
       <template #location="data">
         <span>
-          <span class="me-1">
+          <span class="me-1" v-if="data.value.university?.city">
             {{ data.value.university.city.value }},
           </span>
-          <span>
+          <span v-if="data.value.university?.country">
             <i :class="`fi fi-${data.value.university.country.iso}`" width="300"></i>
             {{ data.value.university.country.value }}
           </span>

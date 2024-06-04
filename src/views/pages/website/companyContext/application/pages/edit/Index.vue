@@ -158,13 +158,13 @@
   </div>
 
   <div class="col-xl-4">
-    <!-- <Inputs v-if="form?.status" :form="form.status" :inputs="statusInputs" :values="form.status.translations" :block-title="'application.form.status_note'" /> -->
+    <Inputs v-if="form?.status" :form="form.status" :inputs="statusInputs" :values="form.status.translations" :block-title="'application.form.status_note'" />
   </div>
 </template>
 
 <script setup>
   import VueMultiselect from 'vue-multiselect'
-  // import Inputs from '../../../../../components/InputCard/Index.vue'
+  import Inputs from '../../../../../components/InputCard/Index.vue'
   import useIndex from './useIndex';
 
   const {
