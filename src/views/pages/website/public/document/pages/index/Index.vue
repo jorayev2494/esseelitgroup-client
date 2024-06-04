@@ -7,11 +7,8 @@
         <div class="section-header section-head-left aos" data-aos="fade-up">
           <div class="section-head-five">
             <!-- <h4><span></span>Join With Us</h4> -->
-            <h2>Join Our Courses & Get More Benefits</h2>
-            <p>
-              Do you want to move on next step? Choose your most popular leaning
-              mentors, it will help you to achieve your professional goals.
-            </p>
+            <h2>{{ $t('document.rating.title') }}</h2>
+            <p>{{ $t('document.rating.text') }}</p>
           </div>
         </div>
         <div class="new-course-five">

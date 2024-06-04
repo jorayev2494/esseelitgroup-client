@@ -2,7 +2,8 @@
   <div class="row">
     <Announcement />
   </div>
-  <div class="row">
+
+  <!-- <div class="row">
     <div class="col-md-12 col-lg-4 dash-board-list blue">
       <div class="dash-widget">
         <div class="circle-bar">
@@ -44,7 +45,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="row">
     <div class="col-md-12">

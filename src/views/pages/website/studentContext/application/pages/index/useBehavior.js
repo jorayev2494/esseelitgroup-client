@@ -4,11 +4,13 @@ import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"
 import { getStatusStyle } from "../../useCases/usePartials";
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
 
 export default () => {
   const store = useStore();
   const paginator = usePaginator();
   const { t, d } = useI18n();
+  const { defaultImage } = useUrlPattern();
 
   const loading = ref(true);
   const items = ref([]);
@@ -29,6 +31,12 @@ export default () => {
   }
 
   const applicationMapper = application => {
+    if (application.student.avatar?.url === undefined) {
+      application.student.avatar = {
+        url: defaultImage('avatar'),
+      };
+    }
+
     application.created_at = d(new Date(application.created_at * 1000), 'short');
 
     return application;

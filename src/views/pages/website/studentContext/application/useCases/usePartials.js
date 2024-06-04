@@ -68,7 +68,7 @@ export const useLanguage = () => {
 
   const loadLanguages = (params= {}) => {
     languages.value = []
-    store.dispatch('studentContext/language/loadLanguageListAsync', { params }).then(response => {
+    store.dispatch('language/loadLanguageListAsync', { params }).then(response => {
       languages.value = response.data;
     })
   }

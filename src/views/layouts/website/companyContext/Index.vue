@@ -3,7 +3,7 @@
     <Header />
     <Breadcrumb></Breadcrumb>
     <!-- Page Content -->
-    <div class="content">
+    <div class="content pb-5">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-4 col-lg-3 col-xl-2 theiaStickySidebar">
