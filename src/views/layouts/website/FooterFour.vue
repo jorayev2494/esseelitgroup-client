@@ -16,17 +16,9 @@
 
               <div class="footer-three-contact">
                 <ul>
-                  <li>
-                    <i class="fa fa-map-pin"></i>
-                    121 King St, Melbourne den 3000, Australia
-                  </li>
-                  <li>
-                    <i class="fa fa-phone"></i>
-                    +1 55265 164561
-                  </li>
-                  <li>
-                    <i class="fa fa-envelope"></i>
-                    mentoring@example.com
+                  <li v-for="(item, idx) of contactItems" :key="idx">
+                    <i :class="item.icon"></i>
+                    {{ item.value }}
                   </li>
                 </ul>
 
@@ -70,21 +62,31 @@
           <div class="col-lg-2 col-md-6">
             <!-- Footer Widget -->
             <div class="footer-widget footer-menu">
-              <h2 class="footer-title">Community</h2>
+              <h2 class="footer-title">{{ $t('pages.index.footer.pages.title') }}</h2>
                <ul>
-                <li>
-                  <router-link to="/mentee/mentor-search">Learners</router-link>
-                </li>
-                <li><router-link to="/pages/login">Partners</router-link></li>
-                <li>
-                  <router-link to="/pages/register">Developers</router-link>
-                </li>
-                <li><router-link to="/booking">Free Courses</router-link></li>
-                <li><router-link to="/mentee/index">Affilates</router-link></li>
-                <li><router-link to="/mentee/index">Blogs</router-link></li>
-                <li>
-                  <router-link to="/mentee/index">Become a Mentee</router-link>
-                </li>
+                  <li class="megamenu" v-bind:class="{ active: aboutUsMenu }">
+                    <router-link :to="$tMakeRoute({ name: 'about-us' })">
+                      {{ $t('navigation.about_us') }}
+                    </router-link>
+                  </li>
+
+                  <li v-bind:class="{ active: universitiesMenu }">
+                    <router-link :to="$tMakeRoute({ name: 'universities' })">
+                      {{ $t('navigation.universities') }}
+                    </router-link>
+                  </li>
+
+                  <li v-bind:class="{ active: departmentsMenu }">
+                    <router-link :to="$tMakeRoute({ name: 'department-names' })">
+                      {{ $t('navigation.departments') }}
+                    </router-link>
+                  </li>
+
+                  <li v-bind:class="{ active: listsMenu }">
+                    <router-link :to="$tMakeRoute({ name: 'document-lists' })">
+                      {{ $t('navigation.lists') }}
+                    </router-link>
+                  </li>
               </ul>
             </div>
             <!-- /Footer Widget -->
@@ -169,6 +171,21 @@
 
   const currentYear = new Date().getFullYear();
 
+  const contactItems = [
+    {
+      icon: 'fa fa-map-pin',
+      value: '121 King St, Melbourne den 3000, Australia',
+    },
+    {
+      icon: 'fa fa-phone',
+      value: '+1 55265 164561',
+    },
+    {
+      icon: 'fa fa-envelope',
+      value: 'mentoring@example.com',
+    },
+  ];
+
   const socials = [
     {
       icon: 'fab fa-facebook-f',
@@ -184,6 +201,10 @@
     // },
     {
       icon: 'fab fa-instagram',
+      link: '#',
+    },
+    {
+      icon: 'fab fa-tiktok',
       link: '#',
     },
     // {

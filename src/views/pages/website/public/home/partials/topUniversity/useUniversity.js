@@ -6,6 +6,7 @@ export default function useUniversity() {
 
   const store = useStore();
   const { imageFromStorage } = useUrlPattern();
+  const limit = 6;
 
   const universities = ref([]);
 
@@ -19,13 +20,13 @@ export default function useUniversity() {
   const loadUniversities = () => {
     store.dispatch('university/loadUniversityListAsync', {
       params: {
+        limit, 
         filters: {
           // company_uuid: '885a3665-0684-43e5-be1c-677da726bbf6',
         }
       },
     })
       .then(response => {
-        console.log('adawdwadawd: ', universities.value);
         universities.value = response.data.map(universityMapper);
       })
       .catch(error => {

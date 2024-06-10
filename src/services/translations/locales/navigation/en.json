@@ -9,5 +9,10 @@
     "about_us": "About Us",
     "lists": "Lists",
     "universities": "Universities",
-    "departments": "Departments"
+    "departments": "Departments",
+    "buttons": {
+        "go_to_panel": "Go to panel",
+        "company": "Company",
+        "student": "Student"
+    }
 }

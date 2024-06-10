@@ -1,14 +1,14 @@
 <template>
-  <div class="card p-2">
+  <div class="card shadow-sm p-2">
     <div class="row">
 
       <div class="col-md-10 col-lg-10 col-xl-10">
-        <input class="form-control" type="search" v-model="form.search" :placeholder="$t('search.search_placeholder')" aria-label="Search">
+        <input class="form-control" type="search" v-model="form.search" @ :placeholder="$t(placeholder)" @keyup.enter="searchHandler" aria-label="Search">
       </div>
 
       <div class="col-md-2 col-2">
         <button type="submit" class="btn btn-block btn-outline-primary" @click="searchHandler">
-          Search
+          {{ $t('search.search_btn') }}
         </button>
       </div>
 
@@ -26,7 +26,11 @@
     form: {
       type: Object,
       required: true,
-    }
+    },
+    placeholder: {
+      type: String,
+      default: 'search.search_placeholder',
+    },
   });
 
   const emits = defineEmits(['search'])

@@ -20,16 +20,32 @@
           >
             <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid } })">
               <div class="sub-categories bg-design d-flex align-items-center justify-content-center pb-4 pt-2">
-                <div class="sub-categories-group">
-                  <div class="categories-img">
-                    <img :src="logo" :alt="logo" width="240" />
+
+                <!-- <div> -->
+
+                  <div class="sub-categories-group">
+                    <div class="categories-img">
+                      <img :src="logo" :alt="logo" width="210" height="auto" />
+                    </div>
+
+                    <!-- <div class="align-bottom" style="vertical-align: bottom; display: table-cell;">
+                      <div class="categories-text text-center">
+                        <h4>{{ name }}</h4>
+                        <p class="course-count">{{ label }}</p>
+                      </div>
+                    </div> -->
+
+                    <div class="align-bottom row">
+                      <div class="categories-text text-center">
+                        <h4>{{ name }}</h4>
+                        <p class="course-count">{{ label }}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="categories-text text-center">
-                    <h4>{{ name }}</h4>
-                    <!-- <p class="course-count">Over 200+ Courses</p> -->
-                    <p class="course-count">{{ label }}</p>
-                  </div>
-                </div>
+
+
+                <!-- </div> -->
+                
               </div>
             </router-link>
           </div>
@@ -51,3 +67,25 @@
 
   const { universities } = useUniversity();
 </script>
+
+<style scoped>
+  /* .sub-categories-group {
+    text-align: center;
+    height: 200px;
+  } */
+
+  .block {
+    height: 100%;
+    border: 1px dashed red;
+  }
+
+  .block-img {
+    height: 100%;
+    margin: 0 auto;
+    border: 1px dashed orange;
+  }
+
+  .block-text {
+    height: 20%;
+  }
+</style>

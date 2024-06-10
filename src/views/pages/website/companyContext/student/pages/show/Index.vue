@@ -377,7 +377,7 @@
 </template>
 
 <script setup>
-  import Applications from '../../../application/clientApplications/Index.vue'
+  import Applications from '../../../application/components/clientApplications/Index.vue'
   import DocumentsPreview from '../partials/documents/preview/Index.vue'
   import VueMultiselect from 'vue-multiselect'
   import useIndex from './useIndex';

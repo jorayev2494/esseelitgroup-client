@@ -18,6 +18,10 @@
             "documents": {
                 "title": "Required Documents",
                 "text": "Visa Application, University Application, Student Residence Permit, Equivalency Certificate"
+            },
+            "pages": {
+                "title": "Pages",
+                "text": ""
             }
         }
     }

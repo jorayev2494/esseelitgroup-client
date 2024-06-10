@@ -2,7 +2,7 @@ import { useUrlPattern } from '@/views/pages/utils/UrlPattern';
 import { onMounted, ref, toRefs } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useStore } from 'vuex';
-import { getStatusStyle } from "../useCases/usePartials";
+import { getStatusStyle } from "../../useCases/usePartials";
 import { usePaginator } from '@/views/pages/useCases/paginator';
 
 export default function useIndex({ props }) {

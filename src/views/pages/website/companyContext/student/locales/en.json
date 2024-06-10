@@ -59,5 +59,16 @@
         "school_attestat_translation": "School attestat translation",
         "biometric_photo": "Biometric photo"
     }
+  },
+  "application": {
+    "language": "Language",
+    "degree": "Degree",
+    "country": "Country",
+    "university": "University",
+    "faculty": "Faculty",
+    "department": "Department",
+    "departments": "Departments",
+    "faculties_and_departments": "Faculties & Departments",
+    "status": "Status"
   }
 }

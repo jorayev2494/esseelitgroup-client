@@ -1,5 +1,4 @@
 import { usePaginator } from "@/views/pages/useCases/paginator"
-import { useLoader } from "@/views/pages/useCases/useLoader"
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"

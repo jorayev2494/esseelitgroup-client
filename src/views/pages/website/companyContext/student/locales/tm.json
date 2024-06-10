@@ -59,5 +59,16 @@
         "school_attestat_translation": "Mekdep attestatyn terjimesi",
         "biometric_photo": "Biometrik surat"
     }
+  },
+  "application": {
+    "language": "Dil",
+    "degree": "Dereje",
+    "country": "Yurt",
+    "university": "Uniwersitet",
+    "faculty": "Fakultet",
+    "department": "Bölüm",
+    "departments": "Иölümler",
+    "faculties_and_departments": "Fakultetler we bölümler",
+    "status": "Status"
   }
 }

@@ -38,7 +38,7 @@ export default function useIndex() {
       announcement.content = announcement.content.slice(0, length).trim() + '...'
     }
 
-    // announcement.created_at = d(dateFromTimestamp(announcement.created_at), 'short')
+    announcement.created_at = d(dateFromTimestamp(announcement.created_at), 'short')
 
     return announcement;
   }

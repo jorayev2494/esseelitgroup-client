@@ -30,12 +30,6 @@
 
             <ul class="main-nav">
 
-              <li class="megamenu" v-bind:class="{ active: aboutUsMenu }">
-                <router-link :to="$tMakeRoute({ name: 'about-us' })">
-                  {{ $t('navigation.about_us') }}
-                </router-link>
-              </li>
-
               <li v-bind:class="{ active: universitiesMenu }">
                 <router-link :to="$tMakeRoute({ name: 'universities' })">
                   {{ $t('navigation.universities') }}
@@ -51,6 +45,12 @@
               <li v-bind:class="{ active: listsMenu }">
                 <router-link :to="$tMakeRoute({ name: 'document-lists' })">
                   {{ $t('navigation.lists') }}
+                </router-link>
+              </li>
+
+              <li class="megamenu" v-bind:class="{ active: aboutUsMenu }">
+                <router-link :to="$tMakeRoute({ name: 'about-us' })">
+                  {{ $t('navigation.about_us') }}
                 </router-link>
               </li>
 
@@ -78,7 +78,7 @@
                 </ul>
               </li> -->
 
-              <li class="has-submenu" v-bind:class="{ active: blogMenu }">
+              <!-- <li class="has-submenu" v-bind:class="{ active: blogMenu }">
                 <a href="">Blog bb <i class="fas fa-chevron-down"></i></a>
                 <ul class="submenu">
                   <li v-bind:class="{ active: currentPath == 'blog-list' }">
@@ -97,7 +97,7 @@
                     >
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <!-- <li>
                 <router-link to="/admin/index" target="_blank">Admin</router-link>
@@ -116,7 +116,7 @@
             <template v-if="! $store.getters['auth/getWhoIsAuthenticated'](['student', 'company'])">
               <li class="nav-item">
                 <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
-                  Company
+                  {{ $t('navigation.buttons.company') }}
                   <!-- <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/> -->
                   <i class="fas fa-building ms-2"></i>
                 </router-link>
@@ -124,7 +124,7 @@
 
               <li class="nav-item">
                 <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
-                  Student
+                  {{ $t('navigation.buttons.student') }}
                   <i class="fas fa-graduation-cap ms-2"></i>
                 </router-link>
               </li>
@@ -133,7 +133,7 @@
             <template v-else>
               <li class="nav-item">
                 <router-link class="nav-link header-login" :to="$tMakeRoute({ name: `${$store.getters['auth/getWhoAuthenticated']}-dashboard` })">
-                  Go to panel
+                  {{ $t('navigation.buttons.go_to_panel') }}
                   <i class="fas fa-user ms-2"></i>
                 </router-link>
               </li>

@@ -5,13 +5,13 @@
     <TopUniversity />
     <!-- <PopularCourseFour /> -->
     <!-- <KnowledgeFour />4 -->
-    <TrendingCourseFour />
-    <TestimonialFour />
+    <!-- <TrendingCourseFour /> -->
+    <!-- <TestimonialFour /> -->
     <!-- <FeaturedInstructorFour /> -->
-    <ManagerCarousel />
-    <FaqFour />
-    <BlogFour />
-    <NewCourseFour />
+    <!-- <ManagerCarousel /> -->
+    <!-- <FaqFour /> -->
+    <!-- <BlogFour /> -->
+    <!-- <NewCourseFour /> -->
     <layout-footer-four />
   </div>
 </template>
@@ -21,11 +21,11 @@
   import HomeBannerFour from "../HomeBanner";
   // import CategoriesFour from "../Categories";
   import TopUniversity from "./partials/topUniversity/Index.vue";
-  import PopularCourseFour from "../PopularCourse";
-  import KnowledgeFour from "../Knowledge";
+  // import PopularCourseFour from "../PopularCourse";
+  // import KnowledgeFour from "../Knowledge";
   import TrendingCourseFour from "../TrendingCourse";
   import TestimonialFour from "../Testimonial";
-  import FeaturedInstructorFour from "../FeaturedInstructor";
+  // import FeaturedInstructorFour from "../FeaturedInstructor";
   import FaqFour from "../Faq";
   import BlogFour from "../Blog";
   import LayoutFooterFour from "../../../../layouts/website/FooterFour.vue";

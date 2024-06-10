@@ -9,5 +9,10 @@
     "about_us": "Hakkımızda",
     "lists": "Listeler",
     "universities": "Üniversiteler",
-    "departments": "Bölümler"
+    "departments": "Bölümler",
+    "buttons": {
+        "go_to_panel": "Panele git",
+        "company": "Şirket",
+        "student": "Öğrenci"
+    }
 }

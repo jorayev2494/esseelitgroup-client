@@ -74,6 +74,14 @@ const actions = {
         .catch(error => reject(error));
     })
   },
+
+  async loadApplicationStatusWidgetListAsync(_, payload) {
+    return await new Promise((resolve, reject) => {
+      return httpClient.get('/company/applications/statuses/widget-list')
+        .then(response => resolve(response))
+        .catch(error => reject(error));
+    })
+  },
 }
 
 export default {

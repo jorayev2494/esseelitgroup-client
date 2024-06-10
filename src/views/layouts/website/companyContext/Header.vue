@@ -32,7 +32,7 @@
               <i class="fas fa-times"></i>
             </a>
           </div>
-          <ul class="main-nav">
+          <ul class="main-nav" v-if="$app.isNodeEnv('local')">
             <li
               class="megamenu has-submenu"
               v-bind:class="{ active: homeMenu }"

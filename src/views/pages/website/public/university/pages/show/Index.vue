@@ -11,14 +11,14 @@
     </div> -->
     <Faculty :university="university" />
     <!-- <MentorThree /> -->
-    <RatingThree />
-    <PopularCourseThree />
-    <TestimonialThree />
-    <JobLocationThree />
-    <NewCourseThree />
-    <FaqThree />
-    <BlogThree />
-    <layout-footer-three />
+    <!-- <RatingThree /> -->
+    <!-- <PopularCourseThree /> -->
+    <!-- <TestimonialThree /> -->
+    <!-- <JobLocationThree /> -->
+    <!-- <NewCourseThree /> -->
+    <!-- <FaqThree /> -->
+    <!-- <BlogThree /> -->
+    <layout-footer-four />
   </div>
 </template>
 
@@ -29,6 +29,7 @@
   import Form from '../../Form/Index.vue';
   import Info from '../../Info/Index.vue';
   import Faculty from '../../Faculty/Index.vue'
+  import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
 
   const { university } = useUniversityForm();
 </script>

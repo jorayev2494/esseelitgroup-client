@@ -12,12 +12,23 @@ export default () => {
     loadItems()
   }
 
+  const itemMapper = item => {
+    const valueLength = 75;
+
+    if (item.value?.length > valueLength) {
+      item.value = item.value.substring(0, valueLength);
+      item.value += '...';
+    }
+
+    return item;
+  }
+
   const loadItems = (params = {}) => {
     store.dispatch('departmentName/loadDepartmentNameListAsync', { params: { ...params } })
       .then(response => {
         const { data } = response;
 
-        data.forEach(item => items.value.push(item));
+        data.map(itemMapper).forEach(item => items.value.push(item));
       })
   }
 
