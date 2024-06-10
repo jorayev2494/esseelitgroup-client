@@ -33,7 +33,7 @@
             </a>
           </div>
 
-          <ul class="main-nav" v-if="$store.getters['getIsMode'](['local'])">
+          <ul class="main-nav" v-if="$app.isNodeEnv('local')">
             <li class="megamenu has-submenu" v-bind:class="{ active: homeMenu }">
               <router-link to="/">Home<i class="fas fa-chevron-down"></i></router-link>
               <ul class="submenu mega-submenu">

@@ -1,14 +1,18 @@
 import { usePaginator } from "@/views/pages/useCases/paginator"
 import { useLoader } from "@/views/pages/useCases/useLoader"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
+import { useDate } from "@/views/pages/utils/helpers"
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"
 
 export default () => {
   const store = useStore()
-  const { t } = useI18n()
+  const { t, d } = useI18n()
+  const { dateFromTimestamp } = useDate()
   const paginator = usePaginator()
   const loader = useLoader()
+  const { defaultImage } = useUrlPattern()
 
   const items = ref([])
   const columns = [
@@ -24,10 +28,22 @@ export default () => {
     loadItems();
   }
 
+  const itemMapper = item => {
+    if (item.avatar?.url === undefined) {
+      item.avatar = {
+        url: defaultImage('avatar'),
+      };
+    }
+
+    item.created_at = d(dateFromTimestamp(item.created_at), 'short')
+
+    return item;
+  }
+
   const loadItems = () => {
     loader.start()
     store.dispatch('companyContext/employee/loadEmployeesAsync', { params: { ...paginator.toQueryParams(), } }).then(response => {
-      items.value = response.data.data
+      items.value = response.data.data.map(itemMapper)
     }).catch(() => {
       
     }).finally(() => {

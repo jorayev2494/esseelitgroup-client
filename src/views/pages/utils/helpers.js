@@ -2,7 +2,7 @@ export function useDate() {
   const separator = (value, to, from = '/') => value.replaceAll(from, to)
 
   const formatDate = (date = new Date()) => {
-    const year = date.toLocaleString('default', {year: 'numeric'});
+    const year = date.toLocaleString('default', { year: 'numeric' });
     const month = date.toLocaleString('default', {
       month: '2-digit',
     });

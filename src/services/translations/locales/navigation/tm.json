@@ -9,5 +9,10 @@
     "about_us": "Biz hakynda",
     "lists": "Sanawlar",
     "universities": "Uniwersitetler",
-    "departments": "Bölümler"
+    "departments": "Bölümler",
+    "buttons": {
+        "go_to_panel": "Panele geçiň",
+        "company": "Kompaniýa",
+        "student": "Talyp"
+    }
 }

@@ -1,10 +1,6 @@
 <template>
-  <div class="row">
-    <Announcement />
-  </div>
-
   <!-- <div class="row">
-    <div class="col-md-12 col-lg-4 dash-board-list blue">
+    <div class="col-md-12 col-lg-2 dash-board-list blue">
       <div class="dash-widget">
         <div class="circle-bar">
           <div class="icon-col">
@@ -18,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-md-12 col-lg-4 dash-board-list yellow">
+    <div class="col-md-12 col-lg-2 dash-board-list yellow">
       <div class="dash-widget">
         <div class="circle-bar">
           <div class="icon-col">
@@ -32,7 +28,7 @@
       </div>
     </div>
 
-    <div class="col-md-12 col-lg-4 dash-board-list pink">
+    <div class="col-md-12 col-lg-2 dash-board-list pink">
       <div class="dash-widget">
         <div class="circle-bar">
           <div class="icon-col">
@@ -46,6 +42,10 @@
       </div>
     </div>
   </div> -->
+
+  <div class="row">
+    <Announcement />
+  </div>
 
   <div class="row">
     <div class="col-md-12">

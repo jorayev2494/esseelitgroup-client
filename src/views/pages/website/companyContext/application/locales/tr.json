@@ -1,6 +1,7 @@
 {
   "context_title": "Başvurular",
   "application_form": "Başvuru Formu",
+  "search_placeholder_full_name": "Öğrencinin tam adı",
   "form": {
     "student": "Öğrenci",
     "alias": "Alias",

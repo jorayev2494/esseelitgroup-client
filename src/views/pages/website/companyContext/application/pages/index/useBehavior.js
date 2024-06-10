@@ -2,14 +2,18 @@ import { usePaginator } from "@/views/pages/useCases/paginator"
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"
-import { getStatusStyle } from "../../useCases/usePartials";
+import { useApplicationStatusStyle } from "../../../../../useCases/useApplicationStatusStyle";
 import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
+import useFilters from "../../useCases/useFilters";
+import useSearch from "@/views/pages/utils/useSearch";
 
 export default () => {
   const store = useStore();
   const paginator = usePaginator();
   const { t, d } = useI18n();
+  const { filters } = useFilters();
   const { defaultImage } = useUrlPattern();
+  const { form: searchForm, toQueryParams } = useSearch('full_name');
 
   const loading = ref(true);
   const items = ref([]);
@@ -24,10 +28,27 @@ export default () => {
     { field: 'actions', title: t('system.actions'), sort: false, headerClass: 'float-end', cellClass: 'float-end' },
   ];
 
-  const reloadData = () => {
+  const reloadData = (params = {}) => {
     items.value = [];
-    loadApplications();
+    loadApplications(params);
   }
+
+  const loadFilters = filters => {
+    reloadData({ filters })
+  }
+
+  const statusSelected = ({ uuid, application_count }) => {
+
+    if (application_count <= 0) {
+      return
+    }
+
+    loadFilters({
+      status_value_uuids: [uuid],
+    })
+  }
+
+  const clearSelected = () => reloadData()
 
   const applicationMapper = application => {
     if (application.student.avatar?.url === undefined) {
@@ -41,10 +62,10 @@ export default () => {
     return application;
   }
 
-  const loadApplications = () => {
+  const loadApplications = (params = {}) => {
     loading.value = true;
 
-    store.dispatch('companyContext/application/loadApplicationsAsync', { params: { ...paginator.toQueryParams(), } })
+    store.dispatch('companyContext/application/loadApplicationsAsync', { params: { ...paginator.toQueryParams(), ...toQueryParams(), ...params } })
       .then(response => {
         const { data } = response;
         console.log('Data: ', data, 'response: ', response)
@@ -76,14 +97,19 @@ export default () => {
   });
 
   return {
+    searchForm,
     items,
     columns,
     loading,
+    filters,
     remove,
 
     paginator,
 
     changeServer,
-    getStatusStyle,
+    useApplicationStatusStyle,
+    statusSelected,
+    clearSelected,
+    loadFilters,
   }
 }

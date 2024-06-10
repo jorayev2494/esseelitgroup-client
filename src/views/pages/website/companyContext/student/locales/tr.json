@@ -59,5 +59,16 @@
         "school_attestat_translation": "Okul tasdiki tercümesi",
         "biometric_photo": "Biyometrik fotoğraf"
     }
+  },
+  "application": {
+    "language": "Dil",
+    "degree": "Derece",
+    "country": "Ülke",
+    "university": "Üniversite",
+    "faculty": "Fakülte",
+    "department": "Bölümler",
+    "departments": "Bölümler",
+    "faculties_and_departments": "Fakülteler ve Bölümler",
+    "status": "Durum"
   }
 }

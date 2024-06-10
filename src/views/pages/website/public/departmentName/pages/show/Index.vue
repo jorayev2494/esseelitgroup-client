@@ -92,7 +92,7 @@
       </div>
     </section>
 
-    <layout-footer></layout-footer>
+    <layout-footer-four></layout-footer-four>
   </div>
 </template>
 
@@ -100,6 +100,7 @@
   import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
   import Department from './components/departmentPaginate/Index.vue'
   import useBehavior from './useBehavior';
+  import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
 
   const {
     item,

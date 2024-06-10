@@ -1,6 +1,7 @@
 {
   "context_title": "Goýmalar",
   "application_form": "Anketa",
+  "search_placeholder_full_name": "Talybyň doly ady",
   "form": {
     "student": "Student",
     "alias": "Alias",

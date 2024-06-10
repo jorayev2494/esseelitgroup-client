@@ -9,5 +9,10 @@
     "about_us": "O нас",
     "lists": "Списки",
     "universities": "Университеты",
-    "departments": "Департаменты"
+    "departments": "Департаменты",
+    "buttons": {
+        "go_to_panel": "Перейти на панель",
+        "company": "Компания",
+        "student": "Студент"
+    }
 }
