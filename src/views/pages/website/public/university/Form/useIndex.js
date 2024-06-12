@@ -79,7 +79,7 @@ export default function useIndex({ props }) {
     {
       name: 'passport_number',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
@@ -126,7 +126,7 @@ export default function useIndex({ props }) {
     {
       name: 'father_name',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
@@ -152,7 +152,7 @@ export default function useIndex({ props }) {
     {
       name: 'mother_name',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
@@ -497,9 +497,6 @@ export default function useIndex({ props }) {
   const getApplicationData = () => {
     const formData = new FormData();
 
-    // formApplication.student_uuid = uuid;
-    // formData.append('student_uuid', uuid);
-
     for (const key in formApplication) {
       if (Object.hasOwnProperty.call(formApplication, key)) {
         const value = formApplication[key];
@@ -565,7 +562,7 @@ export default function useIndex({ props }) {
       clearAdditionalDocuments();
       applicationFormClear();
       
-      toast.success(t('system.form_success_sent_message'), { position: "top-center" });
+      toast.success(t('application_form.form_success_sent_message'), { position: "top-center" });
       setTimeout(() => {
         submitBtn.value.click();
       }, 100)

@@ -72,11 +72,11 @@ export default {
         label: 'student',
         route: 'company-students',
       },
-      {
-        icon: 'fa-inbox',
-        label: 'application',
-        route: 'company-applications',
-      },
+      // {
+      //   icon: 'fa-inbox',
+      //   label: 'application',
+      //   route: 'company-applications',
+      // },
       {
         icon: 'fa-user',
         label: 'employee',

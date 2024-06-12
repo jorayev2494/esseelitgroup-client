@@ -2,7 +2,7 @@
   <div class="row">
 
     <div
-      class="col-xl-1 col-sm-6 col-12 mb-4"
+      class="col-xl-2 col-sm-6 col-12 mb-4"
       @click.stop="clearClicked()"
     >
       <div class="border border-danger rounded">

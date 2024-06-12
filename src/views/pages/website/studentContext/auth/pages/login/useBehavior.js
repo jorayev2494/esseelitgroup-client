@@ -12,8 +12,8 @@ export default () => {
   const isShowPassword = ref(false);
 
   const form = ref({
-    email: 'student@gmail.com',
-    password: '12345Secret_',
+    email: '',
+    password: '',
   });
 
   const getData = () => form.value

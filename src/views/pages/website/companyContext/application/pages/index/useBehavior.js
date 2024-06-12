@@ -37,12 +37,7 @@ export default () => {
     reloadData({ filters })
   }
 
-  const statusSelected = ({ uuid, application_count }) => {
-
-    if (application_count <= 0) {
-      return
-    }
-
+  const statusSelected = ({ uuid }) => {
     loadFilters({
       status_value_uuids: [uuid],
     })
