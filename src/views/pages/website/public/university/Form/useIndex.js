@@ -79,7 +79,7 @@ export default function useIndex({ props }) {
     {
       name: 'passport_number',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
@@ -126,7 +126,7 @@ export default function useIndex({ props }) {
     {
       name: 'father_name',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
@@ -152,7 +152,7 @@ export default function useIndex({ props }) {
     {
       name: 'mother_name',
       type: 'text',
-      required: false,
+      required: true,
       class: 'col-12 col-md-6',
       bind: {
         title: 'title value',
