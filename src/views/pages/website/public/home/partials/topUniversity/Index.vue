@@ -16,38 +16,9 @@
         <div class="row justify-content-center">
 
           <div class="col-lg-3 col-md-4 col-sm-6"
-            v-for="({ uuid, name, label, logo }, idx) of universities" :key="idx"
+            v-for="(university, idx) of universities" :key="idx"
           >
-            <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid } })">
-              <div class="sub-categories bg-design d-flex align-items-center justify-content-center pb-4 pt-2">
-
-                <!-- <div> -->
-
-                  <div class="sub-categories-group">
-                    <div class="categories-img">
-                      <img :src="logo" :alt="logo" width="210" height="auto" />
-                    </div>
-
-                    <!-- <div class="align-bottom" style="vertical-align: bottom; display: table-cell;">
-                      <div class="categories-text text-center">
-                        <h4>{{ name }}</h4>
-                        <p class="course-count">{{ label }}</p>
-                      </div>
-                    </div> -->
-
-                    <div class="align-bottom row">
-                      <div class="categories-text text-center">
-                        <h4>{{ name }}</h4>
-                        <p class="course-count">{{ label }}</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                <!-- </div> -->
-                
-              </div>
-            </router-link>
+            <University :university="university" :key="university.uuid" />
           </div>
 
         </div>
@@ -64,6 +35,7 @@
 
 <script setup>
   import useUniversity from './useUniversity'
+  import University from './University.vue'
 
   const { universities } = useUniversity();
 </script>

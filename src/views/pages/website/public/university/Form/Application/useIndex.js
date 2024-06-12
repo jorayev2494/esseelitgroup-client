@@ -18,8 +18,6 @@ export default function useIndex({ props }) {
   const makePromiseValues = (changed, params) => {
     const value = [];
 
-    console.log('makePromiseValues: ', changed, params);
-
     value.push(loadCountries(params));
     value.push(loadLanguages(params));
     value.push(loadDegrees(params));
@@ -36,11 +34,6 @@ export default function useIndex({ props }) {
 
   const makeDepartmentOptions = () => {
     const res = [];
-    // selectedDepartments.value = [];
-
-    console.log('faculties.value :>> ', faculties.value);
-    console.log('departments.value :>> ', departments.value);
-
 
     faculties.value.forEach(faculty => {
       departments.value.filter
@@ -74,8 +67,6 @@ export default function useIndex({ props }) {
         degree_uuids: form.value.degree_uuid.length ? [form.value.degree_uuid] : [],
       },
     }
-
-    console.log('object', changed, params);
 
     Promise.all(makePromiseValues(changed, params)).then(() => {
       setTimeout(makeDepartmentOptions, 1000);

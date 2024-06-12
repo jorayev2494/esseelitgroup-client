@@ -18,13 +18,19 @@
                 <ul>
                   <li v-for="(item, idx) of contactItems" :key="idx">
                     <i :class="item.icon"></i>
-                    {{ item.value }}
+                    <template v-if="item.type">
+                      <a v-if="item.type === 'link'" :href="item.value" target="_blank" style="color: white;">{{ item.label }}</a>
+                      <a v-else :href="`${item.type}:${item.value}`" style="color: white;">{{ item.label }}</a>
+                    </template>
+                    <template v-else>
+                      {{ item.value }}
+                    </template>
                   </li>
                 </ul>
 
                 <ul class="icon-socials d-flex">
                   <li v-for="({ link, icon }, idx) of socials" :key="idx">
-                    <a :href="link">
+                    <a :href="link" target="_blank">
                       <i :class="icon"></i>
                     </a>
                   </li>
@@ -171,45 +177,75 @@
 
   const currentYear = new Date().getFullYear();
 
+  const address = 'Şirinevler, Nil Sok. 15-17 D:20, 34188 Bahçelievler/İstanbul, Türkiye';
+  const phone = '+90 (505) 145-95-55';
+  const phone2 = '+90 (552) 591-46-58';
+  const email = 'esseacademy34@gmail.com';
+
   const contactItems = [
     {
-      icon: 'fa fa-map-pin',
-      value: '121 King St, Melbourne den 3000, Australia',
-    },
-    {
+      type: 'tell',
       icon: 'fa fa-phone',
-      value: '+1 55265 164561',
+      label: phone,
+      value: phone,
     },
     {
+      type: 'tell',
+      icon: 'fa fa-phone',
+      label: phone2,
+      value: phone2,
+    },
+    {
+      type: 'mail',
       icon: 'fa fa-envelope',
-      value: 'mentoring@example.com',
+      label: email,
+      value: email,
+    },
+    {
+      type: 'link',
+      icon: 'fa fa-map-pin',
+      label: address,
+      value: `http://maps.google.com/?q=${address}`,
     },
   ];
 
   const socials = [
-    {
-      icon: 'fab fa-facebook-f',
-      link: '#',
-    },
-    {
-      icon: 'fab fa-linkedin',
-      link: '#',
-    },
+    // {
+    //   icon: 'fab fa-facebook-f',
+    //   link: '#',
+    // },
+    // {
+    //   icon: 'fab fa-linkedin',
+    //   link: '#',
+    // },
     // {
     //   icon: 'fab fa-behance',
     //   link: '#',
     // },
-    {
-      icon: 'fab fa-instagram',
-      link: '#',
-    },
-    {
-      icon: 'fab fa-tiktok',
-      link: '#',
-    },
     // {
     //   icon: 'fab fa-twitter',
     //   link: '#',
     // },
+    {
+      icon: 'fab fa-instagram',
+      link: 'https://www.instagram.com/esse_elite_group/',
+    },
+    {
+      icon: 'fab fa-tiktok',
+      link: 'https://www.tiktok.com/@esseelitegroup',
+    },
+    {
+      icon: 'fab fa-youtube',
+      link: 'https://www.youtube.com/channel/UCWcL0F1yxSG4mE0-SEm5Wxw',
+    },
+    // {
+    //   icon: 'fab fa-square-whatsapp',
+    //   link: 'https://whatsapp.com/channel/0029VaKOqnuFSAsxVJvBjo3O',
+    // },
+    {
+      icon: 'fab fa-whatsapp',
+      link: 'https://whatsapp.com/channel/0029VaKOqnuFSAsxVJvBjo3O',
+    },
   ];
 </script>
+

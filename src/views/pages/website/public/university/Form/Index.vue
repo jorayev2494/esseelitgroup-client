@@ -165,12 +165,7 @@
                 </div>
               </div>
 
-              <hr>
-
-              <ApplicationForm :form="formApplication" />
-
-              <hr>
-
+              <!-- Additional Document -->
               <template v-for="(aDocument, aIdx) in additionalDocuments" :key="uploadFilesBlock + aIdx">
                 <div class="col-12 col-md-6">
                   <div class="form-group" :key="uploadFilesBlock + aIdx + 1">
@@ -228,6 +223,9 @@
                   </div>
                 </center>
               </div>
+              <!-- End Additional Document -->
+
+              <ApplicationForm :form="formApplication" />
 
               <div class="col-12 col-md-12">
                 <div class="form-check">

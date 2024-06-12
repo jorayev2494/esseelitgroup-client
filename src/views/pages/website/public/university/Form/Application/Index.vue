@@ -21,13 +21,12 @@
       <div class="col-12 col-md-6">
         <div class="form-group">
           <label for="email">{{ $t('application_form.alias') }}</label>
-          <span class="text-danger"> ({{ $t('system.required') }})</span>
+          <!-- <span class="text-danger"> ({{ $t('system.required') }})</span> -->
           <select
-            name="university_uuid"
+            name="alias_uuid"
             v-model="form.alias_uuid"
             class="form-control form-select"
             aria-label="Default select example"
-            required
             @change="loadData('alias')"
           >
             <option value="" disabled selected>{{ $t('application_form.alias') }}</option>
@@ -44,13 +43,12 @@
       <div class="col-12 col-md-6">
         <div class="form-group">
           <label for="email">{{ $t('application_form.country') }}</label>
-          <span class="text-danger"> ({{ $t('system.required') }})</span>
+          <!-- <span class="text-danger"> ({{ $t('system.required') }})</span> -->
           <select
-            name="university_uuid"
+            name="country_uuid"
             v-model="form.country_uuid"
             class="form-control form-select"
             aria-label="Default select example"
-            required
             @change="loadData('country')"
           >
             <option value="" disabled selected>{{ $t('application_form.country') }}</option>
@@ -69,7 +67,7 @@
           <label for="email">{{ $t('application_form.language') }}</label>
           <span class="text-danger"> ({{ $t('system.required') }})</span>
           <select
-            name="university_uuid"
+            name="language_uuid"
             v-model="form.language_uuid"
             class="form-control form-select"
             aria-label="Default select example"
@@ -92,7 +90,7 @@
           <label for="email">{{ $t('application_form.degree') }}</label>
           <span class="text-danger"> ({{ $t('system.required') }})</span>
           <select
-            name="university_uuid"
+            name="degree_uuid"
             v-model="form.degree_uuid"
             class="form-control form-select"
             aria-label="Default select example"
