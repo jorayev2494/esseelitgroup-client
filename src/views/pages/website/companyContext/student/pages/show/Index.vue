@@ -42,7 +42,9 @@
         <div class="mx-3 mb-2 text-secondary">
           <span class="text-primary">
             <i :class="item.icon" aria-hidden="true"></i>
-            <small class="ms-2">{{ $t(item.label) }}</small>
+            <small class="ms-2">
+              <strong>{{ $t(item.label) }}</strong>
+            </small>
           </span>
           <p class="text-dark mb-1">{{ $_.get(form, item.key) }}</p>
         </div>
