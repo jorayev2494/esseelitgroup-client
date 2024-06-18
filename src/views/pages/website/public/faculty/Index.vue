@@ -27,6 +27,8 @@
 
         </div>
 
+        <Department />
+
         <div class="course-counter">
 
           <div class="row justify-content-center">
@@ -93,6 +95,7 @@
   import LayoutFooterFour from "../../../../layouts/website/FooterFour.vue";
   import { defineProps } from 'vue';
   import useIndex from './useIndex.js';
+  import Department from './components/departmentPaginate/Index.vue'
 
   const props = defineProps({
     university: {
