@@ -31,6 +31,13 @@ const actions = {
         .catch(error => reject(error));
     })
   },
+  async showDepartmentAsync(_, { uuid }) {
+    return await new Promise((resolve, reject) => {
+      return httpClient.get(`/public/universities/departments/show/${uuid}`)
+        .then(response => resolve(response))
+        .catch(error => reject(error))
+    })
+  },
 }
 
 export default {

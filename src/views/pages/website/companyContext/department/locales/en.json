@@ -14,7 +14,7 @@
     "price": "Price",
     "currency": "Currency",
     "language": "Language",
-    "is_filled": "Is filled",
+    "is_filled": "Quota",
     "location": "Location"
   }
 }

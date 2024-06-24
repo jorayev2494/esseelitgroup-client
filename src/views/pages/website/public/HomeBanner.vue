@@ -6,8 +6,8 @@
         <div class="col-lg-7 d-flex align-items-center pe-0">
           <div class="section-banner-three aos" data-aos="fade-up">
             <div class="hometwo-slide-text">
-              <h1>{{ $t('pages.index.header.slider-title') }}</h1>
-              <p>{{ $t('pages.index.header.slider-label') }}</p>
+              <h1>{{ $t('pages.index.header.slider_title') }}</h1>
+              <p>{{ $t('pages.index.header.slider_label') }}</p>
             </div>
             
             <Search />

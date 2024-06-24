@@ -26,7 +26,7 @@
               <div class="avatar">
 
                 <Badge :is-show="data.value.university.is_on_the_country_list" />
-                <img :src="data.value.university.logo.url" alt="user-profile" width="35" />
+                <img class="img-50 avatar-img rounded" :src="data.value.university.logo.url" alt="user-profile" width="35" />
 
               </div>
             </div>

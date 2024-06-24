@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue"
 import { useRoute, useRouter } from "vue-router";
 import { useStore } from "vuex"
 import { useAlias, useCountry, useLanguage, useDegree, useUniversity, useFaculty, useDepartment, useStatusInputs, getStatusStyle } from '../../useCases/usePartials'
+import { useApplicationStatusStyle } from "../../../../../useCases/useApplicationStatusStyle";
 import Tr from '@/services/translations/translation'
 
 export default () => {
@@ -246,5 +247,6 @@ export default () => {
     clear,
     update,
     getStatusStyle,
+    useApplicationStatusStyle,
   }
 }

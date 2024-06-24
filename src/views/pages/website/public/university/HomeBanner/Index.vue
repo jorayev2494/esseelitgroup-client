@@ -6,7 +6,7 @@
         <!-- Logo -->
         <div class="search-box">
           <div class="categories-img">
-            <img :src="university.logo" :alt="university.logo" width="240" />
+            <img class="img-fluid rounded" :src="university.logo" :alt="university.logo" width="240" />
           </div>
         </div>
         <!-- End Logo -->

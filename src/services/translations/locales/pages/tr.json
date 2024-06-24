@@ -1,8 +1,8 @@
 {
     "index": {
         "header": {
-            "slider-title": "Hayalinizdeki Üniversiteyi Bulmanın En Hızlı Yolu: Türkiye'de Eğitim Danışmanlığı",
-            "slider-label": "",
+            "slider_title": "Hayalinizdeki Üniversiteyi Bulmanın En Hızlı Yolu: Türkiye'de Eğitim Danışmanlığı",
+            "slider_label": "",
             "search_btn": "Search universities"
         },
         "top_universities": {

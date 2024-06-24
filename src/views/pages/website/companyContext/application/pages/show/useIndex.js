@@ -2,6 +2,7 @@ import { onMounted, ref } from "vue"
 import { useRoute } from "vue-router";
 import { useStore } from "vuex"
 import { useAlias, useCountry, useLanguage, useDegree, useUniversity, useFaculty, useDepartment, useStatusInputs, getStatusStyle } from '../../useCases/usePartials'
+import { useApplicationStatusStyle } from "../../../../../useCases/useApplicationStatusStyle";
 
 export default () => {
 
@@ -198,5 +199,6 @@ export default () => {
     loadData,
     loadFaculties,
     getStatusStyle,
+    useApplicationStatusStyle,
   }
 }

@@ -5,8 +5,13 @@
 
   <div class="col-xl-6">
     <div class="card flex-fill">
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between align-items-center">
           <h4 class="card-title">{{ $t('companyContext.application.application_form') }}</h4>
+          <div class="status-toggle d-flex justify-content-between align-items-center">
+            <span class="badge" v-if="form?.status?.value" :style="useApplicationStatusStyle(form?.status?.value)">
+              {{ form.status.value.value }}
+            </span>
+          </div>
         </div>
 
         <div class="card-body">
@@ -129,7 +134,7 @@
               </div>
             </div>
 
-            <div class="form-group row" v-if="form.status">
+            <!-- <div class="form-group row" v-if="form.status">
               <label class="col-lg-3 col-form-label">{{ $t('companyContext.application.form.status') }}</label>
               <div class="col-lg-9">
                 <select class="form-select" v-model="form.status.value" disabled>
@@ -143,7 +148,7 @@
                   </option>
                 </select>
               </div>
-            </div>
+            </div> -->
 
           </form>
         </div>
@@ -175,6 +180,7 @@
     departmentOptions,
 
     loadData,
+    useApplicationStatusStyle
   } = useIndex();
 </script>
 

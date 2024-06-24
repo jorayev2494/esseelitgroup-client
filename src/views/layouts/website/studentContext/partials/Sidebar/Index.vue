@@ -3,7 +3,7 @@
     
     <div class="user-widget" v-if="studentInfo">
       <div class="avatar avatar-xxl" v-if="studentInfo.avatar">
-        <img class="avatar-img rounded-circle" :src="studentInfo.avatar.url" alt="Company Image">
+        <img class="avatar-img rounded" :src="studentInfo.avatar.url" alt="Company Image">
       </div>
 
       <div class="user-info-cont mt-3">
