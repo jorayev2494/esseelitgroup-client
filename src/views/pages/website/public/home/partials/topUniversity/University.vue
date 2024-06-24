@@ -6,7 +6,7 @@
 
         <div class="sub-categories-group">
           <div class="categories-img">
-            <img :src="university.logo" :alt="university.logo" width="210" height="auto" />
+            <img class="img-fluid rounded" :src="university.logo" :alt="university.logo" width="210" height="auto" />
           </div>
 
           <!-- <div class="align-bottom" style="vertical-align: bottom; display: table-cell;">

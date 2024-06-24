@@ -1,7 +1,11 @@
-import { onMounted, ref, toRefs } from "vue"
+import { onMounted, ref, toRefs, watch } from "vue"
 import { useAlias, useCountry, useLanguage, useDegree, useUniversity, useFaculty, useDepartment } from '../useCases/usePartials'
+import { useRoute } from "vue-router"
+import { useStore } from "vuex";
 
 export default function useIndex({ props }) {
+  const route = useRoute();
+  const store = useStore();
 
   const { aliases, loadAliases } = useAlias()
   const { languages, loadLanguages } = useLanguage()
@@ -10,6 +14,8 @@ export default function useIndex({ props }) {
   const { universities, loadUniversities } = useUniversity()
   const { departments, loadDepartments } = useDepartment()
   const { faculties, loadFaculties } = useFaculty()
+
+  const { department_uuid: departmentUuid } = toRefs(route.query)
 
   const {
     form,
@@ -87,8 +93,35 @@ export default function useIndex({ props }) {
     loadUniversities()
   }
 
+  const checkDepartmentUuid = () => {
+    if (departmentUuid?.value) {
+      store.dispatch('department/showDepartmentAsync', { uuid: departmentUuid.value })
+        .then(response => {
+          console.log('CheckDepartmentUuid response: ', response.data);
+          const {
+            uuid,
+            name,
+            alias_uuid,
+            university: { country_uuid },
+            language_uuid,
+            degree_uuid,
+            university_uuid,
+          } = response.data;
+
+          form.value.alias_uuid = alias_uuid;
+          form.value.country_uuid = country_uuid;
+          form.value.language_uuid = language_uuid;
+          form.value.degree_uuid = degree_uuid;
+          form.value.university_uuid = university_uuid;
+          loadData()
+          form.value.department_uuids = [{ uuid, name: name?.value }];
+        })
+    }
+  }
+
   onMounted(() => {
     clear()
+    checkDepartmentUuid()
   })
 
   return {

@@ -148,12 +148,12 @@
             label="name"
             :placeholder="$t('application_form.faculties_and_departments')"
 
-            :select-group-label="$t('application.form.faculties_and_departments_select.select_group_label')"
-            :deselect-group-label="$t('application.form.faculties_and_departments_select.deselect_group_label')"
+            :select-group-label="$t('application_form.faculties_and_departments_select.select_group_label')"
+            :deselect-group-label="$t('application_form.faculties_and_departments_select.deselect_group_label')"
             
-            :select-label="$t('application.form.faculties_and_departments_select.select_label')"
-            :deselect-label="$t('application.form.faculties_and_departments_select.deselect_label')"
-            :selected-label="$t('application.form.faculties_and_departments_select.selected')"
+            :select-label="$t('application_form.faculties_and_departments_select.select_label')"
+            :deselect-label="$t('application_form.faculties_and_departments_select.deselect_label')"
+            :selected-label="$t('application_form.faculties_and_departments_select.selected')"
           >
           </VueMultiselect>
         </div>

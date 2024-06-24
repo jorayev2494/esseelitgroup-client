@@ -22,7 +22,7 @@
                 <div class="section-top-head top-head-three">
                   <div class="form-group">
                     <div class="change-avatar">
-                      <img :src="university.logo" alt="Logo" width="100" />
+                      <img class="img-fluid rounded" :src="university.logo" alt="Logo" width="100" />
                     </div>
                   </div>
                 </div>

@@ -14,7 +14,7 @@
     "price": "Fiyat",
     "currency": "Para birimi",
     "language": "Dil",
-    "is_filled": "Dolu",
+    "is_filled": "Kontenjan",
     "location": "Konum"
   }
 }

@@ -22,7 +22,7 @@
               <div class="avatar">
 
                 <Badge :is-show="data.value.university.is_on_the_country_list" />
-                <img :src="data.value.university.logo.url" alt="user-profile" width="35" />
+                <img class="avatar-img rounded" :src="data.value.university.logo.url" alt="user-profile" width="35" />
 
               </div>
             </div>
@@ -129,7 +129,7 @@
         <router-link
           v-else
           class="btn btn-sm me-2 bg-primary-light"
-          :to="$tMakeRoute({ name: 'university-show', params: { uuid: data.value.university.uuid } })"
+          :to="$tMakeRoute({ name: 'university-show', params: { uuid: data.value.university.uuid }, query: { department_uuid: data.value.uuid } })"
         >
           {{ $t('system.apply_now') }}
         </router-link>

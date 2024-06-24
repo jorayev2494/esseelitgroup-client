@@ -1,3 +1,4 @@
+import { router } from '@/router';
 import jwtDefaultConfig from './jwtDefaultConfig';
 import store from '@/services/store/index';
 
@@ -64,19 +65,23 @@ export default class JwtService {
 
               this.onAccessTokenFetched(accessToken)
             })
-          }
 
-          const retryOriginalRequest = new Promise(resolve => {
-            this.addSubscriber(accessToken => {
-              // Make sure to assign accessToken according to your response.
-              // Check: https://pixinvent.ticksy.com/ticket/2413870
-              // Change Authorization header
-              originalRequest.headers.Authorization = `${this.jwtConfig.tokenType} ${accessToken}`
-              resolve(this.httpClientIns(originalRequest))
+            const retryOriginalRequest = new Promise(resolve => {
+              this.addSubscriber(accessToken => {
+                // Make sure to assign accessToken according to your response.
+                // Check: https://pixinvent.ticksy.com/ticket/2413870
+                // Change Authorization header
+                originalRequest.headers.Authorization = `${this.jwtConfig.tokenType} ${accessToken}`
+                resolve(this.httpClientIns(originalRequest))
+              })
             })
-          })
-
-          return retryOriginalRequest
+  
+            return retryOriginalRequest
+          } else {
+            this.logout().then(() => {
+              router.push({ name: 'index' })
+            });
+          }
         }
 
         return Promise.reject(error)
