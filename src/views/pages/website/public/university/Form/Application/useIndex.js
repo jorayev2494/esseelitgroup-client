@@ -46,7 +46,7 @@ export default function useIndex({ props }) {
       res.push({
         faculty: faculty.name?.value,
         departments: departments.value.filter(dep => dep.faculty_uuid === faculty.uuid).map(d => {
-
+          
 
           return {
             uuid: d.uuid,
@@ -75,7 +75,7 @@ export default function useIndex({ props }) {
     }
 
     Promise.all(makePromiseValues(changed, params)).then(() => {
-      setTimeout(makeDepartmentOptions, 1000);
+      setTimeout(makeDepartmentOptions, 1500);
     });
   }
 
