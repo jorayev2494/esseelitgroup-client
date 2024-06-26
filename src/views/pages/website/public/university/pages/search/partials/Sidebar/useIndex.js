@@ -10,8 +10,6 @@ export default function useIndex({ props, emit })
   } = toRefs(props)
 
   const addValue = (field, item, multiple) => {
-    console.log('addValue: ', 'field: ', field, 'item: ', item, 'multiple: ', multiple);
-    
     if (multiple) {
       if (! Array.isArray(form.value[field])) {
         form.value[field] = [];
@@ -35,8 +33,6 @@ export default function useIndex({ props, emit })
   }
 
   const removeValue = (field, item, multiple) => {
-    console.log('removeValue: ', 'field: ', field, 'item: ', item, 'multiple: ', multiple);
-
     if (multiple) {
       if (Array.isArray(item)) {
         item.forEach(ii => {

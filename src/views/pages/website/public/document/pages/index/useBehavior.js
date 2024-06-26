@@ -6,8 +6,8 @@ export default () => {
 
   const items = ref([]);
 
-  const download = ({ uuid, file }) => {
-    store.dispatch('document/downloadDocumentAsync', { uuid, name: file.file_name})
+  const download = ({ uuid, title, file: { extension } }) => {
+    store.dispatch('document/downloadDocumentAsync', { uuid, name: `${title}.${extension}` })
   }
 
   const loadItems = (params = {}) => {

@@ -1,7 +1,7 @@
 {
     "index": {
         "header": {
-            "slider_title": "Size iň amatly Uniwersiteti tapmagyň iň çalt ýoly: Türkiýede bilim maslahatçylygy",
+            "slider_title": "Size iň amatly Uniwersiteti tapmagyň iň çalt ýoly: <span class=\"text-danger\">Türkiýede</span> bilim maslahatçylygy",
             "slider_label": "",
             "search_btn": "Uniwersitetleri gözläň"
         },
