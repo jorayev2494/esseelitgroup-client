@@ -25,7 +25,6 @@ const actions = {
     return await new Promise((resolve, reject) => {
       return httpClient.get(`/public/documents/documents/download/${uuid}`, { responseType: 'arraybuffer', })
         .then(response => {
-          console.log('Name: ', name)
           const url = window.URL.createObjectURL(new Blob([response.data]))
           const link = document.createElement('a')
           link.href = url

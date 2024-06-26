@@ -1,7 +1,7 @@
 {
     "index": {
         "header": {
-            "slider_title": "The Fastest Way to Find Your Dream University: Education Consultancy in Turkey",
+            "slider_title": "The Fastest Way to Find Your Dream University: Education Consultancy in <span class=\"text-danger\">Turkey</span>",
             "slider_label": "",
             "search_btn": "Search universities"
         },
