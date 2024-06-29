@@ -30,10 +30,10 @@ const mutations = {
     state.accessToken = accessToken
   },
   setAuthData: (state, payload) => {
-    const { defaultImage } = useUrlPattern()
+    // const { image } = useUrlPattern()
 
     payload.avatar = payload.avatar ?? {}
-    payload.avatar.url = payload?.avatar?.url ?? defaultImage('avatar')
+    // payload.avatar = image(payload?.avatar)
 
     state.authData = payload;
     localStorage.setItem(state.keyName, JSON.stringify(payload));

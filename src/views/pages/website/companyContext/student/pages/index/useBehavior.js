@@ -7,6 +7,7 @@ import useMappers from '../../mappers/index.js';
 import { useApplicationStatusStyle } from "../../../../../useCases/useApplicationStatusStyle";
 import useSearch from "@/views/pages/utils/useSearch.js"
 import useFilters from "../../useCases/useFilters";
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern.js"
 
 export default () => {
   const store = useStore()

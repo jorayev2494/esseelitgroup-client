@@ -1,4 +1,5 @@
 import { usePaginator } from "@/views/pages/useCases/paginator"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useRoute } from "vue-router"
@@ -7,6 +8,7 @@ import { useStore } from "vuex"
 export default () => {
   const store = useStore();
   const route = useRoute();
+  const { image } = useUrlPattern();
   const paginator = usePaginator();
   const { t, d } = useI18n();
   const { uuid } = route.params
@@ -34,6 +36,7 @@ export default () => {
   }
 
   const applicationMapper = application => {
+    application.university.logo = image(application.university.logo);
     application.created_at = d(new Date(application.created_at * 1000), 'short');
 
     return application;

@@ -33,3 +33,18 @@ export function useDate() {
     dateTimeFromTimestamp,
   }
 }
+
+export function useString() {
+  const strCropper = (str, length, tail = '...') => {
+    if (str.length > length) {
+      str = str.slice(0, length);
+      str += tail;
+    }
+
+    return str;
+  }
+
+  return {
+    strCropper,
+  }
+}

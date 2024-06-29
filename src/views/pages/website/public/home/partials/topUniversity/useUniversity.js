@@ -5,14 +5,14 @@ import { useStore } from "vuex"
 export default function useUniversity() {
 
   const store = useStore();
-  const { imageFromStorage } = useUrlPattern();
+  const { image } = useUrlPattern();
   const limit = 6;
 
   const universities = ref([]);
 
   const universityMapper = university => {
-    university.logo = imageFromStorage(university.logo);
-    university.cover = imageFromStorage(university.cover);
+    university.logo = image(university.logo);
+    university.cover = image(university.cover);
 
     return university;
   }

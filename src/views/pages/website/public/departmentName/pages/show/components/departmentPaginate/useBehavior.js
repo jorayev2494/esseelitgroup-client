@@ -1,4 +1,5 @@
 import { usePaginator } from "@/views/pages/useCases/paginator"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { useRoute } from "vue-router"
@@ -7,6 +8,7 @@ import { useStore } from "vuex"
 export default () => {
   const store = useStore();
   const route = useRoute();
+  const { image } = useUrlPattern();
   const paginator = usePaginator();
   const { t, d } = useI18n();
   const { uuid } = route.params
@@ -33,10 +35,11 @@ export default () => {
     loadItems(filters);
   }
 
-  const applicationMapper = application => {
-    application.created_at = d(new Date(application.created_at * 1000), 'short');
+  const departmentMapper = department => {
+    department.university.logo = image(department.university.logo);
+    department.created_at = d(new Date(department.created_at * 1000), 'short');
 
-    return application;
+    return department;
   }
 
   const loadItems = (filters) => {
@@ -47,7 +50,7 @@ export default () => {
         const { data } = response;
 
         paginator.setMetaData(data);
-        items.value = data.data.map(applicationMapper);
+        items.value = data.data.map(departmentMapper);
       })
       .catch(error => error)
       .finally(() => loading.value = false);

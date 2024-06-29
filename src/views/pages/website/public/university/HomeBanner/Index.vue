@@ -11,20 +11,18 @@
         </div>
         <!-- End Logo -->
 
-        <div class="banner-header">
+        <div class="banner-header mt-4">
           <h1>{{ university.name }}</h1>
           <p>{{ university.label }}</p>
-          <p v-if="university.country">{{ university.country.value }}</p>
-          <p v-if="university.city">{{ university.city.value }}</p>
+          <p v-if="university.country" class="mt-2">
+            {{ university.country.value }}, {{ university.city.value }}
+          </p>
         </div>
 
         <div class="poular-search">
-          <!-- <p>
-            <span>Popular Search :</span> Designer, Developer, Web, iOS, PHP
-          </p> -->
           <a href="#application-form" class="btn btn-primary btn-lg">
             {{ $t('system.apply_now') }}
-            <i class="fas fa-hand-point-down icon-apply-now"></i>
+            <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
           </a>
         </div>
       </div>

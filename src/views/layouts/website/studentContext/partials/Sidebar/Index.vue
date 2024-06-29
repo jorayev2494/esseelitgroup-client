@@ -3,7 +3,7 @@
     
     <div class="user-widget" v-if="studentInfo">
       <div class="avatar avatar-xxl" v-if="studentInfo.avatar">
-        <img class="avatar-img rounded" :src="studentInfo.avatar.url" alt="Company Image">
+        <img class="avatar-img rounded" :src="studentInfo.avatar" :alt="studentInfo.avatar">
       </div>
 
       <div class="user-info-cont mt-3">
@@ -45,14 +45,16 @@
 </template>
 
 <script>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
+import { useUrlPattern } from '@/views/pages/utils/UrlPattern';
 
 export default {
   setup() {
     const store = useStore()
     const route = useRoute()
+    const { image } = useUrlPattern()
 
     const studentInfo = ref(null)
 
@@ -86,8 +88,13 @@ export default {
 
     const currentPath = computed(() => route.name)
 
+    watch(studentInfo.value, () => {
+      studentInfo.value.avatar = image(studentInfo.value?.avatar)
+    })
+
     onMounted(() => {
       studentInfo.value = store.getters['studentContext/auth/getAuthData']
+      // studentInfo.value.avatar = image(studentInfo.value?.avatar)
     })
     
     return {

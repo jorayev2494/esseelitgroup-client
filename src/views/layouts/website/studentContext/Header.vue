@@ -426,7 +426,7 @@
               <span class="user-img">
                 <img
                   class="rounded-circle"
-                  :src="authData?.avatar.url"
+                  :src="authData?.avatar"
                   width="31"
                   alt="Darren Elder"
                 />
@@ -436,7 +436,7 @@
               <div class="user-header">
                 <div class="avatar avatar-sm">
                   <img 
-                    :src="authData?.avatar.url"
+                    :src="authData?.avatar"
                     alt="Profile Avatar"
                     class="avatar-img rounded-circle"
                   />
@@ -468,11 +468,13 @@ import Tr from '@/services/translations/translation'
 import { useRouter, useRoute } from "vue-router"
 import { useStore } from 'vuex';
 import LanguageSwitcher from './partials/LanguageSwitcher.vue'
+import { useUrlPattern } from '@/views/pages/utils/UrlPattern';
 
 export default {
   setup() {
     const router = useRouter()
     const store = useStore()
+    const { image } = useUrlPattern()
 
     const authData = ref(null)
 
@@ -508,6 +510,8 @@ export default {
 
     onMounted(() => {
       authData.value = store.getters['studentContext/auth/getAuthData']
+      authData.value.avatar = image(authData.value?.avatar)
+      // authData.value.avatar = 'image(authData.value?.avatar)'
 
       $(".header-fixed").append('<div class="sidebar-overlay"></div>');
       $(document).on("click", "#mobile_btn", function () {

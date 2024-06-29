@@ -5,7 +5,7 @@ import { useStore } from "vuex";
 
 export default function useUniversityForm() {
 
-  const { imageFromStorage } = useUrlPattern();
+  const { image } = useUrlPattern();
   const router = useRouter();
   const store = useStore();
 
@@ -13,12 +13,11 @@ export default function useUniversityForm() {
 
   const loadUniversity = () => {
     const uuid = router.currentRoute.value.params.uuid;
-    console.log('University Uuid: ', uuid);
 
     store.dispatch('university/showUniversityAsync', uuid).then(({ data }) => {
       university.value = data;
-      university.value.cover = imageFromStorage(university.value.cover);
-      university.value.logo = imageFromStorage(university.value.logo);
+      university.value.cover = image(university.value.cover);
+      university.value.logo = image(university.value.logo);
     })
   }
 

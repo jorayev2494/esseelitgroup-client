@@ -26,7 +26,7 @@
         <center>
           <div class="card-body mb-1">
             <!-- <div class="avatar avatar-xxl mr-2"> -->
-              <img class="avatar-img rounded" role="button" alt="User Image" :src="avatarPreview" width="100%">
+              <img class="avatar-img rounded" role="button" :src="avatarPreview" :alt="avatarPreview" width="100%">
             <!-- </div> -->
           </div>
         </center>

@@ -11,9 +11,11 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-lg-5 d-flex align-items-center ">
+              <div class="col-lg-5 d-flex align-items-center" v-if="data?.cover">
                 <div class="knowledge-img-three aos " data-aos="fade-up">
-                  <img :src="data?.cover?.url" class="img-fluid" alt="">
+                  <!-- <div class="shadow-sm rounded"> -->
+                    <img :src="data?.cover" class="img-fluid rounded" alt="">
+                  <!-- </div> -->
                 </div>
               </div>
 
@@ -22,10 +24,10 @@
 
                   <div class="section-header section-head-left aos " data-aos="fade-up">
                     <div class="section-head-five">
-                      <h4>
+                      <!-- <h4>
                         <span></span>
                         {{ $t('aboutUs.context_title') }}
-                      </h4>
+                      </h4> -->
                       <h2>{{ data?.title }}</h2>
                       <p v-html="$ckeditor.replaceStyles(data?.content ?? '')"></p>
                     </div>

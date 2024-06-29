@@ -1,12 +1,20 @@
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
 import { onMounted, ref, toRefs } from "vue"
 import { useStore } from "vuex"
 
 export default function useIndex({ props }) {
 
   const store = useStore();
+  const { image } = useUrlPattern();
   const { university } = toRefs(props);
 
   const faculties = ref([]);
+
+  const facultyMapper = faculty => {
+    faculty.logo = image(faculty.logo);
+
+    return faculty;
+  }
 
   const loadFaculties = universityUuid => {
     store.dispatch('faculty/loadFacultyListAsync', {
@@ -16,7 +24,7 @@ export default function useIndex({ props }) {
         }
       }
     }).then(response => {
-      faculties.value = response.data
+      faculties.value = response.data.map(facultyMapper)
     }).catch(error => {
       
     })
