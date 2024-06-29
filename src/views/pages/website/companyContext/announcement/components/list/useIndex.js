@@ -39,6 +39,7 @@ export default function useIndex() {
     }
 
     announcement.created_at = d(dateFromTimestamp(announcement.created_at), 'short')
+    announcement.author.avatar = image(announcement.author.avatar);
 
     return announcement;
   }

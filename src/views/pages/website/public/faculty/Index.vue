@@ -10,7 +10,7 @@
             <div class="head-join-us aos aos-init aos-animate" data-aos="fade-up">
               <div class="join-mentor-details">
                 <div class="avatar avatar-xxl mb-4">
-                  <img class="avatar-img rounded" alt="User Image" :src="faculty.logo.url">
+                  <img class="avatar-img rounded" :alt="faculty.logo" :src="faculty.logo">
                 </div>
                 <!-- <span class="sub">Variety of Courses</span> -->
                 <h2>{{ faculty.name?.value }}</h2>

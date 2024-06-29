@@ -26,7 +26,7 @@
           <div class="avatar-showcase me-3" v-if="data.value.student.avatar">
             <div class="avatars">
               <div class="avatar">
-                <img class="img-50 avatar-img rounded b-r-15" :src="data.value.student.avatar.url" :alt="data.value.student.avatar.url">
+                <img class="img-50 avatar-img rounded b-r-15" :src="data.value.student.avatar" :alt="data.value.student.avatar">
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@
 
       <template #university="data">
         <div class="d-flex flex-row" v-if="data.value.university">
-          <img class="img-50 avatar-img rounded" :src="data.value.university.logo.url" alt="user-profile" width="35" />
+          <img class="img-50 avatar-img rounded" :src="data.value.university.logo" :alt="data.value.university.logo" width="35" />
           <div class="m-2">{{ data.value.university.name }}</div>
         </div>
       </template>

@@ -4,16 +4,12 @@ import { useI18n } from "vue-i18n";
 
 export default () => {
 
-  const { defaultImage } = useUrlPattern();
+  const { image } = useUrlPattern();
   const { dateFromTimestamp } = useDate();
   const { d } = useI18n();
 
   const avatar = student => {
-    if (student.avatar?.url === undefined) {
-      student.avatar = {
-        url: defaultImage('avatar'),
-      };
-    }
+    student.avatar = image(student.avatar);
   }
 
   const applications = student => {

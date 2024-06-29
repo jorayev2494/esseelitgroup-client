@@ -12,7 +12,7 @@ export default () => {
   const { dateFromTimestamp } = useDate()
   const paginator = usePaginator()
   const loader = useLoader()
-  const { defaultImage } = useUrlPattern()
+  const { image } = useUrlPattern()
 
   const items = ref([])
   const columns = [
@@ -29,11 +29,7 @@ export default () => {
   }
 
   const itemMapper = item => {
-    if (item.avatar?.url === undefined) {
-      item.avatar = {
-        url: defaultImage('avatar'),
-      };
-    }
+    item.avatar = image(item.avatar);
 
     item.created_at = d(dateFromTimestamp(item.created_at), 'short')
 

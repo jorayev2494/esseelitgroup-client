@@ -3,7 +3,7 @@ export function useUrlPattern() {
   const defaultImage = (prefix, w = null, h = null) => require(`@/assets/img/default/${prefix}.jpg`);
 
   const image = (urlPattern = null, w = null, h = null, prefix = 'avatar') => {
-    if (urlPattern !== null) {
+    if (urlPattern !== null && urlPattern !== undefined) {
       let { width, height, url_pattern } = urlPattern
 
       const avatarPatterns = {

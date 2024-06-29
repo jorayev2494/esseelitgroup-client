@@ -3,15 +3,16 @@
     <layout-header-four />
     <HomeBannerFour />
     <TopUniversity />
-    <!-- <PopularCourseFour /> -->
-    <!-- <KnowledgeFour />4 -->
-    <!-- <TrendingCourseFour /> -->
-    <!-- <TestimonialFour /> -->
-    <!-- <FeaturedInstructorFour /> -->
-    <!-- <ManagerCarousel /> -->
-    <!-- <FaqFour /> -->
-    <!-- <BlogFour /> -->
-    <!-- <NewCourseFour /> -->
+
+    <PopularCourseFour />
+    <KnowledgeFour />
+    <TrendingCourseFour />
+    <TestimonialFour />
+    <FeaturedInstructorFour />
+    <ManagerCarousel />
+    <FaqFour />
+    <BlogFour />
+    <NewCourseFour />
     <layout-footer-four />
   </div>
 </template>

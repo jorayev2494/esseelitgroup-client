@@ -32,6 +32,7 @@ export default function useIndex({ props }) {
 
   const applicationMapper = application => {
     application.created_at = d(new Date(application.created_at * 1000), 'short');
+    application.university.logo = image(application.university.logo);
 
     return application;
   }

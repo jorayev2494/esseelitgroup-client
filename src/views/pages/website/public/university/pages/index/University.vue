@@ -3,13 +3,14 @@
       <div class="sub-categories-five">
         <div class="student-img">
           <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: university.uuid } })">
-            <img :src="university.logo?.url" alt="University logo" />
+            <img :src="university.logo" :alt="university.logo" />
           </router-link>
         </div>
 
-        <div class="categories-text">
+        <div class="categories-text mt-2">
           <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: university.uuid } })">
             <h4 class="m-0">{{ university.name }}</h4>
+            <!-- <h4 class="m-0">{{ 'university.name awd awdwa dwa dwaaw dwa dwad wad a'.slice(0, 40) }}</h4> -->
           </router-link>
         </div>
 
@@ -28,7 +29,7 @@
 <script setup>
   import { defineProps } from 'vue'
 
-  const props = defineProps({
+  defineProps({
     university: {
       type: Object,
       required: true,
@@ -40,7 +41,7 @@
 <style scoped>
   .sub-categories-five {
     text-align: center;
-    height: 355px;
+    height: 370px;
   }
 
   .student-img {
@@ -54,7 +55,7 @@
 
   .categories-text {
     /* height: 70%; */
-    height: 17%;
+    height: 15%;
     margin: 0 auto;
     /* border: 1px dashed red; */
   }

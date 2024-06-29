@@ -25,7 +25,7 @@
                     <div class="form-group">
                       <div class="change-avatar">
                         <div class="profile-img">
-                          <img :src="imagePreview" alt="Profile Image" />
+                          <img :src="imagePreview" :alt="imagePreview" />
                         </div>
                         <div class="upload-img">
 

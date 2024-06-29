@@ -5,6 +5,7 @@ import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"
 import useFilters from "../../useCases/useFilters";
 import useSearch from "@/views/pages/utils/useSearch"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern"
 
 export default () => {
   const store = useStore();
@@ -12,6 +13,7 @@ export default () => {
   const { t, d } = useI18n();
   const { filters } = useFilters();
   const { form, toQueryParams } = useSearch('name');
+  const { image } = useUrlPattern();
 
   const loading = ref(true);
   const items = ref([]);
@@ -30,10 +32,11 @@ export default () => {
     loadItems(filters);
   }
 
-  const applicationMapper = application => {
-    application.created_at = d(new Date(application.created_at * 1000), 'short');
+  const departmentMapper = department => {
+    department.university.logo = image(department.university.logo);
+    department.created_at = d(new Date(department.created_at * 1000), 'short');
 
-    return application;
+    return department;
   }
 
   const loadItems = (filters) => {
@@ -44,7 +47,7 @@ export default () => {
         const { data } = response;
 
         paginator.setMetaData(data);
-        items.value = data.data.map(applicationMapper);
+        items.value = data.data.map(departmentMapper);
       })
       .catch(error => error)
       .finally(() => loading.value = false);

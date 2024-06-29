@@ -1,4 +1,5 @@
 import useChangeImage from "@/views/pages/useCases/useChangeImage"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
 import { onMounted, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { toast } from "vue3-toastify";
@@ -7,12 +8,13 @@ import { useStore } from "vuex"
 export default () => {
   const store = useStore()
   const { imagePreview, uploadImage } = useChangeImage()
+  const { image } = useUrlPattern()
   const { t } = useI18n();
 
   const form = ref(null)
 
   const mapProfile = profile => {
-    imagePreview.value = profile?.avatar?.url;
+    imagePreview.value = image(profile?.avatar);
     profile.avatar = '';
 
     return profile;

@@ -4,10 +4,12 @@ import { useI18n } from "vue-i18n"
 import { useStore } from "vuex"
 import useFilters from "../../useCases/useFilters";
 import useSearch from "@/views/pages/utils/useSearch"
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
 
 export default () => {
   const store = useStore();
   const paginator = usePaginator();
+  const { image } = useUrlPattern();
   const { t, d } = useI18n();
   const { filters } = useFilters();
   const { form, toQueryParams } = useSearch('name');
@@ -30,6 +32,7 @@ export default () => {
   }
 
   const applicationMapper = application => {
+    application.university.logo = image(application.university.logo);
     application.created_at = d(new Date(application.created_at * 1000), 'short');
 
     return application;

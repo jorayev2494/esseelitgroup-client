@@ -11,6 +11,7 @@ export default () => {
   const paginator = usePaginator();
   const { t, d } = useI18n();
   const { defaultImage } = useUrlPattern();
+  const { image } = useUrlPattern();
 
   const loading = ref(true);
   const items = ref([]);
@@ -31,11 +32,8 @@ export default () => {
   }
 
   const applicationMapper = application => {
-    if (application.student.avatar?.url === undefined) {
-      application.student.avatar = {
-        url: defaultImage('avatar'),
-      };
-    }
+    application.student.avatar = image(application.student.avatar);
+    application.university.logo = image(application.university.logo);
 
     application.created_at = d(new Date(application.created_at * 1000), 'short');
 

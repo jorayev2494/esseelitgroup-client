@@ -61,7 +61,7 @@ export default () => {
   }
 
   const employeeMapper = employee => {    
-    avatarPreview.value = employee.avatar !== null ? employee.avatar.url : avatarPreview.value;
+    avatarPreview.value = image(employee.avatar);
     employee.avatar = '';
 
     return employee;

@@ -20,7 +20,7 @@
 
                 <div class="categories-five-img">
                   <span>
-                    <img :src="faculty.logo?.url" alt="Faculty logo" width="75">
+                    <img class="img-fluid rounded" :src="faculty.logo" :alt="faculty.logo" width="75">
                   </span>
                   <!-- <span class="cat-rat">{{ faculty.department_count }}</span> -->
                 </div>
