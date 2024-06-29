@@ -1,3 +1,4 @@
+import { useUrlPattern } from "@/views/pages/utils/UrlPattern";
 import { usePaginate } from "@/views/pages/utils/usePaginate";
 import useSearch from "@/views/pages/utils/useSearch";
 import { onMounted, ref } from "vue"
@@ -6,6 +7,7 @@ import { useStore } from "vuex";
 export default function useIndex()
 {
   const store = useStore();
+  const { image } = useUrlPattern();
   
   const { form: searchForm } = useSearch('name');
   const paginator = usePaginate();
@@ -140,6 +142,7 @@ export default function useIndex()
   }
 
   const searchItemMapper = item => {
+    item.logo = image(item.logo);
 
     return item;
   }

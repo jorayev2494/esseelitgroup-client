@@ -30,7 +30,7 @@
 
                       <div class="mentor-img">
                         <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: item.uuid } })">
-                          <img :src="item.logo.url" class="img-fluid" alt="User Image" />
+                          <img :src="item.logo" class="img-fluid" alt="User Image" />
                         </router-link>
                       </div>
 
@@ -97,7 +97,7 @@
                       </div>
 
                       <div class="mentor-booking">
-                        <router-link class="apt-btn" :to="$tMakeRoute({ name: 'university-show', params: { uuid: item.uuid } })">Apply now</router-link>
+                        <router-link class="apt-btn" :to="$tMakeRoute({ name: 'university-show', params: { uuid: item.uuid } })">{{ $t('system.apply_now') }}</router-link>
                       </div>
 
                     </div>
