@@ -6,7 +6,7 @@ import { useStore } from "vuex";
 export default () => {
 
   const store = useStore()
-  const { defaultImage } = useUrlPattern();
+  const { image } = useUrlPattern();
 
   // IndexFourInstructor: IndexFourInstructor,
   const settings = {
@@ -41,9 +41,10 @@ export default () => {
   const items = ref([])
 
   const itemMapper = item => {
-    if (item?.avatar?.url) {
-      item.avatar.url = item?.avatar?.url ?? defaultImage('avatar');
-    }
+    item.avatar = image(item.avatar);
+    // if (item?.avatar?.url) {
+    //   item.avatar.url = item?.avatar?.url ?? defaultImage('avatar');
+    // }
 
     return item;
   }

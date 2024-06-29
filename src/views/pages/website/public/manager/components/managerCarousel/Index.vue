@@ -33,9 +33,9 @@
                 <slide v-for="(item, idx) in items" :key="idx">
                   <div class="large-team m-2">
 
-                    <div class="student-img">
+                    <div class="student-img" v-if="item.avatar">
                       <router-link :to="$tMakeRoute({ name: 'manager-show', params: { uuid: item.uuid } })">
-                        <img :src="item.avatar?.url" alt="" />
+                        <img :src="item.avatar" :alt="item.avatar" />
                       </router-link>
                     </div>
 
