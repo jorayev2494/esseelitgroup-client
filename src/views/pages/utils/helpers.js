@@ -24,6 +24,49 @@ export function useDate() {
     return `${year}-${month}-${day}T${hours}:${minutes}`;
   }
 
+  function padTwoDigits(num) {
+    return num.toString().padStart(2, "0");
+  }
+  
+  function dateInYyyyMmDdHhMmSs(date, dateDiveder = "-", hoursAndMinuteDiveder = ":") {
+    
+    return (
+      [
+        date.getFullYear(),
+        padTwoDigits(date.getMonth() + 1),
+        padTwoDigits(date.getDate()),
+      ].join(dateDiveder) +
+      " " +
+      [
+        padTwoDigits(date.getHours()),
+        padTwoDigits(date.getMinutes()),
+        padTwoDigits(date.getSeconds()),
+      ].join(hoursAndMinuteDiveder)
+    );
+  }
+
+  const dateInDdMmYyyyHhMmSs = (date, dateDiveder = "-", hoursAndMinuteDiveder = ":") =>  dateInDdMmYyyy(date, dateDiveder) + " " + dateInHhMmSs(date, hoursAndMinuteDiveder);
+
+  function dateInHhMmSs(date, hoursAndMinuteDiveder = ":") {
+    return (
+      [
+        padTwoDigits(date.getHours()),
+        padTwoDigits(date.getMinutes()),
+        padTwoDigits(date.getSeconds()),
+      ].join(hoursAndMinuteDiveder)
+    );
+  }
+
+  function dateInDdMmYyyy(date, dateDiveder = "-") {
+    return (
+      [
+        padTwoDigits(date.getDate()),
+        padTwoDigits(date.getMonth() + 1),
+        date.getFullYear(),
+      ].join(dateDiveder)
+    );
+  }
+
   const dateTimeFromTimestamp = timestamp => convertToDateTimeLocalString(new Date(timestamp * 1000));
 
   return {
@@ -31,6 +74,11 @@ export function useDate() {
     formatDate,
     dateFromTimestamp,
     dateTimeFromTimestamp,
+    convertToDateTimeLocalString,
+    dateInYyyyMmDdHhMmSs,
+    dateInDdMmYyyyHhMmSs,
+    dateInHhMmSs,
+    dateInDdMmYyyy,
   }
 }
 

@@ -5,14 +5,15 @@
     <TopUniversity />
 
     <PopularCourseFour />
-    <KnowledgeFour />
-    <TrendingCourseFour />
-    <TestimonialFour />
-    <FeaturedInstructorFour />
-    <ManagerCarousel />
-    <FaqFour />
-    <BlogFour />
-    <NewCourseFour />
+    <!-- <KnowledgeFour /> -->
+    <!-- <TrendingCourseFour /> -->
+    <!-- <TestimonialFour /> -->
+    <!-- <FeaturedInstructorFour /> -->
+    <!-- <ManagerCarousel /> -->
+    <!-- <FaqFour /> -->
+    <!-- <BlogFour /> -->
+    <YouTubeCarousel />
+    <!-- <NewCourseFour /> -->
     <layout-footer-four />
   </div>
 </template>
@@ -24,12 +25,13 @@
   import TopUniversity from "./partials/topUniversity/Index.vue";
   // import PopularCourseFour from "../PopularCourse";
   // import KnowledgeFour from "../Knowledge";
-  import TrendingCourseFour from "../TrendingCourse";
-  import TestimonialFour from "../Testimonial";
+  // import TrendingCourseFour from "../TrendingCourse";
+  // import TestimonialFour from "../Testimonial";
   // import FeaturedInstructorFour from "../FeaturedInstructor";
-  import FaqFour from "../Faq";
-  import BlogFour from "../Blog";
+  // import FaqFour from "../Faq";
+  // import BlogFour from "../Blog"; 
+  import YouTubeCarousel from "../YouTubeCarousel";
   import LayoutFooterFour from "../../../../layouts/website/FooterFour.vue";
 
-  import ManagerCarousel from '../manager/components/managerCarousel/Index.vue'
+  // import ManagerCarousel from '../manager/components/managerCarousel/Index.vue'
 </script>

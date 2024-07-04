@@ -1,7 +1,7 @@
 <template>
   <div class="account-page">
     <div class="main-wrapper">
-        <!-- Page Content -->
+      <!-- Page Content -->
 			<div class="bg-pattern-style">
 				<div class="content">
 							
@@ -38,12 +38,14 @@
 
 							</div>
 						</div>
+
+						<HorizontalLanguageSwitcher />
 					</div>
 					<!-- /Login Tab Content -->
 
 				</div>
 
-			</div>		
+			</div>
 			<!-- /Page Content -->
     </div>
   </div>
@@ -51,6 +53,7 @@
 
 <script setup>
   import behavior from './useBehavior'
+  import HorizontalLanguageSwitcher from '@/views/pages/components/horizontalLanguageSwitcher/Index.vue'
 
   const {
     isShowPassword,

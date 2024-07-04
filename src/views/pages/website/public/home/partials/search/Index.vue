@@ -6,7 +6,7 @@
         <div class="col-10 col-md-10">
           <!-- <pre>{{ form }}</pre> -->
           <div class="form-group">
-          <input type="text" class="form-control text-truncate key" v-model="form.search" placeholder=" Keyword / Course Name" />
+          <input type="text" class="form-control text-truncate key" v-model="form.search" :placeholder="$t('pages.index.header.search_placeholder_text')" />
           <!-- <input type="text" class="form-control city" placeholder=" City or Postalcode" /> -->
           </div>
         </div>

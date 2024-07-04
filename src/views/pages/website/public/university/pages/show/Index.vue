@@ -2,7 +2,7 @@
   <div class="main-wrapper main-wrapper-three" v-if="university">
     <layout-header-four />
     <HomeBanner :university="university" />
-    <CategoriesThree />
+    <!-- <CategoriesThree /> -->
     <!-- <WorkThree /> -->
     <Info :university="university" />
     <Form :university="university" />

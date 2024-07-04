@@ -38,6 +38,8 @@
 
 							</div>
 						</div>
+
+						<HorizontalLanguageSwitcher />
 					</div>
 					<!-- /Login Tab Content -->
 
@@ -50,6 +52,7 @@
 
 <script setup>
   import behavior from './useBehavior'
+  import HorizontalLanguageSwitcher from '@/views/pages/components/horizontalLanguageSwitcher/Index.vue'
 
   const {
     isShowPassword,

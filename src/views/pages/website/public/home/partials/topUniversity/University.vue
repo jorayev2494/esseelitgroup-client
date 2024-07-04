@@ -16,7 +16,7 @@
             </div>
           </div> -->
 
-          <div class="align-bottom row">
+          <div class="align-bottom row px-2">
             <div class="categories-text text-center">
               <h4>{{ university.name }}</h4>
               <p class="course-count">{{ university.label }}</p>

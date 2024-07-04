@@ -4,8 +4,8 @@
     <div class="container">
       <div class="section-top-head top-head-three">
         <div class="section-header aos" data-aos="fade-up">
-          <h2>Featured courses of the day</h2>
-          <p class="sub-title">Featured courses of the day</p>
+          <h2>{{ $t('pages.faculties.title', { university_name: university.name }) }}</h2>
+          <p class="sub-title">{{ $t('pages.faculties.text') }}</p>
         </div>
       </div>
 

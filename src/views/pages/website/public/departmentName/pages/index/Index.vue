@@ -13,12 +13,12 @@
         </div>
 
         <div class="section-header section-head-one text-center aos" data-aos="fade-up">
-          <h2>Meet Our Professional Mentor</h2>
+          <h2>{{ $t('pages.departments.title') }}</h2>
           <div class="title-bar">
             <img src="@/assets/img/icon/index-title-bar.svg" alt="" />
           </div>
           <p class="sub-title">
-            They are highly qualified and trained in their areas
+            {{ $t('pages.departments.text') }}
           </p>
         </div>
 

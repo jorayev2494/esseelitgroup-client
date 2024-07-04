@@ -3,12 +3,19 @@
         "header": {
             "slider_title": "Hayalinizdeki Üniversiteyi Bulmanın En Hızlı Yolu: <span class=\"text-danger\">Türkiye'de</span> Eğitim Danışmanlığı",
             "slider_label": "",
-            "search_btn": "Search universities"
+            "search_btn": "Search universities",
+            "search_placeholder_text": "Üniversite veya bölüm adı giriniz..."
         },
         "top_universities": {
             "top_universities": "En İyi Universitetler",
             "top_university_categories": "Popüler Üniversiteler Kategorileri",
             "top_university_text": "Dünya ve Türkmenistan sıralamasında yer alan Türkiye üniversitelerinde eğitim almak istiyorsanız, en iyileri burada bulabilirsiniz."
+        },
+        "youTube": {
+            "block": {
+                "title": "Türkiye'de Üniversite Yerleştirme Süreci",
+                "text": "Türkiye'deki üniversitelere yerleştirme süreci hakkında detaylı bilgi ve ipuçları."
+            }
         },
         "footer": {
             "contact_us": {
@@ -24,5 +31,17 @@
                 "text": ""
             }
         }
+    },
+    "universities": {
+        "title": "Türkiye'deki Üniversiteler",
+        "text": "Türkiye'de eğitim alabileceğiniz en iyi üniversiteleri burada bulabilirsiniz."
+    },
+    "faculties": {
+        "title": "{university_name} Fakülteleri",
+        "text": "Discover the best universities in Turkey where you can pursue your education."
+    },
+    "departments": {
+        "title": "Lisans Bölümleri",
+        "text": "Türkiye'deki üniversitelerde sunulan tüm lisans bölümlerini inceleyin."
     }
 }

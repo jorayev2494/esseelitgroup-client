@@ -7,7 +7,7 @@ export default () => {
   const router = useRouter();
 
   const form = ref({
-    email: 'student@gmail.com',
+    email: '',
   });
 
   const getData = () => form.value;

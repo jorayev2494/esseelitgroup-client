@@ -1,4 +1,6 @@
 {
+    "application_form_label": "{university_name} Başvuru Formu",
+    "application_form_text": "Lütfen başvuru formunu dikkatli ve eksiksiz doldurunuz.",
     "first_name": "Ad",
     "last_name": "Soyadı",
     "birthday": "Doğum günü",

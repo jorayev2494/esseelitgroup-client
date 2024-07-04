@@ -47,7 +47,8 @@ export default () => {
         const { data } = response;
 
         paginator.setMetaData(data);
-        items.value = data.data.map(departmentMapper);
+        items.value = data.data;
+        items.value = items.value.map(departmentMapper);
       })
       .catch(error => error)
       .finally(() => loading.value = false);
