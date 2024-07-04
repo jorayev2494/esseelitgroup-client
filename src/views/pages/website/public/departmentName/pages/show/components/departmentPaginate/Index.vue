@@ -172,13 +172,6 @@
         </router-link> -->
       </template>
 
-      <template #price="data">
-        <p class="text-black">
-          {{ data.value.price }}
-          {{ data.value.price_currency?.code }}
-        </p>
-      </template>
-
     </vue3-datatable>
   </div>
 </template>
