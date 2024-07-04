@@ -63,7 +63,7 @@
                 <span class="text-black p-0">
                   <strong>{{ $t('companyContext.department.form.is_filled') }}: </strong>
                   <span class="mx-1" :class="data.value.is_filled ? 'text-danger' : 'text-success'">
-                    {{ $t('system.' + (data.value.is_filled ? 'yes' : 'no')) }}
+                    {{ $t('system.' + (data.value.is_filled ? 'no' : 'have')) }}
                   </span>
                 </span>
               </div>
@@ -115,6 +115,35 @@
           </span>
         </span>
       </template> -->
+
+      <template #price="data">
+        <div class="d-flex flex-row">
+          <p class="mt-2">
+            <span>
+              <p v-if="!data.value.discount_price" class="text-primary mb-1">
+                <strong>
+                  {{ data.value.price }}
+                  {{ data.value.price_currency?.code }}
+                </strong>
+              </p>
+              <p v-else class="text-danger mb-1">
+                <em>
+                  <del>
+                    {{ data.value.price }}
+                    {{ data.value.price_currency?.code }}
+                  </del>
+                </em>
+              </p>
+            </span>
+            <span v-if="data.value.discount_price" class="text-primary">
+              <strong>
+                {{ data.value.discount_price }}
+                {{ data.value.price_currency?.code }}
+              </strong>
+            </span>
+          </p>
+        </div>
+      </template>
 
       <template #actions="data">
         <button

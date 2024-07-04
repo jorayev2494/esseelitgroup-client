@@ -29,11 +29,10 @@
 
                 <div class="section-top-head top-head-three">
                   <div class="section-header aos" data-aos="fade-up">
-                    <h2>{{ university.name }} Application Form</h2>
+                    <h2>{{ $t(`application_form.application_form_label`, { university_name: university.name }) }}</h2>
                     <center>
                       <p class="sub-title">
-                        Find the Categories that’s perfect for you. about 800+ new courses
-                        everyday
+                        {{ $t(`application_form.application_form_text`) }}
                       </p>
                     </center>
                   </div>

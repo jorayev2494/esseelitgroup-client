@@ -30,6 +30,8 @@
               <!-- /Forgot Password Form -->
             </div>
           </div>
+
+          <HorizontalLanguageSwitcher />
         </div>
         <!-- /Account Content -->
       </div>
@@ -41,6 +43,7 @@
 
 <script setup>
   import useBehavior from "./useBehavior";
+  import HorizontalLanguageSwitcher from '@/views/pages/components/horizontalLanguageSwitcher/Index.vue'
 
   const {
     form,

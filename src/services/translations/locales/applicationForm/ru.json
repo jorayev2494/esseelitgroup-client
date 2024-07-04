@@ -1,4 +1,6 @@
 {
+    "application_form_label": "Заявка на поступление в университет {university_name}",
+    "application_form_text": "Пожалуйста, заполните форму заявки внимательно и полностью.",
     "first_name": "Имя",
     "last_name": "Фамилия",
     "birthday": "День рождения",

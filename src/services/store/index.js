@@ -15,6 +15,7 @@ import city from './modules/city';
 import degree from './modules/degree';
 import language from './modules/language';
 import alias from './modules/alias';
+import youTube from './modules/youTube';
 import staticPage from './modules/staticPage/index';
 import document from '../../views/pages/website/public/document/store/index.js';
 import manager from '../../views/pages/website/public/manager/store/index.js';
@@ -76,6 +77,7 @@ export default createStore({
     degree,
     language,
     alias,
+    youTube,
     staticPage,
     document,
     manager,

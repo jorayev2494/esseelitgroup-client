@@ -7141,7 +7141,8 @@ span.rate-point.three-rate {
     -webkit-transition: all 0.5s ease;
 }
 .course-categories-four .sub-categories:hover {
-    background: rgba(235, 148, 129, 0.05);
+    /* background: rgba(235, 148, 129, 0.05); */
+	background: rgb(15 39 26 / 2%);
 	border: 1px solid #0f271a;
 	box-shadow: 0 0 13px rgb(0 0 0 / 30%);
 	transition: all 0.5s ease;
@@ -22799,4 +22800,8 @@ label {
 
 .mendor-list .carousel__next {
     right: -12px;
+}
+
+.cursor-pointer {
+	cursor: pointer;
 }

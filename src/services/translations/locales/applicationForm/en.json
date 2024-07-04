@@ -1,4 +1,6 @@
 {
+    "application_form_label": "{university_name} Application Form",
+    "application_form_text": "Please complete the application form carefully and thoroughly.",
     "first_name": "First name",
     "last_name": "Last name",
     "birthday": "Birthday",

@@ -11,7 +11,7 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-lg-5 d-flex align-items-center" v-if="data?.cover">
+              <div class="col-lg-5 align-items-center mt-5" v-if="data?.cover">
                 <div class="knowledge-img-three aos " data-aos="fade-up">
                   <!-- <div class="shadow-sm rounded"> -->
                     <img :src="data?.cover" class="img-fluid rounded" alt="">
