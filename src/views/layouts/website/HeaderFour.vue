@@ -54,61 +54,8 @@
                 </router-link>
               </li>
 
-              <!-- <li class="has-submenu">
-                <a href="#" class="">
-                  Blog
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ul class="submenu">
-                  <li class="">
-                    <a href="/blog/blog-list" class="">
-                      Blog List
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/blog/blog-grid" class="">
-                      Blog Grid
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/mentor/blog-details" class="">
-                      Blog Details
-                    </a>
-                  </li>
-                </ul>
-              </li> -->
-
-              <!-- <li class="has-submenu" v-bind:class="{ active: blogMenu }">
-                <a href="">Blog bb <i class="fas fa-chevron-down"></i></a>
-                <ul class="submenu">
-                  <li v-bind:class="{ active: currentPath == 'blog-list' }">
-                    <router-link to="/blog/blog-list">Blog List</router-link>
-                  </li>
-                  <li v-bind:class="{ active: currentPath == 'blog-grid' }">
-                    <router-link to="/blog/blog-grid">Blog Grid</router-link>
-                  </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-blog-details',
-                    }"
-                  >
-                    <router-link to="/mentor/blog-details"
-                      >Blog Details</router-link
-                    >
-                  </li>
-                </ul>
-              </li> -->
-
-              <!-- <li>
-                <router-link to="/admin/index" target="_blank">Admin</router-link>
-              </li> -->
-
-              <!-- Language Switcher -->
               <LanguageSwitcher />
 
-              <!-- <li class="login-link">
-                <router-link to="/pages/login">Login / Signup</router-link>
-              </li> -->
             </ul>
           </div>
 
@@ -117,7 +64,6 @@
               <li class="nav-item">
                 <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
                   {{ $t('navigation.buttons.company') }}
-                  <!-- <img src="@/assets/img/icon/login-circle.svg" alt="" class="ms-2"/> -->
                   <i class="fas fa-building ms-2"></i>
                 </router-link>
               </li>
@@ -140,7 +86,6 @@
             </template>
           </ul>
 
-          <pre>{{ $store.getters['auth/getWhoAuthenticated'] }}</pre>
         </div>
       </nav>
     </div>
@@ -160,94 +105,109 @@
   import LanguageSwitcher from './LanguageSwitcher.vue'
 
   export default {
-    setup() {
-      // const { t } = useI18n()
-      
-      const currentPath = computed(() => {
-        return useRoute().name;
+  setup() {
+    const currentPath = computed(() => {
+      return useRoute().name;
+    });
+
+    const homeMenu = computed(() => {
+      return Util.homeMenu(useRoute().name);
+    });
+
+    const mentorMenu = computed(() => {
+      return Util.mentorMenu(useRoute().name);
+    });
+
+    const menteeMenu = computed(() => {
+    return Util.menteeMenu(useRoute().name);
+    });
+
+    const pagesMenu = computed(() => {
+    return Util.pagesMenu(useRoute().name);
+    });
+
+    const blogMenu = computed(() => {
+      return Util.blogMenu(useRoute().name);
+    });
+
+    // const { t } = useI18n()
+
+    const aboutUsMenu = computed(() => {
+      return Util.aboutUsMenu(useRoute().name);
+    });
+
+    const universitiesMenu = computed(() => {
+      return Util.universitiesMenu(useRoute().name);
+    });
+
+    const departmentsMenu = computed(() => {
+      return Util.departmentsMenu(useRoute().name);
+    });
+
+    const listsMenu = computed(() => {
+      return Util.listsMenu(useRoute().name);
+    });
+
+    onMounted(() => {
+      $(".header-fixed").append('<div class="sidebar-overlay"></div>');
+      $(document).on("click", "#mobile_btn", function () {
+        $("main-wrapper").toggleClass("slide-nav");
+        $(".sidebar-overlay").toggleClass("opened");
+        $("html").addClass("menu-opened");
+        return false;
       });
 
-      const aboutUsMenu = computed(() => {
-        return Util.aboutUsMenu(useRoute().name);
+      $(document).on("click", ".sidebar-overlay", function () {
+        $("html").removeClass("menu-opened");
+        $(this).removeClass("opened");
+        $("main-wrapper").removeClass("slide-nav");
       });
 
-      const mentorMenu = computed(() => {
-        return Util.mentorMenu(useRoute().name);
+      $(document).on("click", "#menu_close", function () {
+        $("html").removeClass("menu-opened");
+        $(".sidebar-overlay").removeClass("opened");
+        $("main-wrapper").removeClass("slide-nav");
       });
 
-      const universitiesMenu = computed(() => {
-        return Util.universitiesMenu(useRoute().name);
-      });
+      if ($(window).width() <= 991) {
+        var Sidemenu = function () {
+          this.$menuItem = $(".main-nav a");
+        };
+      }
 
-      const departmentsMenu = computed(() => {
-        return Util.departmentsMenu(useRoute().name);
-      });
+      let $wrapper = $(".main-wrapper");
 
-      const listsMenu = computed(() => {
-        return Util.listsMenu(useRoute().name);
-      });
-
-      onMounted(() => {
-        $(".header-fixed").append('<div class="sidebar-overlay"></div>');
-        $(document).on("click", "#mobile_btn", function () {
-          $("main-wrapper").toggleClass("slide-nav");
-          $(".sidebar-overlay").toggleClass("opened");
-          $("html").addClass("menu-opened");
-          return false;
-        });
-
-        $(document).on("click", ".sidebar-overlay", function () {
-          $("html").removeClass("menu-opened");
-          $(this).removeClass("opened");
-          $("main-wrapper").removeClass("slide-nav");
-        });
-
-        $(document).on("click", "#menu_close", function () {
-          $("html").removeClass("menu-opened");
+      $(".main-nav a").on("click", function (e) {
+        if ($(this).parent().hasClass("has-submenu")) {
+          e.preventDefault();
+        } else {
+          $wrapper.removeClass("slide-nav");
           $(".sidebar-overlay").removeClass("opened");
-          $("main-wrapper").removeClass("slide-nav");
-        });
-
-        if ($(window).width() <= 991) {
-          var Sidemenu = function () {
-            this.$menuItem = $(".main-nav a");
-          };
+          $("html").removeClass("menu-opened");
         }
 
-        // let $wrapper = $(".main-wrapper");
-
-        // $(".main-nav a").on("click", function (e) {
-        //   if ($(this).parent().hasClass("has-submenu")) {
-        //     e.preventDefault();
-        //   } else {
-        //     $wrapper.removeClass("slide-nav");
-        //     $(".sidebar-overlay").removeClass("opened");
-        //     $("html").removeClass("menu-opened");
-        //   }
-
-        //   if (!$(this).hasClass("submenu")) {
-        //     $("ul", $(this).parents("ul:first")).slideUp(350);
-        //     $("a", $(this).parents("ul:first")).removeClass("submenu");
-        //     $(this).next("ul").slideDown(350);
-        //     $(this).addClass("submenu");
-        //   } else if ($(this).hasClass("submenu")) {
-        //     $(this).removeClass("submenu");
-        //     $(this).next("ul").slideUp(350);
-        //   }
-        // });
+        if (!$(this).hasClass("submenu")) {
+          $("ul", $(this).parents("ul:first")).slideUp(350);
+          $("a", $(this).parents("ul:first")).removeClass("submenu");
+          $(this).next("ul").slideDown(350);
+          $(this).addClass("submenu");
+        } else if ($(this).hasClass("submenu")) {
+          $(this).removeClass("submenu");
+          $(this).next("ul").slideUp(350);
+        }
       });
-
-      return {
-        currentPath,
-        aboutUsMenu,
-        mentorMenu,
-        universitiesMenu,
-        departmentsMenu,
-        listsMenu,
-      };
-    },
-    components: {
-      LanguageSwitcher,
-    },
-  };
+    });
+    return {
+      currentPath,
+      homeMenu,
+      mentorMenu,
+      menteeMenu,
+      pagesMenu,
+      blogMenu,
+    };
+  },
+  components: {
+    LanguageSwitcher,
+  },
+};
 </script>

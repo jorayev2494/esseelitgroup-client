@@ -66,9 +66,9 @@
                   </div>
                 </div>
               </slide>
-              <!-- <template #addons>
+              <template #addons>
                 <pagination />
-              </template> -->
+              </template>
             </carousel>
 
           </div>

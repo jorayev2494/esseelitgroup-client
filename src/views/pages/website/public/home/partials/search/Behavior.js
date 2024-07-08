@@ -11,14 +11,18 @@ export default function useBehavior()
     toQueryParams,
   } = useSearch('name');
 
-  const search = () => {
-    console.log('object');
+  const popularSearchHandler = item => {
+    form.value.search = item
+  }
 
+  const search = () => {
     router.push({ name: 'university-search', query: { ...toQueryParams() } })
   }
 
   return {
     form,
+    popularSearchHandler,
+
     search,
   }
 }

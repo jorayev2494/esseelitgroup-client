@@ -4,7 +4,8 @@
             "slider_title": "Size iň amatly Uniwersiteti tapmagyň iň çalt ýoly: <span class=\"text-danger\">Türkiýede</span> bilim maslahatçylygy",
             "slider_label": "",
             "search_btn": "Uniwersitetleri gözläň",
-            "search_placeholder_text": "Bölüm ýa-da uniwersitet gözle..."
+            "search_placeholder_text": "Bölüm ýa-da uniwersitet gözle...",
+            "popular_search": "Meşhur gözleg"
         },
         "top_universities": {
             "top_universities": "Iň ýokary uniwersitetler",

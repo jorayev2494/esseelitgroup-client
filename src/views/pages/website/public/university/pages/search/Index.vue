@@ -67,25 +67,27 @@
                       <div class="user-infos">
                         <ul>
                           <li>
-                            <span class="text-success" v-if="item.is_on_the_country_list">
+                            <span class="text-primary" v-if="item.is_on_the_country_list">
                               <i class="fas fa-check-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
-                              Has in country list
+                              <!-- Has in country list -->
+                              {{ $t('system.the_university_is_on_the_list_of_the_country') }}
                             </span>
 
-                            <span v-else>
+                            <span v-else class="text-muted">
                               <i class="fas fa-minus-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i>
-                              Has not in country list
+                              <!-- Has not in country list -->
+                              {{ $t('system.the_university_is_not_on_the_list_of_the_country') }}
                             </span>
                           </li>
 
                           <li>
-                            <i class="far fa-comment"></i>
-                            15
+                            <!-- <i class="far fa-comment"></i>
+                            15 -->
                           </li>
-                          <li v-if="item.country">
+                          <!-- <li v-if="item.country">
                             <i class="fas fa-map-marker-alt"></i>
                             {{ item.country?.value }}, {{ item.city?.value }}
-                          </li>
+                          </li> -->
                           <!-- <li>
                             <i class="far fa-money-bill-alt"></i>
                             $300 -$1000
@@ -97,7 +99,7 @@
                       </div>
 
                       <div class="mentor-booking">
-                        <router-link class="apt-btn" :to="$tMakeRoute({ name: 'university-show', params: { uuid: item.uuid } })">{{ $t('system.apply_now') }}</router-link>
+                        <router-link class="apt-btn" :to="$tMakeRoute({ name: 'university-show', params: { uuid: item.uuid }, query: { university_uuid: item.uuid } })">{{ $t('system.apply_now') }}</router-link>
                       </div>
 
                     </div>
@@ -108,7 +110,7 @@
             </template>
             <template v-else>
               <center>
-                <p class="text-secondary p-2">Universities not fund</p>
+                <p class="text-secondary p-2">{{ $t('system.university_not_found') }}</p>
               </center>
             </template>
 
@@ -129,7 +131,7 @@
     </div>
     <!-- /Page Content -->
 
-    <layout-footer></layout-footer>
+    <layout-footer-four></layout-footer-four>
   </div>
 </template>
 
@@ -140,6 +142,7 @@
   import Breadcrumb from './partials/Breadcrumb.vue';
   import Sidebar from './partials/Sidebar/Index.vue';
   import Search from './partials/Search.vue';
+  import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
   
   const {
     searchForm,

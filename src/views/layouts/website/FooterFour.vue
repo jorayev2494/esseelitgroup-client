@@ -135,7 +135,7 @@
           <div class="row align-items-center">
             <div class="col-lg-4">
               <div class="copyright-text">
-                <p class="mb-0">© {{ currentYear }} {{ $store.getters['getAppName'] }}. All rights reserved.</p>
+                <p class="mb-0">© {{ currentYear }} {{ $store.getters['getAppName'] }}. {{ $t('system.all_rights_reserved') }}.</p>
               </div>
             </div>
             <div class="col-lg-3">

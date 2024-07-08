@@ -20,6 +20,9 @@
             "married": "Evli"
         }
     },
+    "pagination": {
+        "info": "{two} girişten {zero} ila {first} arası gösteriliyor"
+    },
     "apply_now": "Şimdi başvur",
     "required": "Zorunlu",
     "translations": "Çeviriler",
@@ -39,5 +42,9 @@
     "load_more": "Daha fazla yükle",
     "is_filled": "Kontenjan",
     "all_universities": "Tüm Üniversiteler",
-    "all": "Tümü"
+    "all": "Tümü",
+    "university_not_found": "Üniversite bulunamadı",
+    "the_university_is_on_the_list_of_the_country": "Üniversite ülke listesinde",
+    "the_university_is_not_on_the_list_of_the_country": "Üniversite ülke listesinde yok",
+    "all_rights_reserved": "Her hakkı saklıdır"
 }

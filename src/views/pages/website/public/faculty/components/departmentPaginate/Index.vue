@@ -9,6 +9,7 @@
       :showNumbers="false"
       :pageSizeOptions="paginator.perPageOptions"
       :isServerMode="true"
+      :paginationInfo="$t('system.pagination.info', { zero: '{0}', first: '{1}', two: '{2}' })"
 
       skin="bh-table-hover"
 

@@ -15,7 +15,7 @@ export default function useIndex({ props }) {
   const { departments, loadDepartments } = useDepartment()
   const { faculties, loadFaculties } = useFaculty()
 
-  const { department_uuid: departmentUuid } = toRefs(route.query)
+  const { university_uuid: universityUuid, department_uuid: departmentUuid } = toRefs(route.query)
 
   const {
     form,
@@ -97,7 +97,6 @@ export default function useIndex({ props }) {
     if (departmentUuid?.value) {
       store.dispatch('department/showDepartmentAsync', { uuid: departmentUuid.value })
         .then(response => {
-          console.log('CheckDepartmentUuid response: ', response.data);
           const {
             uuid,
             name,
@@ -119,9 +118,30 @@ export default function useIndex({ props }) {
     }
   }
 
+  const checkUniversityUuid = () => {
+    if (universityUuid?.value) {
+      store.dispatch('university/showUniversityAsync', universityUuid.value)
+        .then(response => {
+          console.log('checkUniversityUuid response: ', response);
+          const {
+            uuid,
+            country_uuid,
+          } = response.data;
+
+          // form.value.alias_uuid = alias_uuid;
+          form.value.country_uuid = country_uuid;
+          // form.value.language_uuid = language_uuid;
+          // form.value.degree_uuid = degree_uuid;
+          form.value.university_uuid = uuid;
+          loadData()
+        })
+    }
+  }
+
   onMounted(() => {
     clear()
     checkDepartmentUuid()
+    checkUniversityUuid()
   })
 
   return {

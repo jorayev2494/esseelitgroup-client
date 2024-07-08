@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: university.uuid } })">
+  <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: university.uuid }, query: { university_uuid: university.uuid } })">
     <div class="sub-categories bg-design d-flex align-items-center justify-content-center pb-4 pt-2">
 
       <!-- <div> -->
