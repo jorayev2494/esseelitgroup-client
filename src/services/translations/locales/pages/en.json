@@ -4,7 +4,8 @@
             "slider_title": "The Fastest Way to Find Your Dream University: Education Consultancy in <span class=\"text-danger\">Turkey</span>",
             "slider_label": "",
             "search_btn": "Search universities",
-            "search_placeholder_text": "Search for a program or university..."
+            "search_placeholder_text": "Search for a program or university...",
+            "popular_search": "Popular Search"
         },
         "top_universities": {
             "top_universities": "Top universities",

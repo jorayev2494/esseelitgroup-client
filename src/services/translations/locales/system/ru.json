@@ -20,6 +20,9 @@
             "married": "Женатый"
         }
     },
+    "pagination": {
+        "info": "Показаны с {zero} по {first} из {two} записей"
+    },
     "apply_now": "Подать заявку сейчас",
     "required": "Обязательный",
     "translations": "Переводы",
@@ -39,5 +42,9 @@
     "load_more": "Загрузи больше",
     "is_filled": "Kвота",
     "all_universities": "Все университеты",
-    "all": "Все"
+    "all": "Все",
+    "university_not_found": "Университет не найден",
+    "the_university_is_on_the_list_of_the_country": "Университет находится в списке страны",
+    "the_university_is_not_on_the_list_of_the_country": "Университета нет в списке страны",
+    "all_rights_reserved": "Все права защищены"
 }

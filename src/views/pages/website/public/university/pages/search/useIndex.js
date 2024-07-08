@@ -17,7 +17,8 @@ export default function useIndex()
   const countries = ref([]);
   const cities = ref([]);
   const facultyNames = ref([]);
-  const departmentNames = ref([]);
+  const departments = ref([]);
+  const departmentOptions = ref([]);
   const degrees = ref([]);
   const languages = ref([]);
 
@@ -59,18 +60,11 @@ export default function useIndex()
       items: degrees,
     },
     {
-      label: 'search.filter.labels.faculties',
-      field: 'faculty_uuids',
-      type: 'checkbox',
-      multiple: true,
-      items: facultyNames,
-    },
-    {
-      label: 'search.filter.labels.departments',
+      label: 'search.filter.labels.faculties_and_departments',
       field: 'department_uuids',
-      type: 'checkbox',
+      type: 'group-select',
       multiple: true,
-      items: departmentNames,
+      items: departmentOptions,
     },
   ]);
 
@@ -121,16 +115,6 @@ export default function useIndex()
     })
   }
 
-  const loadDepartmentNames = (params = {}) => {
-    return store.dispatch('departmentName/loadDepartmentNameListAsync', { params }).then(response => {
-      departmentNames.value = response.data.map(({ uuid, value }) => ({
-        uuid,
-        label: value,
-        value: uuid,
-      }))
-    })
-  }
-
   const loadLanguages = (params = {}) => {
     return store.dispatch('language/loadLanguageListAsync', { params }).then(response => {
       languages.value = response.data.map(({ uuid, value }) => ({
@@ -171,6 +155,37 @@ export default function useIndex()
     })
   }
 
+  const loadDepartments = (params = {}) => {
+    return store.dispatch('department/loadDepartmentListAsync', { params }).then(response => {
+      departments.value = response.data.map(({ uuid, faculty, name }) => ({
+        uuid,
+        label: name?.value,
+        value: uuid,
+        faculty_name_uuid: faculty.name?.uuid,
+      }))
+    })
+  }
+
+  // #region Department
+  const makeDepartmentOptions = () => {
+    const res = [];
+
+    facultyNames.value.forEach(facultyName => {
+      departments.value.filter
+      res.push({
+        value: facultyName.uuid,
+        label: facultyName.label,
+        items: departments.value.filter(dep => dep.faculty_name_uuid === facultyName.uuid).map(d => ({
+          value: d.uuid,
+          label: d.label,
+        }))
+      })
+    });
+
+    departmentOptions.value = res;
+  }
+  // #endregion
+
   onMounted(() => {
     paginator.setHandler(loadMore);
     paginator.reloadData();
@@ -179,11 +194,12 @@ export default function useIndex()
       loadCountries(),
       loadCities(),
       loadFacultyNames(),
-      loadDepartmentNames(),
+      loadDepartments(),
       loadDegrees(),
       loadLanguages(),
     ]).then(() => {
       makeCountryAndCitySelect();
+      makeDepartmentOptions();
     })
   })
 

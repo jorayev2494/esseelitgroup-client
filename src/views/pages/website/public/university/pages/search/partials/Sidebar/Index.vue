@@ -43,22 +43,22 @@
                 :group-select="true"
                 group-label="label"
                 group-values="items"
-                track-by="label"
+                track-by="value"
                 label="label"
+
+                :placeholder="$t(filter.label)"
+
+                :select-group-label="$t('')"
+                :deselect-group-label="$t('')"
+                
+                :select-label="$t('')"
+                :deselect-label="$t('')"
+                :selected-label="$t('')"
 
                 @select="i => addValue(filter.field, i, filter.multiple)"
                 @remove="i => removeValue(filter.field, i, filter.multiple)"
               >
               </VueMultiselect>
-
-              <!-- :placeholder="$t('application_form.faculties_and_departments_select.placeholder')"
-
-              :select-group-label="$t('application_form.faculties_and_departments_select.select_group_label')"
-              :deselect-group-label="$t('application_form.faculties_and_departments_select.deselect_group_label')"
-              
-              :select-label="$t('application_form.faculties_and_departments_select.select_label')"
-              :deselect-label="$t('application_form.faculties_and_departments_select.deselect_label')"
-              :selected-label="$t('application_form.faculties_and_departments_select.selected')" -->
             </template>
             
           </div>

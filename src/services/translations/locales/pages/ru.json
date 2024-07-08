@@ -4,7 +4,8 @@
             "slider_title": "Самый быстрый способ найти ваш идеальный университет: Консультации по образованию в <span class=\"text-danger\">Турции</span>",
             "slider_label": "",
             "search_btn": "Поиск университетов",
-            "search_placeholder_text": "Поиск программы или университета..."
+            "search_placeholder_text": "Поиск программы или университета...",
+            "popular_search": "Популярный поиск"
         },
         "top_universities": {
             "top_universities": "Лучшие университеты",

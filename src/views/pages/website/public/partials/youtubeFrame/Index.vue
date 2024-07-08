@@ -1,11 +1,13 @@
 <template>
   <div class="player">
     <VueYtframe
+      ref="youTubeFrame"
       v-if="youtubeVideoId"
       class="iframe-wrapper"
       :video-id="youtubeVideoId"
       :player-vars="{ autoplay: 0, listType: 'user_uploads' }"
       width="100%"
+      @ready="readyHandler"
     />
   </div>
 </template>
@@ -13,7 +15,9 @@
 <script setup>
   import useIndex from './useIndex'
 
-  import { defineProps } from 'vue'
+  import { defineProps, ref } from 'vue'
+
+  const youTubeFrame = ref(null)
 
   const props = defineProps({
     youtubeVideoId: {
@@ -22,7 +26,12 @@
     },
   });
 
-  const { } = useIndex({ props });
+  const readyHandler = event => {
+    event.setLoop(true);
+    event.setVolume(10);
+  }
+
+  useIndex({ props });
 </script>
 
 <style scoped>

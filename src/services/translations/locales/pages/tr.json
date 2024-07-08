@@ -4,7 +4,8 @@
             "slider_title": "Hayalinizdeki Üniversiteyi Bulmanın En Hızlı Yolu: <span class=\"text-danger\">Türkiye'de</span> Eğitim Danışmanlığı",
             "slider_label": "",
             "search_btn": "Search universities",
-            "search_placeholder_text": "Üniversite veya bölüm adı giriniz..."
+            "search_placeholder_text": "Üniversite veya bölüm adı giriniz...",
+            "popular_search": "Popüler Arama"
         },
         "top_universities": {
             "top_universities": "En İyi Universitetler",
