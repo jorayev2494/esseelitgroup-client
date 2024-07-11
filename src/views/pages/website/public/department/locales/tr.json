@@ -1,0 +1,20 @@
+{
+  "context_title": "Bölümler",
+  "translations": "Çeviriler",
+  "form": {
+    "company": "Şirket",
+    "information": "Bilgi",
+    "alias": "Alias",
+    "university": "Üniversite",
+    "faculty": "Fakülte",
+    "activity": "Aktivite",
+    "name": "Ad",
+    "description": "Açıklama",
+    "degree": "Derece",
+    "language": "Dil",
+    "price": "Fiyat",
+    "currency": "Para birimi",
+    "is_filled": "Kontenjan",
+    "location": "Konum"
+  }
+}

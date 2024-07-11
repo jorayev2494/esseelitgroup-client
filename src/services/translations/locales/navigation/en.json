@@ -1,0 +1,18 @@
+{
+    "supported_locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
+    "home": "Home",
+    "about_us": "About Us",
+    "lists": "Lists",
+    "universities": "Universities",
+    "departments": "Departments",
+    "buttons": {
+        "go_to_panel": "Go to panel",
+        "company": "Company",
+        "student": "Student"
+    }
+}

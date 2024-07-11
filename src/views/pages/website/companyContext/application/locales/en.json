@@ -1,0 +1,43 @@
+{
+  "context_title": "Applications",
+  "application_form": "Application Form",
+  "search_placeholder_full_name": "Student full name",
+  "form": {
+    "student": "Student",
+    "alias": "Alias",
+    "language": "Language",
+    "degree": "Degree",
+    "birthday": "Birthday",
+    "father_name": "Father name",
+    "mother_name": "Mother name",
+    "passport_number": "Passport number",
+    "phone": "Phone",
+    "friend_phone": "Friend phone",
+    "home_address": "Home address",
+    "email": "Email",
+    "company": "Company",
+    "country": "Country",
+    "university": "University",
+    "faculties_and_departments": "Faculties & Departments",
+    "status": "Status",
+    "status_note": "Status note",
+    "faculties_and_departments_select": {
+      "placeholder": "Faculties & Departments",
+      "select_group_label": "Press enter to select group",
+      "deselect_group_label": "Press enter to deselect group",
+      "select_label": "Press enter to select",
+      "deselect_label": "Press enter to remove",
+      "selected": "Selected"
+    },
+    "documents": {
+      "passport": "Passport",
+      "school_attestat": "School attestat",
+      "equivalence_document": "Equivalence document",
+      "passport_translation": "Passport translation",
+      "transcript": "Transcript",
+      "transcript_translation": "Transcript translation",
+      "school_attestat_translation": "School attestat translation",
+      "biometric_photo": "Biometric photo"
+    }
+  }
+}

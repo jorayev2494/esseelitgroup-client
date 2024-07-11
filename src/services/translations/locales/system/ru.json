@@ -1,0 +1,50 @@
+{
+    "loading_page_text": "Загрузка ...",
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
+    "gender": {
+        "label": "Пол",
+        "items": {
+            "male": "Мужской",
+            "female": "Женский"
+        }
+    },
+    "marital_status": {
+        "label": "Семейное положение",
+        "items": {
+            "single": "Одинокий",
+            "married": "Женатый"
+        }
+    },
+    "pagination": {
+        "info": "Показаны с {zero} по {first} из {two} записей"
+    },
+    "apply_now": "Подать заявку сейчас",
+    "required": "Обязательный",
+    "translations": "Переводы",
+    "actions": "Действи",
+    "create": "Создать",
+    "edit": "Редактировать",
+    "show": "Показывать",
+    "delete": "Удалить",
+    "send": "Отправить",
+    "save": "Сохранить",
+    "save_changes": "Сохранить изменени",
+    "created_at": "Создан в",
+    "clear": "Очистить",
+    "yes": "Да",
+    "have": "Есть",
+    "no": "Нет",
+    "load_more": "Загрузи больше",
+    "is_filled": "Kвота",
+    "all_universities": "Все университеты",
+    "all": "Все",
+    "university_not_found": "Университет не найден",
+    "the_university_is_on_the_list_of_the_country": "Университет находится в списке страны",
+    "the_university_is_not_on_the_list_of_the_country": "Университета нет в списке страны",
+    "all_rights_reserved": "Все права защищены"
+}

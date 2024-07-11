@@ -1,0 +1,29 @@
+{
+  "context_title": "Profil",
+  "form": {
+    "first_name": "İlk adı",
+    "last_name": "Soyadı",
+    "email": "E-posta"
+  },
+  "flash_messages": {
+    "success": {
+      "profile_was_updated": "Profil güncellendi"
+    }
+  },
+  "partials": {
+    "change_password": {
+      "label": "Şifre",
+      "title": "Şifre değiştir",
+      "form": {
+        "current_password": "Şimdiki Şifre",
+        "new_password": "Yeni Şifre",
+        "new_password_confirmation": "Yeni şifre onayı"
+      },
+      "flash_messages": {
+        "success": {
+          "password_was_changed": "Şifre değiştirildi"
+        }
+      }
+    }
+  }
+}

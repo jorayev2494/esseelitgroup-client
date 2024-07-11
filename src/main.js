@@ -3,9 +3,18 @@ import { router } from './router';
 import store from './services/store'
 import translation from './services/translations/index.js';
 import globalVariables from './services/globalVariables/index'
+import VueYtframe from 'vue3-ytframe'
+// import VueMultiselect from 'vue-multiselect'
+// import 'vue-multiselect/dist/vue-multiselect.css'
+
+// Select Style
+// import './assets/css/website/datetime.css'
 
 import Vue3Toasity from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+
+// Flag styles
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 import { BarChart } from 'vue-morris'
 import { LineChart } from 'vue-morris'
@@ -16,6 +25,7 @@ import './assets/fontawesome/css/fontawesome.min.css'
 import './assets/fontawesome/css/all.min.css'
 import './assets/css/website/input.css'
 import Vue3AutoCounter from 'vue3-autocounter';
+import '@bhplugin/vue3-datatable/dist/style.css'
 
 // import LayoutHeader from './views/layouts/website/Header'
 import LayoutHeader1 from './views/layouts/website/Header1'
@@ -172,6 +182,7 @@ import jquery from 'jquery';
 
 window.$ = jquery
 
+    require('./assets/css/admin/style.css');
 // if (window.location.href.includes("admin")) {
 //     require('./assets/css/admin/style.css');
 //     require('./assets/css/admin/bootstrap.min.css')
@@ -362,4 +373,6 @@ app.use(
     },
 );
 app.use(translation);
+app.use(VueYtframe);
+// app.use(VueMultiselect);
 app.mount('#app');

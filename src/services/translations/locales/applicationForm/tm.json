@@ -1,0 +1,59 @@
+{
+    "application_form_label": "{university_name} Anketasy",
+    "application_form_text": "Arza formasyny dykkatly we doly dolduryň.",
+    "first_name": "Ady",
+    "last_name": "Familiýa",
+    "birthday": "Doglan gün",
+    "father_name": "Kakasynyň ady",
+    "mother_name": "Ejesiniň ady",
+    "passport_number": "Zagran pasport nomeri",
+    "passport_date_of_issue": "Pasportyň berlen senesi",
+    "passport_date_of_expiry": "Pasportyň möhleti",
+    "phone": "Telefon",
+    "friend_phone": "Dostyn telefony",
+
+    "nationality_uuid": "Milleti",
+    "country_of_residence_uuid": "Residenceaşaýan ýeri",
+    "company_uuid": "Kompaniýa",
+
+    "high_school_name": "Orta mekdebiň ady",
+    "high_school_country_uuid": "Orta mekdep ýurdy",
+    "high_school_grade_average": "Orta mekdep ortaça bahasy",
+
+    "email": "E-poçta",
+    "home_address": "Öý addresi",
+
+    "country": "Yurt",
+    "citizenship": "Raýatlyk",
+    "alias": "Alias",
+    "language": "Dil",
+    "degree": "Dereje",
+    "university": "Uniwersitet",
+    "faculties_and_departments": "Fakultetler we bölümler",
+
+    "passport": "Halkara pasport (Zagran posport)",
+    "passport_translation": "Halkara pasportyn terjimesi",
+    "school_attestat": "Mekdep Attestaty",
+    "school_attestat_translation": "Mekdep attestatyn terjimesi",
+    "transcript": "Transkripsiýa",
+    "transcript_translation": "Transkripsiýa terjimesi",
+    "equivalence_document": "Denklik belgesi",
+    "biometric_photo": "Biometrik surat",
+
+    "faculties_and_departments_select": {
+        "placeholder": "Fakultetler we bölümler",
+        "select_group_label": "Press enter to select group",
+        "deselect_group_label": "Press enter to deselect group",
+        "select_label": "Press enter to select",
+        "deselect_label": "Press enter to remove",
+        "selected": "Selected"
+    },
+
+    "add_additional_document": "Goşmaça resminama goşuň",
+    "additional_document": "Goşmaça resminama",
+    "name_of_additional_document": "Goşmaça resminamanyň ady",
+    "document_name": "Resminamanyň ady",
+
+    "form_success_sent_message": "Üstünlik formasy habar iberdi",
+    "agreement_text": "Maglumatlarymyň Esse Elite Group-yň hyzmatdaş uniwersitetleri bilen paýlaşylyp bilinjekdigini tassyklaýaryn. Esse Elite Group-a ýokarda agzalan bölümlere (bölümlere) birnäçe uniwersitetlere ýüz tutmaga rugsat berýärin."
+}

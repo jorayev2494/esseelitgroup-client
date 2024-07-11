@@ -1,0 +1,43 @@
+{
+  "context_title": "Başvurular",
+  "application_form": "Başvuru Formu",
+  "search_placeholder_full_name": "Öğrencinin tam adı",
+  "form": {
+    "student": "Öğrenci",
+    "alias": "Alias",
+    "language": "Dil",
+    "degree": "Derece",
+    "birthday": "Doğum günü",
+    "father_name": "Baba adı",
+    "mother_name": "Anne adı",
+    "passport_number": "Pasaport numarası",
+    "phone": "Telefon",
+    "friend_phone": "Arkadaş telefonu",
+    "home_address": "Ev Adresi",
+    "email": "E-posta",
+    "company": "Şirket",
+    "country": "Ülke",
+    "university": "Üniversite",
+    "faculties_and_departments": "Fakülteler ve Bölümler",
+    "status": "Durum",
+    "status_note": "Durum notu",
+    "faculties_and_departments_select": {
+      "placeholder": "Fakülteler ve Bölümler",
+      "select_group_label": "Grubu seçmek için enter tuşuna basın",
+      "deselect_group_label": "Grubun seçimini kaldırmak için enter tuşuna basın",
+      "select_label": "Seçmek için enter tuşuna basın",
+      "deselect_label": "Kaldırmak için enter tuşuna basın",
+      "selected": "Seçildi"
+    },
+    "documents": {
+      "passport": "Pasaport",
+      "school_attestat": "Okul onayı",
+      "equivalence_document": "Denklik belgesi",
+      "passport_translation": "Pasaport tercümesi",
+      "transcript": "Transkript",
+      "transcript_translation": "Transkript çevirisi",
+      "school_attestat_translation": "Okul tasdiki tercümesi",
+      "biometric_photo": "Biyometrik fotoğraf"
+    }
+  }
+}

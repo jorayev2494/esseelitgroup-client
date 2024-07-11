@@ -1,0 +1,48 @@
+{
+    "index": {
+        "header": {
+            "slider_title": "Size iň amatly Uniwersiteti tapmagyň iň çalt ýoly: <span class=\"text-danger\">Türkiýede</span> bilim maslahatçylygy",
+            "slider_label": "",
+            "search_btn": "Uniwersitetleri gözläň",
+            "search_placeholder_text": "Bölüm ýa-da uniwersitet gözle...",
+            "popular_search": "Meşhur gözleg"
+        },
+        "top_universities": {
+            "top_universities": "Iň ýokary uniwersitetler",
+            "top_university_categories": "Meşhur uniwersitet kategoriýalary",
+            "top_university_text": "Dünýäde we Türkmenistanyň sanawynda bolan Türk uniwersitetlerinde okamak isleseňiz, iň gowularyny şu ýerden tapyp bilersiňiz."
+        },
+        "youTube": {
+            "block": {
+                "title": "Türkiýede Uniwersitetde Ýerleşiş Prosesleri",
+                "text": "Türkiýedäki uniwersitetlerde ýerleşiş prosesleri barada jikme-jik maglumat we maslahatlar."
+            }
+        },
+        "footer": {
+            "contact_us": {
+                "title": "Biz bilen habarlaşyň",
+                "text": "Wiza ýüz tutmak, Uniwersitet  ýüz tutmak, Talyplaryň ýaşamagy üçin rugsatnamasy, Deňlik şahadatnamasy"
+            },
+            "documents": {
+                "title": "Gerekli Resminamalar",
+                "text": "Wiza ýüz tutmak, Uniwersitet  ýüz tutmak, Talyplaryň ýaşamagy üçin rugsatnamasy, Deňlik şahadatnamasy"
+            },
+            "pages": {
+                "title": "Sahypalar",
+                "text": ""
+            }
+        }
+    },
+    "universities": {
+        "title": "Türkiýedäki Uniwersitetler",
+        "text": "Türkiýede bilim alyp biljek iň gowy uniwersitetleri şu ýerden tapyp bilersiňiz."
+    },
+    "faculties": {
+        "title": "{university_name} Fakultetleri",
+        "text": "Discover the best universities in Turkey where you can pursue your education."
+    },
+    "departments": {
+        "title": "Bakalawr Bölümleri",
+        "text": "Türkiýedäki uniwersitetlerde hödürlenýän ähli bakalawr bölümlerini gözden geçiriň."
+    }
+}

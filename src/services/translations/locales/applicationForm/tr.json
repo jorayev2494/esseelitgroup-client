@@ -1,0 +1,59 @@
+{
+    "application_form_label": "{university_name} Başvuru Formu",
+    "application_form_text": "Lütfen başvuru formunu dikkatli ve eksiksiz doldurunuz.",
+    "first_name": "Ad",
+    "last_name": "Soyadı",
+    "birthday": "Doğum günü",
+    "father_name": "Baba adı",
+    "mother_name": "Anne adı",
+    "passport_number": "Pasaport numarası",
+    "passport_date_of_issue": "Pasaportun veriliş tarihi",
+    "passport_date_of_expiry": "Pasaportun geçerlilik tarihi",
+    "phone": "Telefon",
+    "friend_phone": "Arkadaş telefonu",
+
+    "nationality_uuid": "Milliyet",
+    "country_of_residence_uuid": "İkamet edilen ülke",
+    "company_uuid": "Şirket",
+
+    "high_school_name": "Lise adı",
+    "high_school_country_uuid": "Lise ülkesi",
+    "high_school_grade_average": "Lise not ortalaması",
+
+    "email": "E-posta",
+    "home_address": "Ev Adresi",
+
+    "country": "Ülke",
+    "citizenship": "Vatandaşlık",
+    "alias": "Alias",
+    "language": "Dil",
+    "university": "Üniversite",
+    "faculties_and_departments": "Fakülteler ve Bölümler",
+
+    "passport": "Pasaport",
+    "passport_translation": "Pasaport tercümesi",
+    "school_attestat": "Okul Tasdiki",
+    "school_attestat_translation": "Okul tasdiki tercümesi",
+    "transcript": "Transkript",
+    "degree": "Derece",
+    "transcript_translation": "Transkript çevirisi",
+    "equivalence_document": "Denklik belgesi",
+    "biometric_photo": "Biyometrik fotoğraf",
+
+    "faculties_and_departments_select": {
+        "placeholder": "Fakülteler ve Bölümler",
+        "select_group_label": "Fakülte seçmek için enter tuşuna basın",
+        "deselect_group_label": "Fakülte seçimini kaldırmak için enter tuşuna basın",
+        "select_label": "Departmanı seçmek için enter tuşuna basın",
+        "deselect_label": "Departmanı kaldırmak için enter tuşuna basın",
+        "selected": "Seçildi"
+    },
+
+    "add_additional_document": "Ek belge ekle",
+    "additional_document": "Ek belge",
+    "name_of_additional_document": "Ek belgenin adı",
+    "document_name": "Belge adı",
+
+    "form_success_sent_message": "Form başarılı mesajı gönderildi",
+    "agreement_text": "Verilerimin Esse Elite Group'un partner üniversiteleriyle paylaşılabileceğini onaylıyorum. Esse Elite Group'un yukarıda belirtilen bölüm(ler) için birden fazla üniversiteye başvuru yapmasına izin veriyorum."
+}

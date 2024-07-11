@@ -33,14 +33,16 @@
                 <i class="fas fa-times"></i>
               </a>
             </div>
+
             <ul class="main-nav">
               <li
                 class="megamenu has-submenu"
                 v-bind:class="{ active: homeMenu }"
               >
-                <router-link to="/"
-                  >Home <i class="fas fa-chevron-down"></i
-                ></router-link>
+                <router-link to="/">
+                  Home
+                  <i class="fas fa-chevron-down"></i>
+                </router-link>
                 <ul class="submenu mega-submenu">
                   <li>
                     <div class="megamenu-wrapper">
@@ -51,17 +53,17 @@
                             v-bind:class="{ active: currentPath == 'index' }"
                           >
                             <div class="demo-img">
-                              <router-link to="/" class="inner-demo-img"
-                                ><img
+                              <router-link to="/" class="inner-demo-img">
+                                <img
                                   src="@/assets/img/home-1.jpg"
                                   class="img-fluid"
-                                  alt="img"
-                              /></router-link>
+                                  alt="img" />
+                              </router-link>
                             </div>
                             <div class="demo-info">
-                              <router-link to="/" class="inner-demo-img"
-                                >Home - 1</router-link
-                              >
+                              <router-link to="/" class="inner-demo-img">
+                                Home - 1
+                              </router-link>
                             </div>
                           </div>
                         </div>
@@ -71,12 +73,13 @@
                             v-bind:class="{ active: currentPath == 'index-2' }"
                           >
                             <div class="demo-img">
-                              <router-link to="/index-2" class="inner-demo-img"
-                                ><img
+                              <router-link to="/index-2" class="inner-demo-img">
+                                <img
                                   src="@/assets/img/home-2.jpg"
                                   class="img-fluid"
                                   alt="img"
-                              /></router-link>
+                                />
+                              </router-link>
                             </div>
                             <div class="demo-info">
                               <router-link to="/index-2" class="inner-demo-img"
@@ -473,14 +476,8 @@
                   <li v-bind:class="{ active: currentPath == 'blog-grid' }">
                     <router-link to="/blog/blog-grid">Blog Grid</router-link>
                   </li>
-                  <li
-                    v-bind:class="{
-                      active: currentPath == 'mentor-blog-details',
-                    }"
-                  >
-                    <router-link to="/mentor/blog-details"
-                      >Blog Details</router-link
-                    >
+                  <li v-bind:class="{ active: currentPath == 'mentor-blog-details' }">
+                    <router-link to="/mentor/blog-details">Blog Details</router-link>
                   </li>
                 </ul>
               </li>
@@ -535,11 +532,11 @@ export default {
     });
 
     const menteeMenu = computed(() => {
-      return Util.menteeMenu(useRoute().name);
+    return Util.menteeMenu(useRoute().name);
     });
 
     const pagesMenu = computed(() => {
-      return Util.pagesMenu(useRoute().name);
+    return Util.pagesMenu(useRoute().name);
     });
 
     const blogMenu = computed(() => {

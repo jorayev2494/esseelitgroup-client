@@ -47,7 +47,8 @@ const Trans = {
 
   async loadLocaleMessages(locale) {
     if (! i18n.global.availableLocales.includes(locale)) {
-      const messages = await import(`@/services/translations/locales/${locale}.json`);
+      // const messages = await import(`@/services/translations/locales/${locale}.json`);
+      const messages = await import(`@/services/translations/locales/${locale}.js`);
       i18n.global.setLocaleMessage(locale, messages.default)
     }
 
@@ -74,8 +75,6 @@ const Trans = {
     return Trans.defaultLocale;
   },
   async routeMiddleware(to, _from, next) {
-    console.log('To: ', to, 'from: ', _from, 'next: ', next);
-
     const paramLocale = to.params.locale;
 
     if (!Trans.isLocaleSupported(paramLocale)) {

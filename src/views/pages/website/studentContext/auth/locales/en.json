@@ -1,0 +1,37 @@
+{
+  "context_title": "Authentication",
+  "login": {
+    "title": "LOGIN TO CABINET",
+    "label": "Access to our dashboard",
+    "forgot_password": "Forgot Password ?",
+    "login_btn_text": "Login",
+    "form": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "flash_messages": {
+      "success": {
+        "welcome": "Welcome {first_name}! 🧑‍🎓"
+      }
+    }
+  },
+  "forgot_password": {
+    "title": "FORGOT PASSWORD?",
+    "label": "Enter your email to get a password reset link",
+    "remember_your_password": "Remember your password?",
+    "restore_password_btn_text": "Restore password",
+    "form": {
+      "email": "Email"
+    }
+  },
+  "restore_password": {
+    "title": "FORGOT PASSWORD?",
+    "label": "Enter your email to get a password reset link",
+    "remember_your_password": "Remember your password?",
+    "reset_password_btn_text": "Restore password",
+    "form": {
+      "password": "Password",
+      "password_confirmation": "Password confirmation"
+    }
+  }
+}

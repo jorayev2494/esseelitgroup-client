@@ -1,3 +1,5 @@
+import company from './company'
+import student from './student'
 
 /** For  Website**/
 import Index from '../views/pages/website/index/Index'
@@ -49,7 +51,14 @@ import Appointments from '../views/pages/website/mentor/Appointments'
 
 // Project pages
 import Home from '../views/pages/website/public/home/Index.vue'
-import UniversityForm from '../views/pages/website/public/UniversityForm/Index.vue'
+// import UniversityForm from '../views/pages/website/public/university/Index.vue'
+import Faculty from '../views/pages/website/public/faculty/Index.vue'
+import university from '../views/pages/website/public/university/routes.js'
+import department from '../views/pages/website/public/department/routes.js'
+import departmentName from '../views/pages/website/public/departmentName/routes.js'
+import aboutUs from '../views/pages/website/public/aboutUs/routes.js'
+import document from '../views/pages/website/public/document/routes.js'
+import manager from '../views/pages/website/public/manager/routes.js'
 
 const routes = [
   {
@@ -57,11 +66,31 @@ const routes = [
     name: 'home',
     component: Home
   },
+  // {
+  //   path: 'universities',
+  //   name: 'universities',
+  //   component: () => import('../views/pages/website/public/search/Index.vue'),
+  // },
+  // {
+  //   path: 'universities/:uuid',
+  //   name: 'university-show',
+  //   component: UniversityForm,
+  // },
+  ...university,
+  ...department,
+  ...departmentName,
+  ...aboutUs,
+  ...document,
+  ...manager,
   {
-    path: 'university/forum/:uuid',
-    name: 'university-form',
-    component: UniversityForm,
+    path: 'faculty/:uuid',
+    name: 'faculty',
+    component: Faculty,
   },
+
+  ...company,
+  ...student,
+
   {
     path: 'index',
     name: 'dashboard',

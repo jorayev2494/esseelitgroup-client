@@ -1,0 +1,59 @@
+{
+    "application_form_label": "Заявка на поступление в университет {university_name}",
+    "application_form_text": "Пожалуйста, заполните форму заявки внимательно и полностью.",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "birthday": "День рождения",
+    "father_name": "Имя отца",
+    "mother_name": "Имя матери",
+    "passport_number": "Номер паспорта",
+    "passport_date_of_issue": "Дата выдачи паспорта",
+    "passport_date_of_expiry": "Дата истечения срока действия паспорта",
+    "phone": "Телефон",
+    "friend_phone": "Телефон друга",
+
+    "nationality_uuid": "Национальность",
+    "country_of_residence_uuid": "Страна проживания",
+    "company_uuid": "Компания",
+
+    "high_school_name": "Название средней школы",
+    "high_school_country_uuid": "Страна средней школы",
+    "high_school_grade_average": "Средний балл средней школы",
+
+    "email": "Эл. почта",
+    "home_address": "Домашний адрес",
+
+    "country": "Страна",
+    "citizenship": "Гражданство",
+    "alias": "Алиас",
+    "language": "Язык",
+    "degree": "Степень",
+    "university": "Университет",
+    "faculties_and_departments": "Факультеты и кафедры",
+
+    "passport": "Заграничный пасспорт",
+    "passport_translation": "Перевод заграничного паспорта",
+    "school_attestat": "Школьный аттестат",
+    "school_attestat_translation": "Перевод школьного аттестата",
+    "transcript": "Стенограмма",
+    "transcript_translation": "Транскрипт перевода",
+    "equivalence_document": "Документ об эквивалентности",
+    "biometric_photo": "Биометрическое фото",
+
+    "faculties_and_departments_select": {
+        "placeholder": "Факультеты и специальности",
+        "select_group_label": "Нажмите чтобы выбрать факультет",
+        "deselect_group_label": "Нажмите чтобы отменить выбор факультета",
+        "select_label": "Нажмите чтобы выбрать специальность",
+        "deselect_label": "Нажмите чтобы убрать специальность",
+        "selected": "Добавлено"
+    },
+
+    "add_additional_document": "Добавить дополнительный документ",
+    "additional_document": "Дополнительный документ",
+    "name_of_additional_document": "Наименование дополнительного документа",
+    "document_name": "Название документа",
+
+    "form_success_sent_message": "Сообщение об успехе формы отправлено",
+    "agreement_text": "Я подтверждаю, что мои данные могут быть переданы университетам-партнерам Esse Elite Group. Я разрешаю Esse Elite Group подавать заявки на вышеупомянутые факультеты в несколько университетов."
+}

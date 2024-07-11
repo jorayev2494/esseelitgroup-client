@@ -1,0 +1,50 @@
+{
+    "loading_page_text": "Loading ...",
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
+    "gender": {
+        "label": "Gender",
+        "items": {
+            "male": "Male",
+            "female": "Female"
+        }
+    },
+    "marital_status": {
+        "label": "Marital Status",
+        "items": {
+            "single": "Single",
+            "married": "Married"
+        }
+    },
+    "pagination": {
+        "info": "Showing {zero} to {first} of {two} entries"
+    },
+    "apply_now": "Apply now",
+    "required": "Required",
+    "translations": "Translates",
+    "actions": "Actions",
+    "create": "Create",
+    "edit": "Edit",
+    "show": "Show",
+    "delete": "Delete",
+    "send": "Send",
+    "save": "Save",
+    "save_changes": "Save changes",
+    "created_at": "Created at",
+    "clear": "Clear",
+    "yes": "Yes",
+    "have": "Have",
+    "no": "No",
+    "load_more": "Load more",
+    "is_filled": "Quota",
+    "all_universities": "All Universities",
+    "all": "All",
+    "university_not_found": "University not fund",
+    "the_university_is_on_the_list_of_the_country": "The university is on the list of the country",
+    "the_university_is_not_on_the_list_of_the_country": "The university is not on the list of the country",
+    "all_rights_reserved": "All rights reserved"
+}

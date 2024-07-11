@@ -1,0 +1,50 @@
+{
+    "loading_page_text": "Yükleryäris ...",
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
+    "gender": {
+        "label": "Jyns",
+        "items": {
+            "male": "Erkek",
+            "female": "Aýal"
+        }
+    },
+    "marital_status": {
+        "label": "Maşgala ýagdaýy",
+        "items": {
+            "single": "Leeke",
+            "married": "Öýlenen"
+        }
+    },
+    "pagination": {
+        "info": "{two} ýazgydan {zero}-den {first}-e çenli görkezilýär"
+    },
+    "apply_now": "Häzir ýüz tutuň",
+    "required": "Zerur",
+    "translations": "Terjimeleri",
+    "actions": "Hereketler",
+    "create": "Döret",
+    "edit": "Redaktirle",
+    "show": "Görkez",
+    "delete": "Öçür",
+    "send": "Iber",
+    "save": "Saklaň",
+    "save_changes": "Üýtgetmeleri ýatda sakla",
+    "created_at": "Döredildi",
+    "clear": "Arassala",
+    "yes": "Hawa",
+    "have": "Bar",
+    "no": "Yok",
+    "load_more": "Yene ýükle",
+    "is_filled": "Kwota",
+    "all_universities": "Ahli uniwersitetler",
+    "all": "Ählisi",
+    "university_not_found": "Uniwersitet tapylmady",
+    "the_university_is_on_the_list_of_the_country": "Uniwersitet ýurduň sanawynda",
+    "the_university_is_not_on_the_list_of_the_country": "Uniwersitet ýurduň sanawynda ýok",
+    "all_rights_reserved": "Ahli hukuklar goralandyr"
+}

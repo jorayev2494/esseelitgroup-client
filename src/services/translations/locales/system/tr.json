@@ -1,0 +1,50 @@
+{
+    "loading_page_text": "Yükleniyor ...",
+    "supported-locales": {
+        "en": "English",
+        "ru": "Русский",
+        "tm": "Türkmençe",
+        "tr": "Türkçe"
+    },
+    "gender": {
+        "label": "Cinsiyet",
+        "items": {
+            "male": "Erkek",
+            "female": "Bayan"
+        }
+    },
+    "marital_status": {
+        "label": "Medeni durum",
+        "items": {
+            "single": "Tek",
+            "married": "Evli"
+        }
+    },
+    "pagination": {
+        "info": "{two} girişten {zero} ila {first} arası gösteriliyor"
+    },
+    "apply_now": "Şimdi başvur",
+    "required": "Zorunlu",
+    "translations": "Çeviriler",
+    "actions": "Aksiyonu",
+    "create": "Oluştur",
+    "edit": "Düzenle",
+    "show": "Göster",
+    "delete": "Sil",
+    "send": "Gönder",
+    "save": "Kaydet",
+    "save_changes": "Değişiklikleri kaydet",
+    "created_at": "Oluşturulma zamanı",
+    "clear": "Temizlemek",
+    "yes": "Evet",
+    "have": "Var",
+    "no": "Yok",
+    "load_more": "Daha fazla yükle",
+    "is_filled": "Kontenjan",
+    "all_universities": "Tüm Üniversiteler",
+    "all": "Tümü",
+    "university_not_found": "Üniversite bulunamadı",
+    "the_university_is_on_the_list_of_the_country": "Üniversite ülke listesinde",
+    "the_university_is_not_on_the_list_of_the_country": "Üniversite ülke listesinde yok",
+    "all_rights_reserved": "Her hakkı saklıdır"
+}

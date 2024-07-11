@@ -1,0 +1,48 @@
+{
+    "index": {
+        "header": {
+            "slider_title": "The Fastest Way to Find Your Dream University: Education Consultancy in <span class=\"text-danger\">Turkey</span>",
+            "slider_label": "",
+            "search_btn": "Search universities",
+            "search_placeholder_text": "Search for a program or university...",
+            "popular_search": "Popular Search"
+        },
+        "top_universities": {
+            "top_universities": "Top universities",
+            "top_university_categories": "Popular Universities Categories",
+            "top_university_text": "If you want to study at universities in Turkey ranked in the world and Turkmenistan, the best ones are here."
+        },
+        "youTube": {
+            "block": {
+                "title": "University Placement Process in Turkey",
+                "text": "Detailed information and tips about the university placement process in Turkey."
+            }
+        },
+        "footer": {
+            "contact_us": {
+                "title": "Contact Us",
+                "text": "Get in touch with us to learn more about our solutions for your educational needs."
+            },
+            "documents": {
+                "title": "Required Documents",
+                "text": "Visa Application, University Application, Student Residence Permit, Equivalency Certificate"
+            },
+            "pages": {
+                "title": "Pages",
+                "text": ""
+            }
+        }
+    },
+    "universities": {
+        "title": "Universities in Turkey",
+        "text": "Discover the best universities in Turkey where you can pursue your education."
+    },
+    "faculties": {
+        "title": "Faculties of {university_name}",
+        "text": "Discover the best universities in Turkey where you can pursue your education."
+    },
+    "departments": {
+        "title": "Undergraduate Programs",
+        "text": "Explore all undergraduate programs offered by universities in Turkey."
+    }
+}

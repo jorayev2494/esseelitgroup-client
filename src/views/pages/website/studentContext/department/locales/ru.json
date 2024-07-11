@@ -1,0 +1,20 @@
+{
+  "context_title": "Поиск департаментов",
+  "translations": "Переводы",
+  "form": {
+    "company": "Компания",
+    "information": "Информация",
+    "alias": "Псевдоним",
+    "university": "Университет",
+    "faculty": "Факультет",
+    "activity": "Активность",
+    "name": "Название",
+    "description": "Описание",
+    "degree": "Степен",
+    "language": "Язык",
+    "price": "Цена",
+    "currency": "Валюта",
+    "is_filled": "Kвота",
+    "location": "Расположение"
+  }
+}
