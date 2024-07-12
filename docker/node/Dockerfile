@@ -2,13 +2,7 @@ FROM node:21.5 AS base
 
 WORKDIR /var/project
 
-COPY ./ /var/project
-
-RUN ls -la
-
-RUN apt-get update \
-    && npm install --no-progress -g npm@10.2 \
-    && npm install --no-progress
+RUN echo 'base'
 
 ############################################################################################
 
@@ -16,19 +10,35 @@ FROM base AS local
 
 EXPOSE 8090
 
-CMD ["npm", "run", "serve"]
+RUN echo 'local'
 
 ############################################################################################
 
-FROM base AS develop
+FROM base AS build-stage
+
+COPY ./ /var/project
+
+RUN apt-get update \
+    && npm install --no-progress -g npm@10.2 \
+    && npm install --no-progress
+
+RUN echo 'build-stage'
+
+############################################################################################
+
+FROM build-stage AS develop
 
 EXPOSE 8090
+
+RUN echo 'develop'
 
 CMD ["npm", "run", "dev"]
 
 ############################################################################################
 
-FROM base AS build
+FROM build-stage AS build
+
+RUN echo 'build'
 
 RUN npm run build
 
@@ -41,5 +51,7 @@ ADD ./docker/node/project-nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /var/project/dist /usr/share/nginx/html
 
 EXPOSE 80
+
+RUN echo 'production'
 
 CMD ["nginx", "-g", "daemon off;"]
