@@ -56,35 +56,10 @@
 
               <LanguageSwitcher />
 
+              <NavButtons />
+
             </ul>
           </div>
-
-          <ul class="nav header-navbar-rht ms-4">
-            <template v-if="! $store.getters['auth/getWhoIsAuthenticated'](['student', 'company'])">
-              <li class="nav-item">
-                <router-link class="nav-link header-login-two" :to="$tMakeRoute({ name: 'company-login' })">
-                  {{ $t('navigation.buttons.company') }}
-                  <i class="fas fa-building ms-2"></i>
-                </router-link>
-              </li>
-
-              <li class="nav-item">
-                <router-link class="nav-link header-login" :to="$tMakeRoute({ name: 'student-login' })">
-                  {{ $t('navigation.buttons.student') }}
-                  <i class="fas fa-graduation-cap ms-2"></i>
-                </router-link>
-              </li>
-            </template>
-
-            <template v-else>
-              <li class="nav-item">
-                <router-link class="nav-link header-login" :to="$tMakeRoute({ name: `${$store.getters['auth/getWhoAuthenticated']}-dashboard` })">
-                  {{ $t('navigation.buttons.go_to_panel') }}
-                  <i class="fas fa-user ms-2"></i>
-                </router-link>
-              </li>
-            </template>
-          </ul>
 
         </div>
       </nav>
@@ -95,14 +70,10 @@
 
 <script>
   import Util from "@/assets/utils/utils";
-  import {
-    onMounted,
-    computed
-  } from "vue";
-  import {
-    useRoute
-  } from "vue-router";
+  import { onMounted, computed } from "vue";
+  import { useRoute } from "vue-router";
   import LanguageSwitcher from './LanguageSwitcher.vue'
+  import NavButtons from './NavButtons.vue'
 
   export default {
   setup() {
@@ -208,6 +179,7 @@
   },
   components: {
     LanguageSwitcher,
+    NavButtons,
   },
 };
 </script>

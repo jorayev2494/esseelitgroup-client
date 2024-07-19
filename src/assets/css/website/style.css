@@ -1616,8 +1616,8 @@ button.bg-danger:hover {
 }
 .logo {
     display: inline-block;
-    margin-right: 30px;
-    width: 160px;
+    /* margin-right: 30px; */
+    /* width: 160px; */
 }
 .header-navbar-rht {
     margin: 0;
@@ -17305,7 +17305,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 		visibility: hidden;
 		z-index: 1000;
 	}
-	.main-nav li .submenu::before {
+	/* .main-nav li .submenu::before {
 		border: 7px solid #fff;
 		border-color: transparent transparent #fff #fff;
 		box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.1);
@@ -17317,7 +17317,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 		transform-origin: 0 0;
 		-webkit-transform: rotate(135deg);
 		transform: rotate(135deg);
-	}
+	} */
 	.main-nav li.has-submenu:hover > .submenu {
 		visibility: visible;
 		opacity: 1;
@@ -18466,7 +18466,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 		visibility: hidden;
 		z-index: 1000;
 	}
-	.main-nav li .submenu::before {
+	/* .main-nav li .submenu::before {
 		border: 7px solid #fff;
 		border-color: transparent transparent #fff #fff;
 		box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.1);
@@ -18478,7 +18478,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 		transform-origin: 0 0;
 		-webkit-transform: rotate(135deg);
 		transform: rotate(135deg);
-	}
+	} */
 	.main-nav li.has-submenu:hover > .submenu {
 		visibility: visible;
 		opacity: 1;
@@ -18651,6 +18651,9 @@ div.dataTables_wrapper div.dataTables_filter input{
 	.main-wrapper-eight .header-four .main-nav > li {
 		margin-right: 20px;
 	}
+	/* .header-navbar-rht > li > a {
+		display: none;
+	} */
  	.header-navbar-rht > li > a {
 		padding: 15px 28px;
 	}
@@ -18932,7 +18935,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 		font-size: 14px;
 	}
 	.header-three .header-navbar-rht li:first-child {
-		padding-right: 15px;
+		padding-right: 0px;
 	}
 	.header-four .header-navbar-rht li a.header-login {
 		padding: 7px 25px!important;
