@@ -35,7 +35,88 @@
     },
     "universities": {
         "title": "Türkiye'deki Üniversiteler",
-        "text": "Türkiye'de eğitim alabileceğiniz en iyi üniversiteleri burada bulabilirsiniz."
+        "text": "Türkiye'de eğitim alabileceğiniz en iyi üniversiteleri burada bulabilirsiniz.",
+        "universities-for-foreign-students": {
+            "info": {
+                "title": "Yabancı Öğrenciler için Vakıf Üniversiteleri",
+                "text": "Yabancı öğrenciler için Türkiye’deki vakıf üniversitelerinde okumak, sınavsız bir seçenektir. Her yıl vakıf üniversiteleri belli bir oranda yabancı öğrenci kontenjanları açmaktadırlar. Siz de Esse Elite Group aracılığı ile özel burslar ve indirimlerden faydalanmak istiyorsanız aşağıda ki ‘BAŞVUR’ butonuna tıklayarak başvuru yapabilir, %75’e varan burs imkanı kazanabilirsiniz.",
+                "items": [
+                    {
+                        "label": "Daha Fazla Bilgi",
+                        "title": "Sınavsız Yabancı Öğrenci Kabul Eden Vakıf Üniversiteleri",
+                        "description": "Yabancı öğrenciler Türkiye’de sınavsız üniversite okuyabilirler. Sınavsız yabancı öğrenci kabul eden üniversiteler vakıf üniversiteleridir. Halk dilinde ‘özel üniversite’ diye tanılandırılan üniversitelerde yabancı uyruklu öğrenciler için özel kontenjanlar ayrılmaktadır. Yabancı Öğrenci Sınavına girmeden eğitim alabilecekleri toplam 76 üniversite vardır. </br></br> Yabancı uyruklu öğrenci sınavı olarak bilinen YÖS sınavı devlet üniversitelerinde okumak için gereklidir. Sınavsız Yabancı Öğrenci kabul eden üniversiteler vakıf üniversitelerdir. </br></br> Vakıf üniversitelerine başvuru yapacak olan öğrenciler YÖS sınavına gerek duymamaktadırlar. Önemli olan başvuru tarihlerine dikkat etmek ve kontenjanları takip etmektir. </br></br> Sınavsız Türkiye’de yabancı uyruklu öğrenci olarak üniversite okumak istiyorsanız, </br></br> ve kontenjan sorularına takılmak istemiyorsanız aşağıdaki Hemen bilgi Al butonuna tıklayarak danışmanlarımız ile görüşebilirsiniz! </br></br> Sizde bir yabancı öğrencisiniz ve sınavsız Türkiye’de üniversite okumak istiyorsanız lise mezuniyetinizin olması gerekmektedir. </br></br> Lise Diploması ile Türkiye’de üniversite okumak </br></br> Yabancı öğrencilerin Türkiye’de okuyabilmesi için, tüm dünyada olduğu gibi bir lise diplomalarına ihtiyaçları vardır.</br></br> Aşağıda görmüş olduğunuz tabelada ülkeye göre listelenmiş lise diploma çeşidi yer almaktadır."
+                    }
+                ]
+            },
+            "apply_steps": {
+                "label": "Başvuru Süreçleri",
+                "title": "3 Kolay adım ile Başvuru",
+                "description": "Yabancı Uyruklu Öğrenci Olarak Üniversite kazanmanın en kolay ve hızlı yolu!",
+                "items": [
+                    {
+                        "title": "Başvuru",
+                        "description": "Başvuru Formundan bölüm (ve Üniversite) tercihlerinizi yapınız ve dökümanlarınızı yükleyiniz."
+                    },
+                    {
+                        "title": "Kabul",
+                        "description": "Başvurunuz tarafımıza ulaştıktan sonra hemen işleme alınacaktır ve E-Mail adresinize kabul mektupları gönderilecektir."
+                    },
+                    {
+                        "title": "Kayıt",
+                        "description": "Kayıt olmak istediğiniz üniversiteyi seçip, harç ücretlerinizi üniversitenin hesabına yatırarak kayıt işlemlerinizi başlatabilirsiniz."
+                    }
+                ]
+            },
+            "image_block": {
+                "label": "Yabancı Uyruklu Öğrenciler İçin",
+                "title": "Sınavsız ve Diploma Notu ile Üniversite Kabulü",
+                "description": "Başvurunuzu Esse Elite Group ile yapmanın bir çok sebebi vardır.",
+                "items": [
+                    {
+                        "title": "Üniversitelerin Resmi Temcilcisi",
+                        "description": "Esse Elite Group Üniversiteler ile Yabancı Uyruklu öğrenciler üzerine anlaşmaları vardır."
+                    },
+                    {
+                        "title": "Özel Burslu Kabul",
+                        "description": "Esse Elite Group aracılığıyla başvuru yapan öğrenciler özel indirimlerden faydalanabiliyor."
+                    },
+                    {
+                        "title": "Ücretsiz Başvuru",
+                        "description": "Esse Elite Group ile yapacağınız tüm başvurular ücretsizdir. Danışmanlık ücreti yoktur!"
+                    }
+                ]
+            },
+            "question_answers": {
+                "title": "Sıkça Sorulan Sorular",
+                "description": "Sorularınız mı var? Size yardımcı olmak için buradayız",
+                "items": [
+                    {
+                        "title": "Başvuru Ücretli midir?",
+                        "description": "Esse Elite Group ile YabancI Uyruklu Öğrenci olarak yağacağınız tüm başvurular ücretsizdir. <br><br> Üniversitelerimiz arasında sadece Sabancı Üniversitesi başvuru ücreti almaktadır. Başvuru ücreti tabiiki üniversiteye yapılmaktadır."
+                    },
+                    {
+                        "title": "TR-YÖS Sınav sonucu gerekiyor mu?",
+                        "description": "Yabancı Uyruklu Öğrencilerin Vakıf Üniversitelerine başvuru yapabilmeleri için YÖS Sınav sonuçları gerekmemektedir. <br><br> Lise Diploma notu (ve ya son 4 Yılın ortalaması) baz alınmaktadır. Kabul ve Kayıtlarınız sınavsız ve diploma notu ile yapılacaktır."
+                    },
+                    {
+                        "title": "Esse Elite Group indirimi nedir?",
+                        "description": "Esse Elite Group Türkiye’de ki Üniversitelerin Resmi temsilcisi olduğu için ve yabancı uyruklu öğrenci hareketliliği üzerine üniversiteler ile birlikle çalıştığı için, özel indirimli kontenjanlara sahiptir. <br><br> Bu indirimlerden tüm Esse Elite Group aracılığı ile başvuru yapacak olan öğrenciler otomatik olarak faydalanacaktır."
+                    },
+                    {
+                        "title": "İndirimlerden nasıl faydalanabilirim?",
+                        "description": "esse.academy sayfasından başvurunuzu ileterek indirimlerden otomatik olarak faydalanıyorsunuz."
+                    },
+                    {
+                        "title": "Burslu Kontenjanlardan nasıl faydalanıyoruz?",
+                        "description": "Esse Elite Groub’nın bir farklı hizmeti ise, tek seferlik ödeme ile öğrencilerin eğitim ücretlerinde indirim sağlamasıdır."
+                    },
+                    {
+                        "title": "İndirim Koşulları nelerdir?",
+                        "description": "Yabancı Uyruklu öğrencilerin web sitemizde yer alan indirimlerden faydalanabilmeleri için başvuru formumuzdan başvuru yapmaları gerekiyor."
+                    }
+                ]
+            }
+        }
     },
     "faculties": {
         "title": "{university_name} Fakülteleri",

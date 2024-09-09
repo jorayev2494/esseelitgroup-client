@@ -59,7 +59,7 @@
 
 <script setup>
   import useBehavior from "./useBehavior.js";
-  import University from "./University.vue"
+  import University from "./University.vue";
   import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
   import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
 

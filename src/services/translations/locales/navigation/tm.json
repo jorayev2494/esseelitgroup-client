@@ -8,7 +8,11 @@
     "home": "Baş sahypa",
     "about_us": "Biz hakynda",
     "lists": "Sanawlar",
-    "universities": "Uniwersitetler",
+    "university": {
+        "universities": "Uniwersitetler",
+        "all_universities": "Allhli Uniwersitetler",
+        "universities-for-foreign-students": "Daşary ýurtly talyplar üçin uniwersitetler"
+    },
     "departments": "Bölümler",
     "buttons": {
         "go_to_panel": "Panele geçiň",
