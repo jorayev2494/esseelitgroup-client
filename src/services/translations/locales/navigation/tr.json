@@ -8,7 +8,10 @@
     "home": "Home",
     "about_us": "Hakkımızda",
     "lists": "Listeler",
-    "universities": "Üniversiteler",
+    "university": {
+        "universities": "Üniversiteler",
+        "universities-for-foreign-students": "Yabancı öğrenciler için üniversiteler"
+    },
     "departments": "Bölümler",
     "buttons": {
         "go_to_panel": "Panele git",

@@ -8,7 +8,11 @@
     "home": "Главный",
     "about_us": "O нас",
     "lists": "Списки",
-    "universities": "Университеты",
+    "university": {
+        "universities": "Университеты",
+        "all_universities": "Все Университеты",
+        "universities-for-foreign-students": "Университеты для иностранных студентов"
+    },
     "departments": "Департаменты",
     "buttons": {
         "go_to_panel": "Перейти на панель",

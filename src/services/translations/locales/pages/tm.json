@@ -35,7 +35,88 @@
     },
     "universities": {
         "title": "Türkiýedäki Uniwersitetler",
-        "text": "Türkiýede bilim alyp biljek iň gowy uniwersitetleri şu ýerden tapyp bilersiňiz."
+        "text": "Türkiýede bilim alyp biljek iň gowy uniwersitetleri şu ýerden tapyp bilersiňiz.",
+        "universities-for-foreign-students": {
+            "info": {
+                "title": "Daşary ýurtly talyplar üçin uniwersitetler",
+                "text": "Türkiýedäki fond uniwersitetlerinde okamak, daşary ýurtly talyplar üçin ekzamen däl. Gaznanyň uniwersitetleri her ýyl daşary ýurtly talyplar üçin belli bir mukdarda kwotalary açýarlar. Global akademiýanyň üsti bilen ýörite stipendiýalardan we arzanladyşlardan peýdalanmak isleseňiz, aşakdaky “GEREK” düwmesine basyp, 75% -e çenli stipendiýa mümkinçiliklerini gazanyp bilersiňiz.",
+                "items": [
+                    {
+                        "label": "Has giňişleýin maglumat",
+                        "title": "Daşary ýurtly talyplary synagdan geçirýän uniwersitetler",
+                        "description": "Daşary ýurtly talyplar Türkiýedäki uniwersitetde ekzamen almazdan okap bilerler. Daşary ýurtly talyplary synagsyz kabul edýän uniwersitetler esas uniwersitetleridir. Köplenç “hususy uniwersitetler” diýlip atlandyrylýan uniwersitetlerde daşary ýurtly talyplar üçin ýörite kwotalar saklanýar. Daşary ýurtly talyp ekzamenini almazdan talyplaryň okap bilýän jemi 76 uniwersiteti bar. </br></br> Daşary ýurtly talyp ekzameni diýlip atlandyrylýan YÖS ekzamen, döwlet uniwersitetlerinde okamaly. Daşary ýurtly talyplary synagsyz kabul edýän uniwersitetler esas uniwersitetleridir. </br></br> Esasy uniwersitetlere ýüz tutjak talyplara YÖS ekzamenini tabşyrmagyň zerurlygy ýok. Esasy zat, anketalara üns bermek we kwotalary ýerine ýetirmekdir. </br></br> Türkiýedäki uniwersitetde ekzamensiz daşary ýurtly talyp hökmünde okamak isleseňiz, </br></br> Kwota soraglary barada alada etmek islemeýän bolsaňyz, aşakdaky maglumatlary al düwmesine basyp, geňeşçilerimiz bilen habarlaşyp bilersiňiz! </br></br> Daşary ýurtly talyp bolsaňyz we Türkiýedäki uniwersitetde ekzamensiz okamak isleýän bolsaňyz, orta mekdebi gutarmaly. </br></br> Orta mekdebiň diplomy bilen Türkiýedäki uniwersitetde okamak </br></br> Daşary ýurtly talyplaryň Türkiýede okamagy üçin, bütin dünýäde bolşy ýaly orta mekdep diplomy gerek. </br></br> Aşakda görýän belgiňizde, ýurt boýunça sanalan orta mekdep diplom görnüşleri bar."
+                    }
+                ]
+            },
+            "apply_steps": {
+                "label": "Arza beriş amallary",
+                "title": "3 aňsat ädimde ulanyň",
+                "description": "Daşary ýurtly talyp hökmünde uniwersitete girmegiň iň aňsat we çalt usuly!",
+                "items": [
+                    {
+                        "title": "Arza",
+                        "description": "Bölümiňizi (we uniwersitetiňizi) anketada saýlaň we resminamalaryňyzy ýükläň."
+                    },
+                    {
+                        "title": "Kabul ediş",
+                        "description": "Arzaňyzy alanymyzdan soň derrew işlener we kabul ediş hatlary e-poçta salgyňyza iberiler."
+                    },
+                    {
+                        "title": "Record",
+                        "description": "Hasaba girmek isleýän uniwersitetiňizi saýlamak we okuw tölegleriňizi uniwersitetiň hasabyna goýmak bilen hasaba alyş işiňize başlap bilersiňiz."
+                    }
+                ]
+            },
+            "image_block": {
+                "label": "Daşary ýurtly talyplar üçin",
+                "title": "Synagsyz we diplom derejesi bilen uniwersitetlere giriş",
+                "description": "Esse Elite Group bilen ýüz tutmagyň köp sebäbi bar.",
+                "items": [
+                    {
+                        "title": "Uniwersitetleriň resmi wekili",
+                        "description": "Esse Elite Group daşary ýurtly talyplar üçin uniwersitetler bilen şertnamalary baglaşdy."
+                    },
+                    {
+                        "title": "Giriş üçin ýörite stipendiýa",
+                        "description": "Esse Elite Group-a ýüz tutýan talyplar ýörite arzanladyşlardan peýdalanyp bilerler."
+                    },
+                    {
+                        "title": "Mugt anketany tabşyrmak",
+                        "description": "Esse Elite Group bilen eden ähli programmalaryňyz mugt. Maslahat tölegi ýok!"
+                    }
+                ]
+            },
+            "question_answers": {
+                "title": "Köplenç soralýan soraglar",
+                "description": "Soraglaryňyz barmy? Biz kömek etmek üçin geldik",
+                "items": [
+                    {
+                        "title": "Anketa tölegi barmy?",
+                        "description": "Esse Elite Group bilen daşary ýurtly talyp hökmünde eden ähli anketalaryňyz mugt. <br> <br> Uniwersitetlerimiziň arasynda diňe Sabançi uniwersiteti anketa tölegini alýar. Elbetde, anketa tölegi uniwersitet üçin tölenýär."
+                    },
+                    {
+                        "title": "TR-YÖS synag netijesi zerurmy?",
+                        "description": "Daşary ýurtly talyplar üçin uniwersitet uniwersitetlerine ýüz tutmak üçin YÖS synag netijeleri talap edilmeýär. <br> <br> Orta mekdebiň diplom derejesine (ýa-da soňky 4 ýylda ortaça) esaslanýar. Giriş we hasaba alyş synagsyz we diplom derejesi bilen amala aşyrylar."
+                    },
+                    {
+                        "title": "Esse Elite Group arzanladyşy näme?",
+                        "description": "Esse Elite Group Türkiýedäki uniwersitetleriň resmi wekili bolup, daşary ýurtly talyplaryň hereketi boýunça uniwersitetler bilen bilelikde işleýänligi sebäpli, ýörite arzanladyş kwotalary bar. <br> <br> Esse Elite Group-a ýüz tutjak ähli talyplar bu arzanladyşlardan awtomatiki peýdalanarlar."
+                    },
+                    {
+                        "title": "Arzanladyşlardan nädip peýdalanyp bilerin?",
+                        "description": "esse.academy sahypasyna arzaňyzy iberip, arzanladyşlardan awtomatiki peýdalanarsyňyz."
+                    },
+                    {
+                        "title": "Stipendiýa kwotalaryndan nädip peýdalanarys?",
+                        "description": "Esse Elite Groub-yň başga bir hyzmaty, okuwçylaryň okuw töleglerine bir gezeklik töleg bilen arzanladyş bermekdir."
+                    },
+                    {
+                        "title": "Arzanladyş şertleri näme?",
+                        "description": "Daşary ýurtly talyplar web sahypamyzdaky arzanladyşlardan peýdalanmak üçin anketa arkaly ýüz tutmalydyrlar."
+                    }
+                ]
+            }
+        }
     },
     "faculties": {
         "title": "{university_name} Fakultetleri",

@@ -8,7 +8,11 @@
     "home": "Home",
     "about_us": "About Us",
     "lists": "Lists",
-    "universities": "Universities",
+    "university": {
+        "universities": "Universities",
+        "all_universities": "All Universities",
+        "universities-for-foreign-students": "Universities for foreign students"
+    },
     "departments": "Departments",
     "buttons": {
         "go_to_panel": "Go to panel",

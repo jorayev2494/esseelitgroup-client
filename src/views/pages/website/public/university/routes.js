@@ -14,6 +14,11 @@ const routes = [
     name: 'university-show',
     component: () => import('./pages/show/Index.vue'),
   },
+  {
+    path: 'universities/foreign-students',
+    name: 'universities-for-foreign-students',
+    component: () => import('./pages/forForeignStudents/Index.vue'),
+  },
 ];
 
 export default routes;
