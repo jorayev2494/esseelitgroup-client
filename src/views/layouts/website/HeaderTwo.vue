@@ -467,6 +467,7 @@
                   </li>
                 </ul>
               </li>
+
               <li class="has-submenu" v-bind:class="{ active: blogMenu }">
                 <a href="">Blog <i class="fas fa-chevron-down"></i></a>
                 <ul class="submenu">
@@ -481,6 +482,7 @@
                   </li>
                 </ul>
               </li>
+
               <li>
                 <router-link to="/admin/index" target="_blank"
                   >Admin</router-link

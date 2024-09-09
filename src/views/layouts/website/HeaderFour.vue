@@ -4,6 +4,7 @@
     <div class="header-fixed">
       <nav class="navbar navbar-expand-lg header-nav scroll-sticky-three">
         <div class="container">
+
           <div class="navbar-header">
             <a id="mobile_btn" href="javascript:void(0);">
               <span class="bar-icon">
@@ -30,10 +31,24 @@
 
             <ul class="main-nav">
 
-              <li v-bind:class="{ active: universitiesMenu }">
-                <router-link :to="$tMakeRoute({ name: 'universities' })">
-                  {{ $t('navigation.universities') }}
-                </router-link>
+              <li class="has-submenu" v-bind:class="{ active: universitiesMenu }">
+                <a href="">{{ $t('navigation.university.universities') }} <i class="fas fa-chevron-down"></i></a>
+
+                <ul class="submenu">
+
+                  <li>
+                    <router-link :to="$tMakeRoute({ name: 'universities' })" v-bind:class="{ active: currentPath == 'universities' }">
+                      {{ $t('navigation.university.all_universities') }}
+                    </router-link>
+                  </li>
+
+                  <li v-bind:class="{ active: currentPath == 'universities-for-foreign-students' }">
+                    <router-link :to="$tMakeRoute({ name: 'universities-for-foreign-students' })">
+                      {{ $t('navigation.university.universities-for-foreign-students') }}
+                    </router-link>
+                  </li>
+
+                </ul>
               </li>
 
               <li v-bind:class="{ active: departmentsMenu }">

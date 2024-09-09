@@ -35,7 +35,89 @@
     },
     "universities": {
         "title": "Universities in Turkey",
-        "text": "Discover the best universities in Turkey where you can pursue your education."
+        "text": "Discover the best universities in Turkey where you can pursue your education.",
+
+        "universities-for-foreign-students": {
+            "info": {
+                "title": "Universities for Foreign Students",
+                "text": "Studying at foundation universities in Turkey is an exam-free option for foreign students. Foundation universities open a certain number of quotas for foreign students every year. If you want to benefit from special scholarships and discounts through Esse Elite Group, you can apply by clicking the 'APPLY' button below and earn up to 75% scholarship opportunities.",
+                "items": [
+                    {
+                        "label": "More Information",
+                        "title": "Foundation Universities Accepting Foreign Students Without Exams",
+                        "description": "Foreign students can study at universities in Turkey without an exam. Universities that accept foreign students without an exam are foundation universities. Special quotas are set aside for foreign students at universities known as ‘private universities’ in the public language. There are a total of 76 universities where they can study without taking the Foreign Student Exam. </br></br> The YÖS exam, known as the foreign student exam, is required to study at state universities. Universities that accept foreign students without an exam are foundation universities. </br></br> Students who will apply to foundation universities do not need to take the YÖS exam. The important thing is to pay attention to the application dates and follow the quotas.  </br></br> If you want to study at a university in Turkey as a foreign student without an exam,  </br></br> and do not want to get stuck on quota questions, you can talk to our consultants by clicking the Get Information Now button below!  </br></br> If you are a foreign student and want to study at a university in Turkey without an exam, you must have graduated from high school.  </br></br> Studying at a university in Turkey with a high school diploma </br></br> For foreign students to study in Turkey, as is the case all over the world, they need a high school diploma. </br></br> The table below shows the types of high school diplomas listed by country."
+                    }
+                ]
+            },
+            "apply_steps": {
+                "label": "Application Processes",
+                "title": "Apply in 3 Easy Steps",
+                "description": "The easiest and fastest way to get into university as a foreign student!",
+                "items": [
+                    {
+                        "title": "Application",
+                        "description": "Make your department (and University) choices in the Application Form and upload your documents."
+                    },
+                    {
+                        "title": "Acceptance",
+                        "description": "Once we receive your application, it will be processed immediately and acceptance letters will be sent to your e-mail address."
+                    },
+                    {
+                        "title": "Record",
+                        "description": "You can start your registration process by choosing the university you want to enroll in and depositing your tuition fees into the university's account."
+                    }
+                ]
+            },
+            "image_block": {
+                "label": "For Foreign Students",
+                "title": "University Admission Without Exams and with Diploma Grade",
+                "description": "There are many reasons to apply with Esse Elite Group.",
+                "items": [
+                    {
+                        "title": "Official Representative of Universities",
+                        "description": "Esse Elite Group has agreements with universities for foreign students."
+                    },
+                    {
+                        "title": "Special Scholarship Admission",
+                        "description": "Students who apply through Esse Elite Group can benefit from special discounts."
+                    },
+                    {
+                        "title": "Free Application",
+                        "description": "All applications you make with Esse Elite Group are free of charge. There is no consultancy fee!"
+                    }
+                ]
+            },
+            "question_answers": {
+                "title": "Frequently Asked Questions",
+                "description": "Have Questions? We are here to help",
+                "items": [
+                    {
+                        "title": "Is there an application fee?",
+                        "description": "All applications you make as a Foreign Student with Esse Elite Group are free of charge. <br><br> Among our universities, only Sabancı University charges an application fee. The application fee is of course paid to the university."
+                    },
+                    {
+                        "title": "Are TR-YÖS Exam results required?",
+                        "description": "Foreign students do not need YÖS exam results to apply to foundation universities. <br><br> High School Diploma grade (or average of the last 4 years) is taken as basis. Your acceptance and registration will be made without exams and with diploma grades."
+                    },
+                    {
+                        "title": "What is the Esse Elite Group discount?",
+                        "description": "Since Esse Elite Group is the official representative of universities in Turkey and works with universities on international student mobility, it has special discounted quotas. <br><br> All students who apply through Esse Elite Group will automatically benefit from these discounts."
+                    },
+                    {
+                        "title": "How can I benefit from discounts?",
+                        "description": "By submitting your application on the esse.academy page, you automatically benefit from the discounts."
+                    },
+                    {
+                        "title": "How do we benefit from Scholarship Quotas?",
+                        "description": "Another distinctive service offered by Esse Elite Group is that it provides students with a discount on their tuition fees with a one-time payment."
+                    },
+                    {
+                        "title": "What are the Discount Conditions?",
+                        "description": "In order for foreign students to benefit from the discounts on our website, they must apply through our application form."
+                    }
+                ]
+            }
+        }
     },
     "faculties": {
         "title": "Faculties of {university_name}",
