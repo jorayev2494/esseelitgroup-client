@@ -22,7 +22,7 @@ export default function useUniversity() {
       params: {
         limit, 
         filters: {
-          // company_uuid: '885a3665-0684-43e5-be1c-677da726bbf6',
+          top_position: true,
         }
       },
     })
