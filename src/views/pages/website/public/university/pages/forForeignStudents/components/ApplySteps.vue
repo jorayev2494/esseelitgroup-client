@@ -19,7 +19,7 @@
 
       <div class="row justify-content-center">
 
-        <div class="col-lg-4 col-md-6" v-for="(item, idx) of items" :key="idx">
+        <div class="col-lg-4 col-md-6 mt-4" v-for="(item, idx) of items" :key="idx">
           <div class="feature-box feature-box-eight text-center aos h-100 d-inline-block" data-aos="fade-up">
             <div class="feature-header">
               <div class="feature-icon">

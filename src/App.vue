@@ -1,9 +1,9 @@
 <template>
 
   <div :class="{ 'modal-open': $store.getters['getIsLoadingPage'] }">
-    <!-- <Transition> -->
-      <router-view />
-    <!-- </Transition> -->
+    <Transition>
+      <router-view v-if="isLoadedPage" />
+    </Transition>
 
     <Transition name="fade">
       <div
@@ -30,10 +30,22 @@
 
 </template>
 
-<script>
-  export default {
-    name: 'App',
-  }
+<script setup>
+  import { onMounted, ref } from 'vue';
+  import store from '@/services/store/index.js';
+
+  const isLoadedPage = ref(false);
+
+  store.commit('setIsLoadingPage', true);
+
+  onMounted(() => {
+    setTimeout(() => {
+      isLoadedPage.value = true;
+      setTimeout(() => {
+        store.commit('setIsLoadingPage', false)
+      }, 1500);
+    }, 1200)
+  })
 </script>
 
 <style scoped>
