@@ -1,20 +1,15 @@
 <template>
   <router-link :to="$tMakeRoute({ name: 'university-show', params: { uuid: university.uuid }, query: { university_uuid: university.uuid } })">
-    <div class="sub-categories bg-design d-flex align-items-center justify-content-center pb-4 pt-2">
-
-      <div class="sub-categories-group">
-        <div class="categories-img">
-          <img class="img-fluid rounded" :src="university.logo" :alt="university.logo" width="210" height="auto" />
-        </div>
-
-        <div class="align-bottom row px-2">
-          <div class="categories-text text-center">
-            <h4>{{ university.name }}</h4>
-            <p class="course-count">{{ university.label }}</p>
-          </div>
-        </div>
+    <div class="sub-categories-five sub-categories-eight h-100">
+      <div class="categories-five-img">
+        <span>
+          <img :src="university.logo" :alt="university.logo" class="img-fluid rounded" width="95" height="auto" />
+        </span>
       </div>
-      
+      <div class="categories-text">
+        <h4>{{ university.name }}</h4>
+        <h5>{{ university.label }}</h5>
+      </div>
     </div>
   </router-link>
 </template>

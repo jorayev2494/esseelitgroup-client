@@ -20,7 +20,7 @@ export default function useUniversity() {
   const loadUniversities = () => {
     store.dispatch('university/loadUniversityListAsync', {
       params: {
-        limit, 
+        // limit, 
         filters: {
           top_position: true,
         }
