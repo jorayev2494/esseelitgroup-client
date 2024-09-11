@@ -19,8 +19,8 @@
             <div class="col-md-12">
 
               <div class="row">
-                <div v-for="(item, idx) in items" :key="idx" class="col-md-3 px-3">
-                  <University :university="item" :key="item.uuid" />
+                <div v-for="(item, idx) in items" :key="idx" class="col-xl-2 col-lg-4 col-sm-6 mt-4">
+                  <UniversityNew :university="item" :key="item.uuid" />
                 </div>
               </div>
 
@@ -51,7 +51,8 @@
   import Mentor from './components/ImageBlock.vue';
   import ApplySteps from './components/ApplySteps.vue';
   import QuestionAnswers from "./components/QuestionAnswers.vue";
-  import University from "../index/University.vue";
+  // import University from "../index/University.vue";
+  import UniversityNew from "../index/UniversityNew.vue";
   import { useBehavior } from './useBehavior';
 
   const {

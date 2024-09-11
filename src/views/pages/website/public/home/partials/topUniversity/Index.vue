@@ -15,10 +15,8 @@
       <div class="popular-categories aos" data-aos="fade-up">
         <div class="row justify-content-center">
 
-          <div class="col-lg-3 col-md-4 col-sm-6"
-            v-for="(university, idx) of universities" :key="idx"
-          >
-            <University :university="university" :key="university.uuid" />
+          <div class="col-xl-2 col-lg-4 col-sm-6 mt-4" v-for="(university, idx) of universities" :key="idx">
+            <UniversityNew :university="university" :key="university.uuid" />
           </div>
 
         </div>
@@ -35,7 +33,8 @@
 
 <script setup>
   import useUniversity from './useUniversity'
-  import University from './University.vue'
+  // import University from './University.vue'
+  import UniversityNew from './UniversityNew.vue'
 
   const { universities } = useUniversity();
 </script>

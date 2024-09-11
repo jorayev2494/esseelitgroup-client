@@ -27,8 +27,12 @@
             <div class="col-md-12">
 
               <div class="row">
-                <div v-for="(item, idx) in items" :key="idx" class="col-md-3 px-3">
+                <!-- <div v-for="(item, idx) in items" :key="idx" class="col-md-3 px-3">
                   <University :university="item" :key="item.uuid" />
+                </div> -->
+
+                <div class="col-xl-2 col-lg-4 col-sm-6 mt-4" v-for="(item, idx) in items" :key="idx">
+                  <UniversityNew :university="item" :key="item.uuid" />
                 </div>
               </div>
 
@@ -60,6 +64,7 @@
 <script setup>
   import useBehavior from "./useBehavior.js";
   import University from "./University.vue";
+  import UniversityNew from "./UniversityNew.vue";
   import LayoutHeaderFour from "../../../../../../layouts/website/HeaderFour.vue";
   import LayoutFooterFour from "../../../../../../layouts/website/FooterFour.vue";
 
